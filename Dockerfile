@@ -18,9 +18,4 @@ RUN npm run build --prod
 
 FROM nginx:1.17.1-alpine
 
-#RUN mkdir /app/out
-
 COPY --from=build /app/dist/gdsc-web-frontend /usr/share/nginx/html
-
-RUN ls /usr/share/nginx/html
-
