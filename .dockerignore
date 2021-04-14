@@ -1,0 +1,15 @@
+#Add all files that should be ignored
+
+.git
+
+.editorconfig
+
+/node_modules
+
+/e2e
+
+/docs
+
+.gitignore
+
+*.md
