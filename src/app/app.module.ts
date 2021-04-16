@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     ArticlespageComponent,
     EventspageComponent,
-    AboutusComponent
+    AboutusComponent,
     FooterComponent,
     HomepageComponent,
     ContactComponent,
