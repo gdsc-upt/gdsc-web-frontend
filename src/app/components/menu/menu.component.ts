@@ -17,8 +17,26 @@ export class MenuComponent implements OnInit {
     {
       name: 'Contact',
       type: 'button',
-      link: '/contactPath',
+      link: '/contact',
       id: 2
+    },
+    {
+      name: 'Articles',
+      type: 'button',
+      link: '/articles',
+      id: 3
+    },
+    {
+      name: 'About Us',
+      type: 'button',
+      link: '/about-us',
+      id: 4
+    },
+    {
+      name: 'Events',
+      type: 'button',
+      link: '/events',
+      id: 4
     }
   ];
 
