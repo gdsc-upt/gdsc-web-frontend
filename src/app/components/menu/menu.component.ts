@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
     {
       name: 'Contact',
       type: 'button',
-      link: '',
+      link: '/contactPath',
       id: 2
     }
   ];
