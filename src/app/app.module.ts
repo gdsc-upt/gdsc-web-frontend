@@ -7,12 +7,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import { TextImageComponentComponent } from './components/text-image-component/text-image-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    TextImageComponentComponent
   ],
   imports: [
     BrowserModule,
