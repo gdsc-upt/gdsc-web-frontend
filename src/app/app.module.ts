@@ -12,7 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
   declarations: [
     AppComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
