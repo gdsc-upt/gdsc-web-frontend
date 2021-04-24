@@ -1,6 +1,6 @@
 import {Base} from './base';
 
-export interface FAQ extends Base {
+export interface Faq extends Base {
   question: string;
   answer: string;
 }
