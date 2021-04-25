@@ -8,8 +8,6 @@ import {Faq} from '../../../../models/faq';
 })
 export class FaqsSectionComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() description: string;
   faqs: Faq[] = [{
     id: 0,
     question: 'What is GDSC?',
