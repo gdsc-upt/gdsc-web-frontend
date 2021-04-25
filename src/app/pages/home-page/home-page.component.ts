@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {Technology} from "../../models/technology";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -8,8 +7,7 @@ import {Technology} from "../../models/technology";
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
