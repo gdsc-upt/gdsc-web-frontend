@@ -15,7 +15,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
   imports: [
     CommonModule,
     RouterModule.forChild([{path: '', component: HomePageComponent}]),
-    MatExpansionModule
+    MatExpansionModule,
   ]
 })
 export class HomePageModule { }
