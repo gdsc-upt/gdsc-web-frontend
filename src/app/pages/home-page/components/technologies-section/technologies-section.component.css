@@ -1,18 +1,13 @@
-.text-container{
-  text-align: center;
-}
-
-img{
-  border-radius: 50%;
-  width: 150px;
-  height: auto;
-  border: 1px solid #edf5ff;
-}
-
 .mat-panel{
   transition: .5s;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 7px;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.card{
+  width: 100% !important;
 }
 
 .tech-component{
@@ -22,46 +17,14 @@ img{
 
 .container{
   background-color: #edf5ff;
-  padding: 75px;
-}
+  padding: 80px !important;
 
-/*mat-panel{*/
-/*  position: relative;*/
-/*  display: block;*/
-/*  width: 60px;*/
-/*  height: 60px;*/
-/*  text-align: center;*/
-/*  line-height: 63px;*/
-/*  background: #333;*/
-/*  border-radius: 50%;*/
-/*  font-size: 30px;*/
-/*  color: #666;*/
-/*  transition: .5s;*/
-/*  margin-bottom: 30px;*/
-/*  padding: 30px;*/
-/*}*/
-
-mat-panel::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #007bff;
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
-}
-
-.mat-panel:hover::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #007bff;
 }
 
 .mat-panel:hover {
-  color: #007bff;
-  box-shadow: 0 0 5px #007bff;
-  text-shadow: 0 0 5px #007bff;
+  transition: 0.3s ease-in-out !important;
+  box-shadow: 0 0 5px #007bff !important;
+  stroke-dashoffset: -480 !important;
+  transform: translateY(-10px);
+
 }

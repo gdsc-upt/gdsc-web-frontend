@@ -7,6 +7,7 @@ import { FaqsSectionComponent } from './components/faqs-section/faqs-section.com
 import {MatExpansionModule} from '@angular/material/expansion';
 import {TechnologiesSectionComponent} from "./components/technologies-section/technologies-section.component";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
     TextImageComponent,
     FaqsSectionComponent,
     TechnologiesSectionComponent,
+    TechnologyCardComponent,
   ],
   imports: [
     CommonModule,
