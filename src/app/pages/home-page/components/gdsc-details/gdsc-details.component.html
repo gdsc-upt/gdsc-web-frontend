@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="text-container">
+    <div>
+      <h1>{{ title }}</h1>
+      <p>{{ text }}</p>
+    </div>
+    <div class="social-details">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/dsc-upt/">
+            <img class="logos" [src]="fbImage">
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/dsc-upt">
+            <img class="logos" [src]="gitImage">
+          </a>
+        </li>
+        <li>
+          <a href="https://dsc.community.dev/politehnica-university-of-timisoara/">
+            <img class="logos" [src]="webImage">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="image-container">
+  <img style="object-fit: scale-down" [src]="image" alt="Home"></div>
+</div>
