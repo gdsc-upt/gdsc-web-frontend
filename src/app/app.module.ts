@@ -12,13 +12,13 @@ import {MatMenuModule} from '@angular/material/menu';
   declarations: [
     AppComponent,
     FooterComponent,
-    MenuComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

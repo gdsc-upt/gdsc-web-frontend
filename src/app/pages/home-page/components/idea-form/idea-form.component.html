@@ -1,0 +1,45 @@
+<form [formGroup]="ideasForm">
+  <div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input required matInput>
+  </mat-form-field>
+  </div>
+  <div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" required>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  </div>
+  <div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="email" required>
+    <mat-error *ngIf="ideasForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  </div>
+    <div class="container">
+      <mat-form-field appearance="fill">
+        <mat-label>Branch</mat-label>
+        <input required matInput>
+      </mat-form-field>
+    </div>
+    <div class="container">
+      <mat-form-field appearance="fill">
+        <mat-label>Year</mat-label>
+        <input required matInput>
+      </mat-form-field>
+    </div>
+  <div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Idea</mat-label>
+    <textarea required matInput></textarea>
+  </mat-form-field>
+  </div>
+  <div class="container">
+  <button type="submit" [disabled]="!ideasForm.valid">Submit Idea</button>
+  </div>
+</form>
