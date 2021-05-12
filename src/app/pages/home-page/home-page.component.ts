@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Technology} from '../../models/technology';
 
 @Component({
   selector: 'app-homepage',

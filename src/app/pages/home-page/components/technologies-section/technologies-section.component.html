@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="text-container">
+    <h1>Technologies</h1>
+    <p>The are some of the technologies we focus on at GDSC UPT</p>
+  </div>
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let technology of technologies" class="mat-panel">
+      <img src="{{technology.image}}" class="img-component">
+      <h2>{{technology.name}}</h2>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
