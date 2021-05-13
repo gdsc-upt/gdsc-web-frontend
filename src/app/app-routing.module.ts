@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'articles',
     loadChildren: () =>
-      import('./pages/articles-page/articles-page.module').then((m) => m.ArticlesPageModule),
+      import('./pages/articles-page/articles-page.module').then(m => m.default),
   },
   {
     path: 'about-us',
