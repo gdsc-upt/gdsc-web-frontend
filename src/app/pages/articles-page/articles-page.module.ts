@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ArticlesPageComponent} from './articles-page.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { ArticlesPageComponent } from './articles-page.component';
 
-
+const routes: Routes = [{ path: '', component: ArticlesPageComponent }];
 
 @NgModule({
-  declarations: [
-    ArticlesPageComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([{ path: '', component: ArticlesPageComponent }])
-  ]
+  declarations: [ArticlesPageComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)],
 })
-export class ArticlesPageModule { }
+export default class ArticlesPageModule {}

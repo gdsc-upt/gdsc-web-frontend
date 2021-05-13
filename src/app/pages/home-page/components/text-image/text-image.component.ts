@@ -1,20 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-text-image-component',
   templateUrl: './text-image.component.html',
-  styleUrls: ['./text-image.component.css']
+  styleUrls: ['./text-image.component.css'],
 })
-export class TextImageComponent implements OnInit {
-
-  constructor() { }
-
+export class TextImageComponent {
   @Input() title: string;
+
   @Input() text: string;
+
   @Input() image: string;
+
   @Input() position: boolean;
-
-  ngOnInit(): void {
-  }
-
 }
