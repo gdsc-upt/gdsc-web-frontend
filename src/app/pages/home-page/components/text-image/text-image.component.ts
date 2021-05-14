@@ -8,7 +8,7 @@ export enum Position {
 @Component({
   selector: 'app-text-image-component',
   templateUrl: './text-image.component.html',
-  styleUrls: ['./text-image.component.css']
+  styleUrls: ['./text-image.component.scss']
 })
 export class TextImageComponent {
   @Input() title: string;

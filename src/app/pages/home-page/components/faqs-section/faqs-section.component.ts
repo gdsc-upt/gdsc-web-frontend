@@ -4,7 +4,7 @@ import { Faq } from '@gdsc/models/faq';
 @Component({
   selector: 'app-faqs-section',
   templateUrl: './faqs-section.component.html',
-  styleUrls: ['./faqs-section.component.css'],
+  styleUrls: ['./faqs-section.component.scss'],
 })
 export class FaqsSectionComponent {
   faqs: Faq[] = [
