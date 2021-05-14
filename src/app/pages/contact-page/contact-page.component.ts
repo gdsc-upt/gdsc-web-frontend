@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatMenuModule} from '@angular/material/menu';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,10 +8,17 @@ import {MatMenuModule} from '@angular/material/menu';
   styleUrls: ['./contact-page.component.css']
 })
 export class ContactPageComponent implements OnInit {
-
+  contactForm: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
+  this.contactForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    phone: new FormControl(''),
+    subject: new FormControl(''),
+    message: new FormControl(''),
+  });
   }
 
 }

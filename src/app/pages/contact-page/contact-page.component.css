@@ -1,0 +1,17 @@
+img {
+  width: 50%;
+  
+}
+
+.container {
+  display: flex;
+}
+
+.contact-container {
+  margin-right: 100px;
+  margin-bottom: 15px;
+}
+
+mat-form-field.mat-form-field{
+  width: 450px;
+}
