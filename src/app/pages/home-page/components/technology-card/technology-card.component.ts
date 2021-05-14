@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
+import {Input} from '@angular/core';
 import {Technology} from '../../../../models/technology';
 
 @Component({
@@ -6,12 +7,7 @@ import {Technology} from '../../../../models/technology';
   templateUrl: './technology-card.component.html',
   styleUrls: ['./technology-card.component.css']
 })
-export class TechnologyCardComponent implements OnInit {
+export class TechnologyCardComponent{
   @Input() technology: Technology;
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
 }
