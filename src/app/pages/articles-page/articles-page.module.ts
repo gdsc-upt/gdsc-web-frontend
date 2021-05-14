@@ -9,4 +9,4 @@ const routes: Routes = [{ path: '', component: ArticlesPageComponent }];
   declarations: [ArticlesPageComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
-export default class ArticlesPageModule {}
+export class ArticlesPageModule {}

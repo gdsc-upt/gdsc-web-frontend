@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from '../../models/menu-item';
+import { MenuItem } from '@gdsc/models/menu-item';
 
 @Component({
   selector: 'app-menu',

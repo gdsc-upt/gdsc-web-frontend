@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Faq } from '../../../../models/faq';
+import { Faq } from '@gdsc/models/faq';
 
 @Component({
   selector: 'app-faqs-section',
