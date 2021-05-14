@@ -1,45 +1,75 @@
+<section class="idea-form ptb-100 bg-gray">
+  <div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <div class="analysis-text">
+          <h3>Have an awesome idea?</h3>
+          <h3>Let's brainstorm!</h3>
+          <div class="bar"></div>
+          <div class="code">
+            <p class="mb-1">
+              <b>Input:</b>
+            </p>
+            <p class="mb-1">
+              const <b>idea</b> = ["Revolutionary Idea"];
+            </p>
+            <p class="mb-1">if(<b>idea.includes("technicalKnowledge" || "developers" ||<!-- -->  <!-- -->"domainKnowledge" || "designers "<!-- --> </b>)<!-- --> {{"{"}}</p>
+            <p class="ml-4 mb-0"><b>submitIdea();</b></p><p class="mb-1"> } </p>
+            <p class="mb-1"><b>Output: </b>helpReceived()</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="analysis-form">
 <form [formGroup]="ideasForm">
+  <div class="form-group">
   <div class="container">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
-    <input required matInput>
+    <input class="inp" formControlName="name" required matInput>
+    <mat-error *ngIf="ideasForm.controls.name.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   </div>
   <div class="container">
-  <mat-form-field appearance="fill">
-    <mat-label>Enter your password</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'" required>
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field>
-  </div>
-  <div class="container">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Enter your email</mat-label>
       <input matInput placeholder="pat@example.com" formControlName="email" required>
     <mat-error *ngIf="ideasForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   </div>
     <div class="container">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Branch</mat-label>
-        <input required matInput>
+        <input formControlName="branch" required matInput>
+        <mat-error *ngIf="ideasForm.controls.branch.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
     </div>
     <div class="container">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Year</mat-label>
-        <input required matInput>
+        <input formControlName="year" required matInput>
+        <mat-error *ngIf="ideasForm.controls.year.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
     </div>
   <div class="container">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Idea</mat-label>
-    <textarea required matInput></textarea>
+    <textarea formControlName="idea" required matInput></textarea>
+    <mat-error *ngIf="ideasForm.controls.idea.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   </div>
   <div class="container">
-  <button type="submit" [disabled]="!ideasForm.valid">Submit Idea</button>
+  <button class="button button1" type="submit" [disabled]="!ideasForm.valid">Submit Idea</button>
   </div>
+  </div>
+
 </form>
+        </div>
+      </div>
+  </div>
+  </div>
+  <svg class="idea-form-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,70 C30,130 70,50 100,70 L100,100 0,100 Z" fill="#ffffff"></path>
+  </svg>
+</section>
+

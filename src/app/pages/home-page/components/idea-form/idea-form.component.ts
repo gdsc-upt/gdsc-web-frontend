@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -12,7 +12,10 @@ export class IdeaFormComponent implements OnInit{
   ngOnInit(): void {
     this.ideasForm = new FormGroup({
       name : new FormControl(''),
-      email : new FormControl('', [Validators.required, Validators.email])
+      email : new FormControl('', [Validators.required, Validators.email]),
+      branch : new FormControl(''),
+      year : new FormControl(''),
+      idea : new FormControl('')
     });
   }
   getErrorMessage(): string {
