@@ -31,6 +31,7 @@ export class TechnologiesSectionComponent implements OnInit {
     name: 'Android Development'
   },
   ];
+
   public breakpoint: number;
 
   ngOnInit(): void {
