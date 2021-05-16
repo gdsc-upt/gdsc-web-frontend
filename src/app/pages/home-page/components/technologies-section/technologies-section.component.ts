@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Technology} from '../../../../models/technology';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { Component, OnInit } from '@angular/core';
+import { Technology } from '../../../../models/technology';
 
 @Component({
   selector: 'app-technologies-section',
@@ -16,20 +15,20 @@ export class TechnologiesSectionComponent implements OnInit {
     name: 'Angular'
   },
     {
-    id: 1,
-    image: 'assets/javascript.svg',
-    name: 'JavaScript'
-  },
+      id: 1,
+      image: 'assets/javascript.svg',
+      name: 'JavaScript'
+    },
     {
-    id: 2,
-    image: 'assets/python.jpg',
-    name: 'Python'
-  },
+      id: 2,
+      image: 'assets/python.jpg',
+      name: 'Python'
+    },
     {
-    id: 3,
-    image: 'assets/android.svg',
-    name: 'Android Development'
-  },
+      id: 3,
+      image: 'assets/android.svg',
+      name: 'Android Development'
+    },
   ];
 
   public breakpoint: number;

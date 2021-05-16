@@ -1,11 +1,11 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-left: 30px;
 }
 
-img{
+img {
   border-radius: 50%;
   width: 75px;
   height: 75px;

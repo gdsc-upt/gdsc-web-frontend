@@ -5,9 +5,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { HomePageComponent } from './home-page.component';
 import { TextImageComponent } from './components/text-image/text-image.component';
 import { FaqsSectionComponent } from './components/faqs-section/faqs-section.component';
-import {TechnologiesSectionComponent} from "./components/technologies-section/technologies-section.component";
-import {MatGridListModule} from "@angular/material/grid-list";
+import { TechnologiesSectionComponent } from './components/technologies-section/technologies-section.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
+
+const routes:
+  Routes = [{path: '', component: HomePageComponent}];
 
 @NgModule({
   declarations: [
@@ -19,19 +22,12 @@ import { TechnologyCardComponent } from './components/technology-card/technology
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([{path: '', component: HomePageComponent}]),
-    MatExpansionModule,
-    MatGridListModule,
-
-const routes: Routes = [{ path: '', component: HomePageComponent }];
-
-@NgModule({
-  declarations: [HomePageComponent, TextImageComponent, FaqsSectionComponent],
-  imports: [
-    CommonModule,
     RouterModule.forChild(routes),
-    MatExpansionModule
-  ]
+    MatExpansionModule,
+    MatGridListModule
+  ],
 })
+
+
 export class HomePageModule {
 }

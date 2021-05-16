@@ -6,5 +6,5 @@ import { Position } from './components/text-image/text-image.component';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {
-  imagePosition = Position
+  imagePosition = Position;
 }

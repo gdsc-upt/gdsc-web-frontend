@@ -1,4 +1,4 @@
-.mat-panel{
+.mat-panel {
   transition: .5s;
   background-color: white;
   border-radius: 7px;
@@ -6,16 +6,16 @@
   transition: 1s ease-in-out;
 }
 
-.card{
+.card {
   width: 100% !important;
 }
 
-.tech-component{
+.tech-component {
   padding: 0px;
   background-color: darkgrey;
 }
 
-.container{
+.container {
   background-color: #edf5ff;
   padding: 80px !important;
 
