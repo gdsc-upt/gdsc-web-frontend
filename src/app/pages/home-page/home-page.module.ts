@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule} from '@angular/router';
-import {HomePageComponent} from './home-page.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { HomePageComponent } from './home-page.component';
 import { TextImageComponent } from './components/text-image/text-image.component';
 import { FaqsSectionComponent } from './components/faqs-section/faqs-section.component';
-import {MatExpansionModule} from '@angular/material/expansion';
 import {TechnologiesSectionComponent} from "./components/technologies-section/technologies-section.component";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
@@ -22,6 +22,16 @@ import { TechnologyCardComponent } from './components/technology-card/technology
     RouterModule.forChild([{path: '', component: HomePageComponent}]),
     MatExpansionModule,
     MatGridListModule,
+
+const routes: Routes = [{ path: '', component: HomePageComponent }];
+
+@NgModule({
+  declarations: [HomePageComponent, TextImageComponent, FaqsSectionComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    MatExpansionModule
   ]
 })
-export class HomePageModule { }
+export class HomePageModule {
+}

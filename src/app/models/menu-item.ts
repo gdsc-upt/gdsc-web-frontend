@@ -1,6 +1,6 @@
-import {Base} from './base';
+import { Base } from './base';
 
-export interface MenuItem extends Base{
+export interface MenuItem extends Base {
   name: string;
   type: string;
   link: string;
