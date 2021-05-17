@@ -16,6 +16,8 @@ $default_border_radius: 7px;
   margin: 0 !important;
 }
 
-.mat-expansion-indicator:after {
-  color: white !important;
+.mat-expansion-panel:hover {
+  .mat-expansion-indicator:after {
+    color: white !important;
+  }
 }
