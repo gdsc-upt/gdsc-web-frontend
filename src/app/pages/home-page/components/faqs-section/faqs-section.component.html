@@ -4,8 +4,8 @@
     <p>The below are some of the frequently asked questions by the students</p>
   </div>
   <div class="faq-panel">
-    <mat-expansion-panel *ngFor="let faq of faqs" class="mat-panel">
-      <mat-expansion-panel-header class="mat-panel-question">
+    <mat-expansion-panel *ngFor="let faq of faqs">
+      <mat-expansion-panel-header>
         {{ faq.question }}
       </mat-expansion-panel-header>
       <mat-panel-description class="mat-panel-answer">
