@@ -10,3 +10,12 @@ body {
 }
 
 $default_border_radius: 7px;
+
+.faq-panel .mat-expansion-panel-body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mat-expansion-indicator:after {
+  color: white !important;
+}
