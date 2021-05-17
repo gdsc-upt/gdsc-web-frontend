@@ -24,8 +24,4 @@ export class FaqsSectionComponent {
       answer: 'GDSC is a very well',
     },
   ];
-
-  _(obj): Faq {
-    return obj as Faq;
-  }
 }
