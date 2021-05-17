@@ -1,30 +1,41 @@
+@import 'src/styles';
+
 .container {
   background-color: #edf5ff;
   padding: 75px;
 }
 
-.mat-panel {
+.mat-expansion-panel {
   transition: .5s;
   background-color: #f5f9ff;
-  border-radius: 10px;
-  margin: 0;
-  padding: 0;
+  border-radius: $default_border_radius;
 }
 
-.mat-panel:hover {
+.mat-expansion-panel:hover {
   background-color: #007bff;
+  color: white;
   transition: 300ms;
-  border-radius: 10px;
-  margin: 0;
-  padding: 0;
 }
 
 .faq-panel {
   background-color: white;
   padding: 50px;
-  border-radius: 10px;
+  border-radius: $default_border_radius;
+  border: 0;
 }
 
+::ng-deep .faq-panel .mat-expansion-panel-body {
+  padding: 0;
+  margin: 0;
+}
+
+.mat-expansion-panel:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+  margin-right: 0;
+}
 
 .mat-panel-answer {
   padding: 20px;
