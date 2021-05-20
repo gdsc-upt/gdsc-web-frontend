@@ -54,6 +54,12 @@ p {
   color: dimgray;
 }
 
-.social-details{
+.social-details {
   position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
 }
