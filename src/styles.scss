@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$default_border_radius: 7px;
+
+.faq-panel .mat-expansion-panel-body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mat-expansion-panel:hover {
+  .mat-expansion-indicator:after {
+    color: white !important;
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
+}
+
+img {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #edf5ff;
+}
