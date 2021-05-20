@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="text-container">
+    <h1>FAQs</h1>
+    <p>The below are some of the frequently asked questions by the students</p>
+  </div>
+  <div class="faq-panel">
+    <mat-expansion-panel *ngFor="let faq of faqs">
+      <mat-expansion-panel-header>
+        {{ faq.question }}
+      </mat-expansion-panel-header>
+      <mat-panel-description class="mat-panel-answer">
+        <p>{{ faq.answer }}</p>
+      </mat-panel-description>
+    </mat-expansion-panel>
+  </div>
+</div>
