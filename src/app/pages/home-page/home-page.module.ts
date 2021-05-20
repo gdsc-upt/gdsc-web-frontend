@@ -9,8 +9,7 @@ import { TechnologiesSectionComponent } from './components/technologies-section/
 import { MatGridListModule } from '@angular/material/grid-list';
 import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
 
-const routes:
-  Routes = [{path: '', component: HomePageComponent}];
+const routes: Routes = [{ path: '', component: HomePageComponent }];
 
 @NgModule({
   declarations: [
@@ -18,16 +17,14 @@ const routes:
     TextImageComponent,
     FaqsSectionComponent,
     TechnologiesSectionComponent,
-    TechnologyCardComponent,
+    TechnologyCardComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MatExpansionModule,
     MatGridListModule
-  ],
+  ]
 })
-
-
 export class HomePageModule {
 }

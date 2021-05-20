@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Faq } from '@gdsc/models/faq';
+import { IFaq } from '@gdsc/models';
 
 @Component({
   selector: 'app-faqs-section',
@@ -7,7 +7,7 @@ import { Faq } from '@gdsc/models/faq';
   styleUrls: ['./faqs-section.component.scss'],
 })
 export class FaqsSectionComponent {
-  faqs: Faq[] = [
+  faqs: IFaq[] = [
     {
       id: 0,
       question: 'What is GDSC?',
