@@ -1,0 +1,30 @@
+.mat-panel {
+  transition: .5s;
+  background-color: white;
+  border-radius: 7px;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.card {
+  width: 100% !important;
+}
+
+.tech-component {
+  padding: 0px;
+  background-color: darkgrey;
+}
+
+.container {
+  background-color: #edf5ff;
+  padding: 80px !important;
+
+}
+
+.mat-panel:hover {
+  transition: 0.3s ease-in-out !important;
+  box-shadow: 0 0 5px #007bff !important;
+  stroke-dashoffset: -480 !important;
+  transform: translateY(-10px);
+
+}
