@@ -12,11 +12,11 @@ export class IdeaFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.ideasForm = new FormGroup({
-      name: new FormControl(''),
+      name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      branch: new FormControl(''),
-      year: new FormControl(''),
-      idea: new FormControl('')
+      branch: new FormControl('', [Validators.required]),
+      year: new FormControl('', [Validators.required]),
+      idea: new FormControl('', [Validators.required])
     });
   }
 
