@@ -71,6 +71,10 @@ h3 {
   .column {
     width: 100%;
   }
+  .code {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
 }
 
 .row {
@@ -81,6 +85,7 @@ h3 {
 
 .form {
   background: #fff;
+  margin-left: 20px;
   box-shadow: 5px 7px 30px rgb(72 73 121);
   padding: 40px;
   border-radius: 5px;
@@ -91,4 +96,7 @@ p {
   font-size: 18px;
   color: #818992;
   line-height: 1.6;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
