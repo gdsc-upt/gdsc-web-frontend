@@ -1,0 +1,94 @@
+.button {
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #007bff;
+}
+
+.button1:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 15px 0 20px;
+  line-height: 40px;
+}
+
+.idea-form {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #edf5ff;
+  padding: 100px 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.idea-form-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.container {
+  width: 70%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.form {
+  background: #fff;
+  box-shadow: 5px 7px 30px rgb(72 73 121);
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  color: #818992;
+  line-height: 1.6;
+}

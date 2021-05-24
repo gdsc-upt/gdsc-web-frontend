@@ -9,8 +9,17 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, MenuComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatMenuModule],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    MenuComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
