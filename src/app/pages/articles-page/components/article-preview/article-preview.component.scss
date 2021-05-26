@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.container{
+  display: flex;
+
+  justify-content: center;
+  margin: 3% 8% 3% 8%;
+}
+
+mat-card{
+  margin-left: 2%;
+  border-radius: 2vw;
+  max-width: 25%;
+  max-height: 2%;
+  font-family: Novito, sans-serif;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-bottom: 2%;
+  background: red;
+}
+
+.title{
+  font-family: Novito, sans-serif;
+}
+
+.content{
+  text-align: justify;
+  text-overflow: ellipsis;
+}

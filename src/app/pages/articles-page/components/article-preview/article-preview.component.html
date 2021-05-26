@@ -1,1 +1,7 @@
-<p>article-preview works!</p>
+<div class="container">
+  <mat-card *ngFor = "let preview of articles" [class.mat-elevation-z2]="!isActive">
+    <h1 class="title">{{ preview.title }}</h1>
+    <h3 class="date">{{ preview.date | date: 'dd/mm/yyyy'}}</h3>
+    <p class="content">{{ preview.content}}</p>
+  </mat-card>
+</div>

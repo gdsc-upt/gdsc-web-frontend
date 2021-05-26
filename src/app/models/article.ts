@@ -1,6 +1,6 @@
 import { Base } from './base';
 
-export interface article extends Base {
+export interface Article extends Base {
   title: string;
   content: string;
   date: Date;
