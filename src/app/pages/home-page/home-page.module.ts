@@ -13,6 +13,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import { AppModule } from '../../app.module';
+import { SharedModule } from '../../shared/shared.module';
 
 const routes:
   Routes = [{path: '', component: HomePageComponent}];
@@ -27,6 +29,7 @@ const routes:
     TechnologyCardComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
     RouterModule.forChild(routes),
     MatExpansionModule,
@@ -34,7 +37,7 @@ const routes:
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
   ]
 })
 export class HomePageModule {

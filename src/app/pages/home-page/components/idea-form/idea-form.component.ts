@@ -4,7 +4,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-idea-form',
   templateUrl: './idea-form.component.html',
-  styleUrls: ['./idea-form.component.css'],
+  styleUrls: ['./idea-form.component.scss'],
 })
 export class IdeaFormComponent implements OnInit {
   hide = true;
