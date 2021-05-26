@@ -1,0 +1,56 @@
+<section class="idea-form">
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <div class="code">
+        <h3>Have an awesome idea?</h3>
+        <h3>Let's brainstorm!</h3>
+          <p>
+            <b>Input:</b>
+          </p>
+          <p>
+            const <b>idea</b> = ["Revolutionary Idea"];
+          </p>
+          <p>if(<b>idea.includes("technicalKnowledge" || "developers" ||<!-- -->  <!-- -->
+            "domainKnowledge" || "designers "<!-- --> </b>)<!-- --> {{"{"}}</p>
+          <p><b>submitIdea();</b></p>
+          <p> } </p>
+          <p><b>Output: </b>helpReceived()</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="form">
+          <form [formGroup]="ideasForm">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input formControlName="name" required matInput>
+              <mat-error *ngIf="ideasForm.controls.name.getError('required')">This field is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="pat@example.com" formControlName="email" required>
+              <mat-error *ngIf="ideasForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Branch</mat-label>
+              <input formControlName="branch" required matInput>
+              <mat-error *ngIf="ideasForm.controls.branch.getError('required')">This field is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Year</mat-label>
+              <input formControlName="year" required matInput>
+              <mat-error *ngIf="ideasForm.controls.year.getError('required')">This field is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Idea</mat-label>
+              <textarea formControlName="idea" required matInput></textarea>
+              <mat-error *ngIf="ideasForm.controls.idea.getError('required')">This field is required</mat-error>
+            </mat-form-field>
+            <button class="button button1" type="submit" [disabled]="!ideasForm.valid">Submit Idea</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
