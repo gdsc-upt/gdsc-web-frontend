@@ -3,6 +3,15 @@
   padding: 20px 50px;
 }
 
+.header-container {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -50,7 +59,6 @@
   margin: 25px 0 15px;
 }
 
-
 .contact-info-box p {
   margin-bottom: 0;
 }
@@ -92,3 +100,22 @@ a {
     margin-bottom: 20px;
   }
 }
+
+h2 {
+  color: #007bff;
+  font: 35px Nunito, sans-serif;
+  text-align: center;
+}
+
+.text-container {
+  text-align: center;
+  margin:10px 15px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactText {
+  margin-top: 20px;
+}
+

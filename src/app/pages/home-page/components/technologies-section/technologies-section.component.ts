@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Technology } from '../../../../models/technology';
+import { ITechnology } from '@gdsc/models';
 
 @Component({
   selector: 'app-technologies-section',
@@ -7,9 +7,9 @@ import { Technology } from '../../../../models/technology';
   styleUrls: ['./technologies-section.component.css']
 })
 export class TechnologiesSectionComponent implements OnInit {
-  public offSet = 500;
+  offSet = 500;
 
-  technologies: Technology[] = [{
+  technologies: ITechnology[] = [{
     id: 0,
     image: 'assets/angular.jpg',
     name: 'Angular'
@@ -30,7 +30,7 @@ export class TechnologiesSectionComponent implements OnInit {
       name: 'Android Development'
     },
   ];
-  public breakpoint: number;
+  breakpoint: number;
 
   ngOnInit(): void {
     this.breakpoint = (innerWidth / this.offSet);

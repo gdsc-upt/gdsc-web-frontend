@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from '@gdsc/models/menu-item';
+import { IMenuItem } from '@gdsc/models';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +7,7 @@ import { MenuItem } from '@gdsc/models/menu-item';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  menuItems: MenuItem[] = [
+  menuItems: IMenuItem[] = [
     {
       name: 'Home',
       type: 'button',

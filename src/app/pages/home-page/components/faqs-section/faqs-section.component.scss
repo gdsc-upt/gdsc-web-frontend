@@ -44,4 +44,12 @@
 
 .text-container {
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.faqsText {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
