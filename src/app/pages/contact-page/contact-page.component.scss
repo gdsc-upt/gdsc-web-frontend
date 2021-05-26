@@ -111,7 +111,8 @@ h2 {
 .text-container {
   text-align: center;
   margin:10px 15px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-
 
