@@ -4,6 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 
 const components = [
   FooterComponent,
@@ -17,7 +18,8 @@ const components = [
   ],
   imports: [
     CommonModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule
   ],
   exports: [
     ...components
