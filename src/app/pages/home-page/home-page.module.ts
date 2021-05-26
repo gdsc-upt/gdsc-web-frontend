@@ -16,8 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { AppModule } from '../../app.module';
 import { SharedModule } from '../../shared/shared.module';
 
-const routes:
-  Routes = [{path: '', component: HomePageComponent}];
+const routes: Routes = [{ path: '', component: HomePageComponent }];
 
 @NgModule({
   declarations: [
@@ -26,7 +25,7 @@ const routes:
     FaqsSectionComponent,
     IdeaFormComponent,
     TechnologiesSectionComponent,
-    TechnologyCardComponent,
+    TechnologyCardComponent
   ],
   imports: [
     SharedModule,
@@ -38,7 +37,6 @@ const routes:
     MatInputModule,
     MatIconModule,
     MatGridListModule,
-  ]
 })
 export class HomePageModule {
 }

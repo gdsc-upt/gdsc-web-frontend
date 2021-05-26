@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Technology } from '../../../../models/technology';
+import { ITechnology } from '@gdsc/models';
 
 @Component({
   selector: 'app-technology-card',
@@ -7,6 +7,6 @@ import { Technology } from '../../../../models/technology';
   styleUrls: ['./technology-card.component.css']
 })
 export class TechnologyCardComponent {
-  @Input() technology: Technology;
+  @Input() technology: ITechnology;
 
 }

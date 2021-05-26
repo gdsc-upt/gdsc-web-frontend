@@ -1,6 +1,6 @@
-import { Base } from './base';
+import { IBase } from './base';
 
-export interface Faq extends Base {
+export interface IFaq extends IBase {
   question: string;
   answer: string;
 }

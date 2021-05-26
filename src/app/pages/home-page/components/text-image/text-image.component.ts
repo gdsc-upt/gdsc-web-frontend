@@ -1,9 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Position } from '@gdsc/types';
 
-export enum Position {
-  RIGHT = 'right',
-  LEFT = 'left'
-}
+
 
 @Component({
   selector: 'app-text-image-component',
