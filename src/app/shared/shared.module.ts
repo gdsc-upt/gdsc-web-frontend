@@ -25,4 +25,5 @@ const components = [
     ...components
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

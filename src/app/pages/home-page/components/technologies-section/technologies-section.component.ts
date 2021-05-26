@@ -14,21 +14,21 @@ export class TechnologiesSectionComponent implements OnInit {
     image: 'assets/angular.jpg',
     name: 'Angular'
   },
-  {
-    id: 1,
-    image: 'assets/javascript.svg',
-    name: 'JavaScript'
-  },
-  {
-    id: 2,
-    image: 'assets/python.jpg',
-    name: 'Python'
-  },
-  {
-    id: 3,
-    image: 'assets/android.svg',
-    name: 'Android Development'
-  },
+    {
+      id: 1,
+      image: 'assets/javascript.svg',
+      name: 'JavaScript'
+    },
+    {
+      id: 2,
+      image: 'assets/python.jpg',
+      name: 'Python'
+    },
+    {
+      id: 3,
+      image: 'assets/android.svg',
+      name: 'Android Development'
+    },
   ];
   breakpoint: number;
 
