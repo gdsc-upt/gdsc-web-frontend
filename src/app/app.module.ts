@@ -10,23 +10,22 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        FooterComponent,
-        MenuComponent,
-        TitleBarComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatMenuModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    exports: [
-        TitleBarComponent
-    ]
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    MenuComponent,
+    TitleBarComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+  ],
+  exports: [
+    TitleBarComponent
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
