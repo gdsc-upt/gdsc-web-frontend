@@ -1,0 +1,54 @@
+name: GDSC Web Frontend
+
+on:
+  push:
+    branches: [ main, dev, docker ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      BRANCH: ${{ steps.extract_branch.outputs.branch }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to GitHub Packages Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CR_PAT }}
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Build and push to GitHub Packages
+        uses: docker/build-push-action@v2
+        env:
+          BRANCH: ${{ steps.extract_branch.outputs.branch }}
+        with:
+          secrets: GIT_AUTH_TOKEN=${{ secrets.CR_PAT }}
+          push: true
+          tags: ghcr.io/dsc-upt/gdsc-web-frontend-${{ env.BRANCH }}:latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull & run image on server
+        uses: appleboy/ssh-action@master
+        env:
+          BRANCH: ${{ needs.build.outputs.BRANCH }}
+        with:
+          host: gdscupt.tech
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: sudo /opt/deploy/_deploy.sh /home/docker/gdsc/gdsc-web-frontend-${{ env.BRANCH }}
