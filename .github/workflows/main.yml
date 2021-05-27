@@ -39,7 +39,7 @@ jobs:
           push: true
           tags: ghcr.io/dsc-upt/gdsc-web-frontend-${{ env.BRANCH }}:latest
 
-deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
