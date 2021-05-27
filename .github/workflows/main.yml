@@ -39,8 +39,8 @@ jobs:
           push: true
           tags: ghcr.io/dsc-upt/gdsc-web-frontend-${{ env.BRANCH }}:latest
 
-  deploy:
-   needs: build
+deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Pull & run image on server
@@ -48,7 +48,7 @@ jobs:
         env:
           BRANCH: ${{ needs.build.outputs.BRANCH }}
         with:
-          host: gdscupt.tech
+          host: timis.tech
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: sudo /opt/deploy/_deploy.sh /home/docker/opportunity-frontend-${{ env.BRANCH }}
