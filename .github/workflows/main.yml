@@ -51,4 +51,4 @@ jobs:
           host: timis.tech
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script: sudo /opt/deploy/_deploy.sh /home/docker/opportunity-frontend-${{ env.BRANCH }}
+          script: sudo /opt/deploy/_deploy.sh /home/docker/gdsc-web-frontend-${{ env.BRANCH }}
