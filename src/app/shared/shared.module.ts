@@ -10,7 +10,7 @@ const components = [
   FooterComponent,
   MenuComponent,
   TitleBarComponent
-]
+];
 
 @NgModule({
   declarations: [
