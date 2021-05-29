@@ -1,17 +1,81 @@
-img {
-  height: 30px;
-  border-radius: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
 footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   background-image: url('~assets/footer-bg.png')
 }
 
-.logo {
-  height: 50px;
-  padding: 25px;
+.icons {
+  width: 180px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
+
+img {
+  height: 30px;
+
+}
+
+a img {
+  color: #818992;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.icons a {
+  border: 1px solid #818992;
+  border-radius: 30px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.icons a:hover {
+  transition-duration: 0.4s;
+  background-color: #007bff;
+
+  .icon {
+    transition-duration: 0.4s;
+    filter: invert(1) sepia(1);
+  }
+
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+.logo {
+  height: 120px;
+  width: 300px;
+}
+
+.icon {
+  display: inline-block;
+  background-size: cover;
+  filter: invert(42%) saturate(1352%) brightness(119%) contrast(119%) grayscale(100%);
+}
+
+.icon-github {
+  background-image: url("~assets/github.svg");
+  width: 20px;
+  height: 20px;
+  margin-top: 13px;
+}
+
+.icon-fb {
+  background-image: url("~assets/fb.svg");
+  width: 20px;
+  height: 30px;
+  margin-top: 8px;
+}
+
+//<img src="/assets/github.svg"
+//                                                             alt="GitHub logo" class="github">
