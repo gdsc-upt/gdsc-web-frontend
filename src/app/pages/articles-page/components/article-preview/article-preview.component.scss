@@ -1,29 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
-.container{
+.container {
   display: flex;
-
   justify-content: center;
   margin: 3% 8% 3% 8%;
+  @media screen and (max-width: 992px) {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
 }
 
-mat-card{
-  margin-left: 2%;
-  border-radius: 2vw;
-  max-width: 25%;
-  max-height: 2%;
-  font-family: Novito, sans-serif;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-bottom: 2%;
-  background: red;
+mat-card {
+  background: url('https://farm1.staticflickr.com/571/21101592188_f5da31c3f5_o.jpg') no-repeat center center fixed;
+  background-size: cover;
+  transform: scale(1);
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 60px 10px rgba(0, 0, 0, 0.75);
+  max-width: 40%;
+  padding: 40px;
+  border-radius: 0;
+  text-align: center;
+  color: #ffffff;
+  @media screen and (max-width: 992px) {
+    max-width: 100%;
+  }
 }
 
-.title{
-  font-family: Novito, sans-serif;
+.container .mat-card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1));
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
 
-.content{
-  text-align: justify;
-  text-overflow: ellipsis;
+.container .mat-card:hover {
+  transform: scale(1.1) !important;
+}
+
+.container .mat-card:hover:after {
+  opacity: 0;
+}
+
+.container .mat-card .content-article {
+  z-index: 2;
+  position: relative;
 }

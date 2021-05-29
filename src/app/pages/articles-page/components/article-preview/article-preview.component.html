@@ -1,7 +1,7 @@
 <div class="container">
-  <mat-card *ngFor = "let preview of articles" [class.mat-elevation-z2]="!isActive">
-    <h1 class="title">{{ preview.title }}</h1>
-    <h3 class="date">{{ preview.date | date: 'dd/mm/yyyy'}}</h3>
-    <p class="content">{{ preview.content}}</p>
+  <mat-card>
+    <h1 class="content-article">{{ article.title }}</h1>
+    <h3 class="content-article">{{ article.date | date: 'dd/mm/yyyy'}}</h3>
+    <p class="content-article">{{ article.content}}</p>
   </mat-card>
 </div>

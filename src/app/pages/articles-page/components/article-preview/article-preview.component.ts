@@ -7,46 +7,19 @@ import { IArticle } from '../../../../models/article';
   styleUrls: ['./article-preview.component.scss']
 })
 export class ArticlePreviewComponent implements OnInit {
-  articles: IArticle[] = [
+  article: IArticle =
     {
       id: '0',
       created: '',
       updated: '',
       title: 'Article 1',
-      content: 'This is a lot of words',
+      content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
       date: new Date('August 22 2001'),
       slug: 'https://www.google.com'
-    },
-    {
-      id: '1',
-      created: '',
-      updated: '',
-      title: 'Article 2',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra risus in ligula ullamcorper, nec posuere justo fringilla. Ut lacinia non lectus eu iaculis. Quisque felis sem, cursus eu massa in, eleifend viverra turpis. Proin eleifend pulvinar auctor. Nullam vitae sollicitudin leo, nec sollicitudin turpis. Cras et posuere eros. In gravida neque metus. Aenean condimentum, felis a sollicitudin tincidunt, tortor massa elementum urna, quis ultricies lorem nulla id mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent viverra, orci eget bibendum fringilla, lectus arcu volutpat urna, sed vulputate tortor mi eu nulla. Nullam fringilla erat id blandit pretium.',
-      date: new Date('August 22 2001'),
-      slug: 'https://www.google.com'
-    },
-    {
-      id: '2',
-      created: '',
-      updated: '',
-      title: 'Article 3',
-      content: 'This is a lot of words',
-      date: new Date('August 22 2001'),
-      slug: 'https://www.google.com'
-    },
-    {
-      id: '3',
-      created: '',
-      updated: '',
-      title: 'Article 4',
-      content: 'This is a lot of words',
-      date: new Date('August 22 2001'),
-      slug: 'https://www.google.com'
-    },
-  ];
+    }
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
 
