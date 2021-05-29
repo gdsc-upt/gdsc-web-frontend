@@ -1,3 +1,5 @@
 export interface IBase {
-  id: number;
+  id: string;
+  created: string;
+  updated: string;
 }

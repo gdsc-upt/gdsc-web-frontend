@@ -10,24 +10,32 @@ export class TechnologiesSectionComponent implements OnInit {
   offSet = 500;
 
   technologies: ITechnology[] = [{
-    id: 0,
+    id: '0',
     image: 'assets/angular.jpg',
-    name: 'Angular'
+    name: 'Angular',
+    created: '',
+    updated: ''
   },
     {
-      id: 1,
+      id: '1',
       image: 'assets/javascript.svg',
-      name: 'JavaScript'
+      name: 'JavaScript',
+      created: '',
+      updated: ''
     },
     {
-      id: 2,
+      id: '2',
       image: 'assets/python.jpg',
-      name: 'Python'
+      name: 'Python',
+      created: '',
+      updated: ''
     },
     {
-      id: 3,
+      id: '3',
       image: 'assets/android.svg',
-      name: 'Android Development'
+      name: 'Android Development',
+      created: '',
+      updated: ''
     },
   ];
   breakpoint: number;

@@ -12,31 +12,41 @@ export class MenuComponent {
       name: 'Home',
       type: 'button',
       link: '',
-      id: 1,
+      id: '1',
+      created: '',
+      updated: ''
     },
     {
       name: 'Contact',
       type: 'button',
       link: '/contact',
-      id: 2,
+      id: '2',
+      created: '',
+      updated: ''
     },
     {
       name: 'Articles',
       type: 'button',
       link: '/articles',
-      id: 3,
+      id: '3',
+      created: '',
+      updated: ''
     },
     {
       name: 'About Us',
       type: 'button',
       link: '/about-us',
-      id: 4,
+      id: '4',
+      created: '',
+      updated: ''
     },
     {
       name: 'Events',
       type: 'button',
       link: '/events',
-      id: 4,
+      id: '4',
+      created: '',
+      updated: ''
     },
   ];
 }
