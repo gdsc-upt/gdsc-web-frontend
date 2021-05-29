@@ -5,12 +5,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
+import { MatIconModule } from '@angular/material/icon';
 
 const components = [
   FooterComponent,
   MenuComponent,
-  TitleBarComponent
-];
+  TitleBarComponent,
+  BackToTopComponent,
+]
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ const components = [
   imports: [
     CommonModule,
     MatMenuModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   exports: [
     ...components
