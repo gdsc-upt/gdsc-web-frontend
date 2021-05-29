@@ -1,4 +1,5 @@
 #myBtn {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -9,7 +10,7 @@
   background-color: #D3D3D3;
   color: white;
   padding: 15px;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 #myBtn:hover {
