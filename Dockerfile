@@ -1,6 +1,4 @@
-#Stage 1
-
-FROM node:12-alpine as build
+FROM node:14-alpine as build
 
 RUN mkdir /app
 
@@ -14,8 +12,8 @@ COPY . /app
 
 RUN npm run build --prod
 
-#Stage 2
-
 FROM nginx:1.17.1-alpine
 
 COPY --from=build /app/dist/gdsc-web-frontend /usr/share/nginx/html
+
+LABEL org.opencontainers.image.source=https://github.com/dsc-upt/gdsc-web-frontend
