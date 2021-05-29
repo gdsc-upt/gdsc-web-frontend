@@ -9,8 +9,12 @@ import { Component, HostListener} from '@angular/core';
 export class BackToTopComponent {
 
   public goToTop(): void {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    try
+    {
+      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -23,3 +27,4 @@ export class BackToTopComponent {
     }
   }
 }
+
