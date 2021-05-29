@@ -1,8 +1,8 @@
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 25px;
+  right: 25px;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -11,9 +11,15 @@
   color: white;
   padding: 15px;
   border-radius: 10px;
+  @media screen and (max-width: 992px) {
+    padding: 5px;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
 #myBtn:hover {
   transition: background-color 0.2s ease-in-out;
   background-color: #555;
+  cursor: pointer;
 }
