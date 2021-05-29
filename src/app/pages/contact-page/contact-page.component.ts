@@ -15,7 +15,7 @@ export class ContactPageComponent implements OnInit {
   showMessageSoon() {
     setTimeout(() => {
       this.show = true;
-    }, 1000);
+    }, 100);
   }
   ngOnInit(): void {
   this.contactForm = new FormGroup({

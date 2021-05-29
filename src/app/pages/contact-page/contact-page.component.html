@@ -1,42 +1,38 @@
 <div class = "container">
-<div class="row">
-  <div class = "col-lg-6 col-md-12">
+  <div class ="imageContainer">
     <img src="/assets/contact.webp" alt="contact">
   </div>
-</div>
-  <div class="contact-container">
-  <form class = "form-container" [formGroup]="contactForm">
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Name">
-    </mat-form-field>
-
-  <div>
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Email">
-    </mat-form-field>
+  <div class="contactContainer">
+    <form [formGroup]="contactForm">
+      <div class="contact-area">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+      <div class="contact-area">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Email">
+        </mat-form-field>
+      </div>
+      <div class="contact-area">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Phone">
+        </mat-form-field>
+      </div>
+      <div class="contact-area">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Subject">
+        </mat-form-field>
+      </div>
+      <div class="contact-area">
+        <mat-form-field appearance="outline">
+          <mat-label>Your message</mat-label>
+          <textarea matInput rows="6" placeholder="Your Message"></textarea>
+        </mat-form-field>
+      </div>
+      <button (click)="showMessageSoon()" mat-raised-button class="btn btn-primary">Submit message</button>
+      <p *ngIf="show">The button works!</p>
+    </form>
   </div>
-  <div>
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Phone">
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Subject">
-    </mat-form-field>
-  </div>
 
-  <div>
-    <mat-form-field appearance="outline">
-      <mat-label>Your message</mat-label>
-      <textarea matInput rows= "5" cols= "40" placeholder="Your Message"></textarea>
-    </mat-form-field>
-  </div>
-    <button (click)="showMessageSoon()" mat-raised-button class="btn btn-primary">Submit message</button>
-    <p *ngIf="show">The button works!</p>
-
-
-  </form>
-
-  </div>
 </div>
