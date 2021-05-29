@@ -1,6 +1,6 @@
-import { Base } from './base';
+import { IBase } from './base';
 
-export interface Article extends Base {
+export interface IArticle extends IBase {
   title: string;
   content: string;
   date: Date;

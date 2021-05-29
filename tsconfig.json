@@ -18,7 +18,8 @@
     ],
     "paths": {
       "@gdsc/env/*": ["environments/*"],
-      "@gdsc/models/*": ["app/models/*"]
+      "@gdsc/models": ["app/models"],
+      "@gdsc/types": ["app/types"]
     }
   },
   "angularCompilerOptions": {

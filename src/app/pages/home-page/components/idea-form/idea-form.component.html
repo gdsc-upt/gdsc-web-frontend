@@ -2,9 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="column">
-        <h3>Have an awesome idea?</h3>
-        <h3>Let's brainstorm!</h3>
         <div class="code">
+          <h3>Have an awesome idea?</h3>
+          <h3>Let's brainstorm!</h3>
+          <app-title-bar></app-title-bar>
           <p>
             <b>Input:</b>
           </p>
@@ -24,7 +25,9 @@
             <mat-form-field appearance="outline">
               <mat-label>Name</mat-label>
               <input formControlName="name" required matInput>
-              <mat-error *ngIf="ideasForm.controls.name.getError('required')">This field is required</mat-error>
+              <mat-error *ngIf="ideasForm.controls.name.getError('required')">This field is
+                required
+              </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Enter your email</mat-label>
@@ -34,19 +37,26 @@
             <mat-form-field appearance="outline">
               <mat-label>Branch</mat-label>
               <input formControlName="branch" required matInput>
-              <mat-error *ngIf="ideasForm.controls.branch.getError('required')">This field is required</mat-error>
+              <mat-error *ngIf="ideasForm.controls.branch.getError('required')">This field is
+                required
+              </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Year</mat-label>
               <input formControlName="year" required matInput>
-              <mat-error *ngIf="ideasForm.controls.year.getError('required')">This field is required</mat-error>
+              <mat-error *ngIf="ideasForm.controls.year.getError('required')">This field is
+                required
+              </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Idea</mat-label>
               <textarea formControlName="idea" required matInput></textarea>
-              <mat-error *ngIf="ideasForm.controls.idea.getError('required')">This field is required</mat-error>
+              <mat-error *ngIf="ideasForm.controls.idea.getError('required')">This field is
+                required
+              </mat-error>
             </mat-form-field>
-            <button class="button button1" type="submit" [disabled]="!ideasForm.valid">Submit Idea</button>
+            <button class="button button1" type="submit" [disabled]="!ideasForm.valid">Submit Idea
+            </button>
           </form>
         </div>
       </div>

@@ -1,27 +1,21 @@
-import { Component } from '@angular/core';
-import { Faq } from '@gdsc/models/faq';
+import { Component, OnInit } from '@angular/core';
+import { IFaq } from '@gdsc/models';
+import { FaqsService } from '../../../../services/faqs.service';
 
 @Component({
   selector: 'app-faqs-section',
   templateUrl: './faqs-section.component.html',
   styleUrls: ['./faqs-section.component.scss'],
 })
-export class FaqsSectionComponent {
-  faqs: Faq[] = [
-    {
-      id: 0,
-      question: 'What is GDSC?',
-      answer: 'GDSC is a thing',
-    },
-    {
-      id: 1,
-      question: 'Why is GDSC?',
-      answer: 'GDSC is a why it is',
-    },
-    {
-      id: 2,
-      question: 'How is GDSC?',
-      answer: 'GDSC is a very well',
-    },
-  ];
+export class FaqsSectionComponent implements OnInit{
+  faqs: IFaq[];
+
+  constructor(
+    private readonly _faqsService: FaqsService
+  ) {
+  }
+
+  ngOnInit(): void {
+    this._faqsService.get().subscribe(faqs => this.faqs = faqs);
+  }
 }
