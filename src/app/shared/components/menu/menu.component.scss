@@ -1,74 +1,101 @@
-.container {
+.empty-place {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-bottom: 55px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
+.header-menu {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 10;
+  margin-top: -60px;
+  display: block;
+  box-shadow: 0 7px 13px 0 rgb(0 0 0 / 10%);
 }
 
-.navbar-brand {
-  display: inline-block;
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-}
-
-.navbar-brand, img {
-  max-width: 250px;
-  height: auto;
-}
-
-.navbar-collapse {
-  flex-grow: 1;
-  align-items: center;
-}
-
-.navbar-nav {
-  display: flex;
-  flex-direction: row;
-  padding-inline-start: 40px;
-}
-
-.ml-auto, .mx-auto {
-  margin-left: auto !important;
+.padding-menu-right {
+  padding-right: 2%;
+  @media(min-width: 600px) {
+    padding-right: 8%;}
 }
 
 #wrapper {
-  background-color: transparent;
-  height: 5vh;
-  display: block;
-}
+  @media only screen and (max-width: 870px) {
+    display: none;
+  }
 
-.menu {
-  float: right;
+  height: 2vh;
+  width: 100%;
   display: inline;
-  padding: 1vh 1vw 1vh 1vw;
-  highlight: none;
 }
 
-.menu:hover {
-  cursor: pointer;
-  color: #007bff;
-  transition: all 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-  .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
+.menuShit {
+  @media only screen and (min-width: 870px) {
+    float: right;
+    display: block;
+    padding: 5vh 1vw 3vh 1vw;
+    color: #716c80;
   }
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
+.color-hover {
+
+  transition: transform .2s;
+
+  &:hover {
+    color: #4284f7;
+    @media only screen and (min-width: 870px) {
+      transform: scale(1.35);
+    }
   }
+}
+
+.dsc-image {
+  float: left;
+  display: block;
+  position: fixed;
+  width: 40%;
+  max-width: 270px;
+  padding-top: 2vh;
+  padding-left: 2%;
+  @media(min-width: 600px) {
+  padding-left: 8%;}
+  @media(max-width: 400px) {
+    width: 50%;
+    padding-left: -2%;
+  }
+  @media(max-width: 400px) {
+    margin-top: -1vh;
+  }
+}
+
+.button-mobile {
+  @media (min-width: 870px) {
+    display: none;
+  }
+  display: block;
+  padding-top: 3vh;
+  padding-bottom: 1.78vh;
+  @media(min-width: 400px) {
+    margin-top: -1vh;
+    padding-bottom: 1vh;
+  }
+  z-index: 1000;
+}
+
+.mobile-padding {
+  display: block;
+  max-width: 100%;
+  @media(max-width: 400px) {
+    margin-top: -1vh;
+  }
+  @media(min-width: 400px) {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  @media(min-width: 550px) {
+    padding-top: 2vh;
+  }
+  float: right;
+  padding-right: 4px;
 }

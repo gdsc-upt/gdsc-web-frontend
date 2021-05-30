@@ -1,14 +1,22 @@
-<div class="container">
-  <div class="navbar">
-    <a class="navbar-brand" href="#">
-      <img src="/assets/dsclogo.png" alt="logo">
-    </a>
-    <div class="navbar-collapse">
-      <div class="navbar-nav ml-auto">
-        <div *ngFor="let item of menuItems" id="wrapper">
-          <div class="menu" [routerLink]="item.link">{{ item.name }}</div>
-        </div>
+<div class="empty-place"></div>
+<div class="header-menu">
+  <img src="../../../assets/dsclogo.png" class="dsc-image">
+  <div class="padding-menu-right">
+    <div class="mobile-padding">
+      <div class="button-mobile" [matMenuTriggerFor]="menu">
+        <mat-icon>format_align_center</mat-icon>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <div *ngFor="let item of menuItems">
+            <button mat-menu-item [routerLink]="item.link">{{ item.name }}</button>
+          </div>
+        </mat-menu>
+      </div>
+    </div>
+    <div *ngFor="let item of menuItems" id="wrapper">
+      <div class="menuShit">
+        <div class="color-hover" [routerLink]="item.link">{{ item.name }}</div>
       </div>
     </div>
   </div>
 </div>
+
