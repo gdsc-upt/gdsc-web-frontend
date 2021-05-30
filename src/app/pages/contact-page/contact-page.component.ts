@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatMenuModule} from '@angular/material/menu';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -19,11 +19,11 @@ export class ContactPageComponent implements OnInit {
   }
   ngOnInit(): void {
   this.contactForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    subject: new FormControl(''),
-    message: new FormControl(''),
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email, Validators.pattern('^\\S+@\\S+$')]),
+    phone: new FormControl('', [Validators.required, Validators.pattern('[0-9]{10}')]),
+    subject: new FormControl('', [Validators.required]),
+    message: new FormControl('', [Validators.required]),
   });
   }
 
