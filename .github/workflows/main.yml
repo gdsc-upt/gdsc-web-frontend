@@ -2,7 +2,7 @@ name: GDSC Web Frontend
 
 on:
   push:
-    branches: [ main, dev, docker ]
+    branches: [ main, dev ]
 
 jobs:
   build:
@@ -51,4 +51,4 @@ jobs:
           host: gdscupt.tech
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script: sudo /opt/deploy/_deploy.sh /home/docker/gdsc/gdsc-web-frontend-${{ env.BRANCH }}
+          script: sudo /home/docker/deploy/deploy.sh /home/docker/gdsc/frontend-${{ env.BRANCH }}

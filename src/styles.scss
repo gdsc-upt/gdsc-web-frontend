@@ -6,7 +6,12 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "JetBrains Mono", monospace;
+}
+
+mat-label,
+input, textarea, button, h1, h2, h3, h4, h5, h6 {
+  font-family: "JetBrains Mono", monospace;
 }
 
 $default_border_radius: 7px;
