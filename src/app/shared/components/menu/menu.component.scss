@@ -1,41 +1,44 @@
-.empty-place {
+.header-menu {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  padding: 25px 0;
+  background: #edf5ff;
+  border-radius: 20px;
   width: 100%;
-  padding-bottom: 55px;
+  //box-shadow: 0 7px 13px 0 rgb(0 0 0 / 10%);
 }
 
-.header-menu {
-  width: 100%;
-  position: fixed;
-  background-color: #fff;
-  z-index: 10;
-  margin-top: -60px;
-  display: block;
-  box-shadow: 0 7px 13px 0 rgb(0 0 0 / 10%);
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .padding-menu-right {
   padding-right: 2%;
   @media(min-width: 600px) {
-    padding-right: 8%;}
+    padding-right: 8%;
+  }
 }
 
-#wrapper {
+.wrapper {
   @media only screen and (max-width: 870px) {
     display: none;
   }
-
-  height: 2vh;
-  width: 100%;
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 70px;
 }
 
-.menuShit {
-  @media only screen and (min-width: 870px) {
-    float: right;
-    display: block;
-    padding: 5vh 1vw 3vh 1vw;
-    color: #716c80;
-  }
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  color: #716c80;
 }
 
 .color-hover {
@@ -51,22 +54,9 @@
 }
 
 .dsc-image {
-  float: left;
-  display: block;
-  position: fixed;
-  width: 40%;
+  width: 35%;
   max-width: 270px;
-  padding-top: 2vh;
-  padding-left: 2%;
-  @media(min-width: 600px) {
-  padding-left: 8%;}
-  @media(max-width: 400px) {
-    width: 50%;
-    padding-left: -2%;
-  }
-  @media(max-width: 400px) {
-    margin-top: -1vh;
-  }
+  padding-left: 70px;
 }
 
 .button-mobile {

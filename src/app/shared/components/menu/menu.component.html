@@ -1,19 +1,8 @@
-<div class="empty-place"></div>
 <div class="header-menu">
-  <img src="../../../assets/dsclogo.png" class="dsc-image">
-  <div class="padding-menu-right">
-    <div class="mobile-padding">
-      <div class="button-mobile" [matMenuTriggerFor]="menu">
-        <mat-icon>format_align_center</mat-icon>
-        <mat-menu #menu="matMenu" xPosition="before">
-          <div *ngFor="let item of menuItems">
-            <button mat-menu-item [routerLink]="item.link">{{ item.name }}</button>
-          </div>
-        </mat-menu>
-      </div>
-    </div>
-    <div *ngFor="let item of menuItems" id="wrapper">
-      <div class="menuShit">
+  <div class="content-container">
+    <div class="wrapper">
+      <div *ngFor="let item of menuItems" class="menuItem">
+        <mat-icon>{{ item.logoName }}</mat-icon>
         <div class="color-hover" [routerLink]="item.link">{{ item.name }}</div>
       </div>
     </div>
