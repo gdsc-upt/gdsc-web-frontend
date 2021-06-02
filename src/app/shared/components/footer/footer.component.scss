@@ -7,11 +7,12 @@ footer {
 }
 
 .icons {
-  width: 180px;
-  padding: 30px 0 50px;
+  padding: 20px 0;
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  align-content: center;
 }
 
 img {
@@ -53,8 +54,8 @@ p {
 
 .logo {
   margin-top: 20px;
-  height: 120px;
-  width: 300px;
+  width: 250px;
+  height: auto;
 }
 
 .icon {
@@ -88,8 +89,8 @@ p {
 
 @media screen and (max-width: 500px) {
   .logo {
-    height: 80px;
     width: 200px;
+    height: auto;
   }
 
   .icons {
