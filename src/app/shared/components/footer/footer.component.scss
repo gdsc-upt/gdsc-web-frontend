@@ -39,7 +39,6 @@ a img {
 
 .icons a:hover {
   transition-duration: 0.4s;
-  background-color: #007bff;
 
   .icon {
     transition-duration: 0.4s;
@@ -48,9 +47,17 @@ a img {
 
 }
 
+.icons .fb:hover {
+  background-color: #007bff;
+}
+
+.icons .github:hover {
+  background-color: #0d1117;
+}
+
 p {
   margin: 0 5px;
-  color: #818992;
+  color: #827F7E;
 }
 
 .logo {
