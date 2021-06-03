@@ -5,7 +5,7 @@ import { FaqsService } from '../../../../services/faqs.service';
 @Component({
   selector: 'app-faqs-section',
   templateUrl: './faqs-section.component.html',
-  styleUrls: ['./faqs-section.component.scss'],
+  styleUrls: ['./faqs-section.component.scss']
 })
 export class FaqsSectionComponent implements OnInit {
   faqs: IFaq[];

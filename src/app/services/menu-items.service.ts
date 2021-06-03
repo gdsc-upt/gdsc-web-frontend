@@ -12,7 +12,7 @@ export class MenuItemsService {
   constructor(private readonly _http: HttpClient) {
   }
 
-  public get(): Observable<IMenuItem[]> {
+  get(): Observable<IMenuItem[]> {
     const url = `${this._apiUrl}menu-items`;
     return this._http.get<IMenuItem[]>(url);
   }

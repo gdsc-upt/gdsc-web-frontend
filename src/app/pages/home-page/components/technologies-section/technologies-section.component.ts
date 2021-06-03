@@ -20,27 +20,27 @@ export class TechnologiesSectionComponent implements OnInit {
     created: '',
     updated: ''
   },
-    {
-      id: '1',
-      image: 'assets/javascript.svg',
-      name: 'JavaScript',
-      created: '',
-      updated: ''
-    },
-    {
-      id: '2',
-      image: 'assets/python.jpg',
-      name: 'Python',
-      created: '',
-      updated: ''
-    },
-    {
-      id: '3',
-      image: 'assets/android.svg',
-      name: 'Android Development',
-      created: '',
-      updated: ''
-    }
+  {
+    id: '1',
+    image: 'assets/javascript.svg',
+    name: 'JavaScript',
+    created: '',
+    updated: ''
+  },
+  {
+    id: '2',
+    image: 'assets/python.jpg',
+    name: 'Python',
+    created: '',
+    updated: ''
+  },
+  {
+    id: '3',
+    image: 'assets/android.svg',
+    name: 'Android Development',
+    created: '',
+    updated: ''
+  }
   ];
   breakpoint: number;
 
