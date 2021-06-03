@@ -9,7 +9,8 @@ import { IMenuItem } from '@gdsc/models';
 export class MenuItemsService {
   private readonly _apiUrl = '/v1/';
 
-  constructor(private readonly _http: HttpClient) { }
+  constructor(private readonly _http: HttpClient) {
+  }
 
   public get(): Observable<IMenuItem[]> {
     const url = `${this._apiUrl}menu-items`;

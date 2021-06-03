@@ -13,7 +13,7 @@ const components = [
   MenuComponent,
   TitleBarComponent,
   BackToTopComponent,
-]
+];
 
 @NgModule({
   declarations: [

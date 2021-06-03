@@ -11,7 +11,8 @@ export class FaqsService {
 
   constructor(
     private readonly _http: HttpClient
-  ) { }
+  ) {
+  }
 
   get(): Observable<IFaq[]> {
     const url = `${this._apiUrl}faqs`;

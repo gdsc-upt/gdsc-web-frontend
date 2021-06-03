@@ -7,7 +7,7 @@ import { FaqsService } from '../../../../services/faqs.service';
   templateUrl: './faqs-section.component.html',
   styleUrls: ['./faqs-section.component.scss'],
 })
-export class FaqsSectionComponent implements OnInit{
+export class FaqsSectionComponent implements OnInit {
   faqs: IFaq[];
 
   constructor(
