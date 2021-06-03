@@ -56,6 +56,10 @@ a img {
   background-color: #0d1117;
 }
 
+.madeWith mat-icon:hover {
+  transform: scale(1.2);
+}
+
 p {
   margin: 0 5px;
   color: #827F7E;
