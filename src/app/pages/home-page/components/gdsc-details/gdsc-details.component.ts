@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-gdsc-details',
   templateUrl: './gdsc-details.component.html',
-  styleUrls: ['./gdsc-details.component.css']
+  styleUrls: ['./gdsc-details.component.scss']
 })
 export class GdscDetailsComponent implements OnInit {
 
