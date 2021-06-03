@@ -8,6 +8,7 @@
 .mat-expansion-panel {
   transition: .5s;
   background-color: #f5f9ff;
+  color: black;
   border-radius: $default_border_radius;
 }
 
@@ -50,6 +51,28 @@
 }
 
 .faqsText {
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin: 20px 0 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .faq-panel {
+    padding: 30px 0;
+  }
+
+  .container {
+    padding: 50px 20px;
+  }
+
+  mat-expansion-panel .mat-expansion-panel-header {
+    font-size: 12px;
+  }
+
+  mat-expansion-panel .mat-panel-answer {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .faqsText {
+    margin: 20px 0;
+  }
 }
