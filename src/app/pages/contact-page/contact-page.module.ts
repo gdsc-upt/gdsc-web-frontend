@@ -8,12 +8,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const routes: Routes = [{path: '', component: ContactPageComponent}];
 
 @NgModule({
   declarations: [
-    ContactPageComponent
+    ContactPageComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,

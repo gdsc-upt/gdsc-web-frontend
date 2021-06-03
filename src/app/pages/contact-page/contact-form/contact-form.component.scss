@@ -1,0 +1,54 @@
+.form-container {
+  display: flex;
+}
+
+.imageContainer {
+  flex: 1;
+  box-sizing: border-box;
+  padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 1%;
+}
+
+.contactContainer {
+  flex: 1;
+  box-sizing: border-box;
+  padding-top: 5%;
+  padding-right: 15%;
+  padding-left: 1%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.btn {
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 5px;
+  position: relative;
+  text-transform: uppercase;
+  transition: color .15s;
+  padding: 5px 31px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4284f7;
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+}
+
