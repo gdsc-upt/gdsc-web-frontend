@@ -67,7 +67,7 @@ h3 {
   width: 50%;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .column {
     width: 100%;
   }
@@ -81,6 +81,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+  align-items: center;
 }
 
 .form {
@@ -90,7 +91,7 @@ h3 {
   padding: 40px;
   border-radius: 5px;
   text-align: center;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1200px) {
     margin-left: -40px;
     margin-right: -40px;
   }
@@ -98,9 +99,24 @@ h3 {
 
 p {
   font-size: 18px;
-  color: #818992;
   line-height: 1.6;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
+}
+
+.color-red {
+  color: #DB4437;
+}
+
+.color-yellow {
+  color: #F4B400;
+}
+
+.color-blue {
+  color: #4285F4;
+}
+
+.color-green {
+  color: #0F9D58;
 }
