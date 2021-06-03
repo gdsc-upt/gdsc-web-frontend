@@ -1,6 +1,6 @@
-import {Base} from './base';
+import { IBase } from './base';
 
-export interface Technology extends Base {
+export interface ITechnology extends IBase {
   image: string;
   name: string;
 }

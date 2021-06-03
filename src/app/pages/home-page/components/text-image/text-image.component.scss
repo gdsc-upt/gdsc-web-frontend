@@ -1,0 +1,50 @@
+.container {
+  width: 70%;
+  height: max-content;
+  overflow: hidden;
+  margin: 10px auto 50px auto;
+  position: relative;
+}
+
+.text-container {
+  width: max-content;
+  max-width: 50%;
+  height: auto;
+  font-size: large;
+  overflow: hidden;
+  text-align: justify;
+  margin-top: 100px;
+  color: dimgray;
+}
+
+.text-container h1 {
+  margin-bottom: 25px;
+  color: darkslategray;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.container img {
+  width: 50%;
+  height: auto;
+}
+
+.left img {
+  float: left;
+}
+
+.left div {
+  float: right;
+}
+
+.right img {
+  float: right;
+}
+
+.right div {
+  float: left;
+}
+
+.textImage {
+  margin-top: 25px;
+}

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContactPageComponent} from './contact-page.component';
-import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../../shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [{path: '', component: ContactPageComponent}];
 
 @NgModule({
   declarations: [
@@ -17,9 +20,12 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    RouterModule.forChild([{path: '', component: ContactPageComponent}]),
+    RouterModule.forChild(routes),
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    SharedModule
   ],
 })
-export class ContactPageModule { }
+export class ContactPageModule {
+}

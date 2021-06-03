@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { EPositions } from '@gdsc/types';
 
 @Component({
-  selector: 'app-homepage',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.scss'],
 })
-export class HomePageComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class HomePageComponent {
+  positions = EPositions;
 }

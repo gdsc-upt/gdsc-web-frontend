@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "form-container">
   <div class ="imageContainer">
     <img src="/assets/contact.webp" alt="contact">
   </div>
@@ -55,5 +55,30 @@
       <p *ngIf="show">The button works!</p>
     </form>
   </div>
-
 </div>
+<div class="header-container">
+  <div class="text-container">
+    <h2>Let's talk!</h2>
+    <app-title-bar></app-title-bar>
+    <p class="contactText"> Do you have any questions? Or maybe you'd like to discuss about a
+      partnership?</p>
+    <p>Get in touch with us!</p>
+  </div>
+</div>
+<section class="contact-info-area">
+  <div class="container">
+    <button class="contact-info-box">
+      <a href="mailto:dsc.upt@gmail.com">
+        <mat-icon>alternate_email</mat-icon>
+        <h3>Email</h3>
+        <p>dsc.upt@gmail.com</p>
+      </a>
+    </button>
+    <button class="contact-info-box">
+      <mat-icon>location_on</mat-icon>
+      <h3>Address</h3>
+      <p>Timisoara, Romania</p>
+    </button>
+  </div>
+</section>
+<app-back-to-top></app-back-to-top>

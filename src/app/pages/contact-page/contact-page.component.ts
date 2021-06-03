@@ -3,9 +3,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact',
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.css']
+  styleUrls: ['./contact-page.component.scss'],
 })
 export class ContactPageComponent implements OnInit {
   contactForm: FormGroup;

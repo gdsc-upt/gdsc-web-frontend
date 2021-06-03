@@ -1,21 +1,42 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule} from '@angular/router';
-import {HomePageComponent} from './home-page.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { HomePageComponent } from './home-page.component';
 import { TextImageComponent } from './components/text-image/text-image.component';
 import { FaqsSectionComponent } from './components/faqs-section/faqs-section.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { TechnologiesSectionComponent } from './components/technologies-section/technologies-section.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
+import { IdeaFormComponent } from './components/idea-form/idea-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from '../../shared/shared.module';
+
+const routes: Routes = [{path: '', component: HomePageComponent}];
 
 @NgModule({
   declarations: [
     HomePageComponent,
     TextImageComponent,
     FaqsSectionComponent,
+    IdeaFormComponent,
+    TechnologiesSectionComponent,
+    TechnologyCardComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
-    RouterModule.forChild([{path: '', component: HomePageComponent}]),
+    RouterModule.forChild(routes),
     MatExpansionModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatGridListModule,
   ]
 })
-export class HomePageModule { }
+export class HomePageModule {
+}
