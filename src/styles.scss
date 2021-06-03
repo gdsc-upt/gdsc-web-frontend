@@ -1,12 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use '~@angular/material' as mat;
+
+$gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
+
+@include mat.core($gdsc-typography);
+
 html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button, body {
+  font-family: "JetBrains Mono", monospace;
 }
 
 $default_border_radius: 7px;

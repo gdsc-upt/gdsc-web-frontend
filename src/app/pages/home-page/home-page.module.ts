@@ -24,7 +24,7 @@ const routes: Routes = [{path: '', component: HomePageComponent}];
     FaqsSectionComponent,
     IdeaFormComponent,
     TechnologiesSectionComponent,
-    TechnologyCardComponent
+    TechnologyCardComponent,
   ],
   imports: [
     SharedModule,

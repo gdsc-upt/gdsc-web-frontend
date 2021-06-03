@@ -103,13 +103,13 @@ a {
 
 h2 {
   color: #007bff;
-  font: 35px Nunito, sans-serif;
+  font-size: 35px;
   text-align: center;
 }
 
 .text-container {
   text-align: center;
-  margin:10px 15px 0;
+  margin: 10px 15px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -118,4 +118,3 @@ h2 {
 .contactText {
   margin-top: 20px;
 }
-
