@@ -1,43 +1,60 @@
 import { Component, OnInit } from '@angular/core';
-import { Technology } from '../../../../models/technology';
+import { ITechnology } from '@gdsc/models';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-technologies-section',
   templateUrl: './technologies-section.component.html',
-  styleUrls: ['./technologies-section.component.css']
+  styleUrls: ['./technologies-section.component.scss']
 })
 export class TechnologiesSectionComponent implements OnInit {
-  public offSet = 500;
+  offSet = 500;
+  _counter = -1;
+  audioSubject = new BehaviorSubject<HTMLAudioElement>(null);
+  counter$ = this.audioSubject.asObservable();
 
-  technologies: Technology[] = [{
-    id: 0,
+  technologies: ITechnology[] = [{
+    id: '0',
     image: 'assets/angular.jpg',
-    name: 'Angular'
+    name: 'Angular',
+    created: '',
+    updated: ''
   },
-    {
-      id: 1,
-      image: 'assets/javascript.svg',
-      name: 'JavaScript'
-    },
-    {
-      id: 2,
-      image: 'assets/python.jpg',
-      name: 'Python'
-    },
-    {
-      id: 3,
-      image: 'assets/android.svg',
-      name: 'Android Development'
-    },
+  {
+    id: '1',
+    image: 'assets/javascript.svg',
+    name: 'JavaScript',
+    created: '',
+    updated: ''
+  },
+  {
+    id: '2',
+    image: 'assets/python.jpg',
+    name: 'Python',
+    created: '',
+    updated: ''
+  },
+  {
+    id: '3',
+    image: 'assets/android.svg',
+    name: 'Android Development',
+    created: '',
+    updated: ''
+  }
   ];
-  public breakpoint: number;
+  breakpoint: number;
 
   ngOnInit(): void {
     this.breakpoint = (innerWidth / this.offSet);
+
+    this.counter$.subscribe(async audio => {
+      this._counter = this._counter + 1;
+      if (this._counter > 1 && this._counter % 4 === 0) await audio.play();
+      else audio?.pause();
+    });
   }
 
   onResize(event): void {
     this.breakpoint = (event.target.innerWidth / this.offSet);
   }
-
 }

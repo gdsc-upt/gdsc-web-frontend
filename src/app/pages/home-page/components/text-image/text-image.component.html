@@ -1,7 +1,8 @@
 <div class='container' [ngClass]="{ right: position === 'right', left: position === 'left' }">
   <div class='text-container'>
     <h1>{{ title }}</h1>
-    {{ text }}
+    <app-title-bar></app-title-bar>
+    <p class="textImage">{{ text }}</p>
   </div>
   <img [src]='image' alt='Students'/>
 </div>

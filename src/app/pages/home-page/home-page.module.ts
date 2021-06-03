@@ -9,27 +9,36 @@ import { GdscDetailsComponent } from './components/gdsc-details/gdsc-details.com
 import { TechnologiesSectionComponent } from './components/technologies-section/technologies-section.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
+import { IdeaFormComponent } from './components/idea-form/idea-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from '../../shared/shared.module';
 
-const routes:
-  Routes = [{path: '', component: HomePageComponent}];
+const routes: Routes = [{path: '', component: HomePageComponent}];
 
 @NgModule({
   declarations: [
     HomePageComponent,
     TextImageComponent,
     FaqsSectionComponent,
+    IdeaFormComponent,
     GdscDetailsComponent,
     TechnologiesSectionComponent,
     TechnologyCardComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
     RouterModule.forChild(routes),
     MatExpansionModule,
-    MatGridListModule
-  ],
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatGridListModule,
+  ]
 })
-
-
 export class HomePageModule {
 }
