@@ -11,3 +11,19 @@ img {
   height: 75px;
   border: 1px solid #edf5ff;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-left: 15px;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

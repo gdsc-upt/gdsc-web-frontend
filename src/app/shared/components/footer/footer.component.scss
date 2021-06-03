@@ -1,11 +1,115 @@
-img {
-  height: 30px;
-  border-radius: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  background-image: url('~assets/footer-bg.png')
 }
 
-footer {
-  text-align: center;
+.icons {
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+img {
+  height: 30px;
+}
+
+a img {
+  color: #818992;
   background-color: white;
+  margin-top: 10px;
+}
+
+.icons a {
+  border: 1px solid #818992;
+  border-radius: 30px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.icons a:hover {
+  transition-duration: 0.4s;
+  transform: scale(1.2);
+
+  .icon {
+    transition-duration: 0.4s;
+    filter: invert(1);
+  }
+
+}
+
+.icons .fb:hover {
+  background-color: #007bff;
+}
+
+.icons .github:hover {
+  background-color: #0d1117;
+}
+
+.madeWith mat-icon:hover {
+  transform: scale(1.2);
+}
+
+p {
+  margin: 0 5px;
+  color: #827F7E;
+}
+
+.logo {
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+}
+
+.icon {
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 13px;
+  display: inline-block;
+  filter: invert(42%);
+}
+
+.icon-github {
+  background-image: url("~assets/github.svg");
+}
+
+.icon-fb {
+  background-image: url("~assets/fb.svg");
+}
+
+.color {
+  color: red;
+}
+
+.madeWith {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+
+  .icons {
+    padding: 20px 0 25px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
