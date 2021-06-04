@@ -9,15 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
 
   contactForm: FormGroup;
-  constructor() { }
-  show = false;
-  // tslint:disable-next-line:typedef
-  showMessageSoon() {
-    setTimeout(() => {
-      this.show = true;
-    }, 100);
-  }
-  ngOnInit(): void {
+
+  buildForm() {
     this.contactForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email, Validators.pattern('^\\S+@\\S+$')]),
@@ -25,6 +18,11 @@ export class ContactFormComponent implements OnInit {
       subject: new FormControl('', [Validators.required]),
       message: new FormControl('', [Validators.required]),
     });
+  }
+
+  ngOnInit(): void {
+    this.buildForm();
+
   }
 
 }

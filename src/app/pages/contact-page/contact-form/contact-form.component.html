@@ -6,7 +6,8 @@
     <form [formGroup]="contactForm">
       <div class="contact-area">
         <mat-form-field appearance="outline">
-          <input formControlName="name" matInput placeholder="Name">
+          <input formControlName="name" matInput>
+          <mat-label>Name</mat-label>
           <mat-error *ngIf="contactForm.controls.name.getError('required')">
             This field is required!
           </mat-error>
@@ -14,7 +15,8 @@
       </div>
       <div class="contact-area">
         <mat-form-field appearance="outline">
-          <input formControlName="email" matInput placeholder="Email">
+          <input formControlName="email" matInput>
+          <mat-label>Email</mat-label>
           <mat-error *ngIf="contactForm.controls.email.getError('required')">
             This field is required!
           </mat-error>
@@ -25,7 +27,8 @@
       </div>
       <div class="contact-area">
         <mat-form-field appearance="outline">
-          <input formControlName="phone" matInput placeholder="Phone">
+          <input formControlName="phone" matInput>
+          <mat-label>Phone</mat-label>
           <mat-error *ngIf="contactForm.controls.phone.getError('required')">
             This field is required!
           </mat-error>
@@ -36,7 +39,8 @@
       </div>
       <div class="contact-area">
         <mat-form-field appearance="outline">
-          <input formControlName="subject" matInput placeholder="Subject">
+          <input formControlName="subject" matInput>
+          <mat-label>Subject</mat-label>
           <mat-error *ngIf="contactForm.controls.subject.getError('required')">
             This field is required!
           </mat-error>
@@ -44,15 +48,14 @@
       </div>
       <div class="contact-area">
         <mat-form-field formControlName="message" appearance="outline">
+          <textarea matInput rows="6"></textarea>
           <mat-label>Your message</mat-label>
-          <textarea matInput rows="6" placeholder="Your Message"></textarea>
           <mat-error *ngIf="contactForm.controls.message.getError('required')">
             This field is required!
           </mat-error>
         </mat-form-field>
       </div>
-      <button (click)="showMessageSoon()" mat-raised-button class="btn btn-primary">Submit message</button>
-      <p *ngIf="show">The button works!</p>
+      <button mat-raised-button class="btn btn-primary">Submit message</button>
     </form>
   </div>
 </div>
