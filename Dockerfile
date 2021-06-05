@@ -12,7 +12,7 @@ RUN npm install ci
 
 COPY . /app
 
-RUN npm run build --configuration=$BRANCH
+RUN npm run build:$BRANCH --prod
 
 FROM nginx:1.17.1-alpine
 

@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "dev": "ng serve --proxy-config proxy/proxy.dev.conf.json",
-    "build": "ng build",
+    "build:main": "ng build --configuration=main",
+    "build:dev": "ng build --configuration=dev",
     "lint": "ng lint"
   },
   "private": true,
