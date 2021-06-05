@@ -9,6 +9,13 @@ import { MenuItemsService } from '../../../services/menu-items.service';
 })
 export class MenuComponent implements OnInit {
   menuItems: IMenuItem[];
+  menuIcons: string[] = [
+    'home',
+    'phone',
+    'article',
+    'groups',
+    'event',
+  ]
 
   constructor(private readonly menuItemsService: MenuItemsService) {
   }
