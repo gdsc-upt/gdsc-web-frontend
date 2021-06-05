@@ -1,0 +1,55 @@
+.icons {
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.icons a {
+  border: 1px solid #818992;
+  border-radius: 30px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.icons a:hover {
+  transition-duration: 0.4s;
+  transform: scale(1.2);
+
+  .icon {
+    transition-duration: 0.4s;
+    filter: invert(1);
+  }
+
+}
+
+.icons .fb:hover {
+  background-color: #007bff;
+}
+
+.icons .github:hover {
+  background-color: #0d1117;
+}
+
+.icon {
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  margin: 13px;
+  display: inline-block;
+  filter: invert(42%);
+}
+
+.icon-github {
+  background-image: url("~assets/github.svg");
+}
+
+.icon-fb {
+  background-image: url("~assets/fb.svg");
+}

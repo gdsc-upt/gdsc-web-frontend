@@ -6,6 +6,8 @@ $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 @include mat.core($gdsc-typography);
 
+@import "src/assets/styles/icons";
+
 html, body {
   height: 100%;
 }
