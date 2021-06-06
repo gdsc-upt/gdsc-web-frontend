@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IMenuItem } from '@gdsc/models';
-import { environment } from '@gdsc/env/environment';
+import { environment } from '@gdsc/env';
 
 @Injectable({
   providedIn: 'root'

@@ -14,8 +14,8 @@ export class MenuComponent implements OnInit {
     'phone',
     'article',
     'groups',
-    'event',
-  ]
+    'event'
+  ];
 
   constructor(private readonly menuItemsService: MenuItemsService) {
   }

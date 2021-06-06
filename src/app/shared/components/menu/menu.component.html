@@ -1,11 +1,10 @@
-<div class="center">
-  <div class="header-menu">
-    <div class="wrapper">
-      <div *ngFor="let item of menuItems; let i = index" class="menuItem color-hover">
-        <mat-icon [routerLink]="item.link">{{ menuIcons[i] }}</mat-icon>
-        <div [routerLink]="item.link">{{ item.name }}</div>
+<div class='center'>
+  <div class='header-menu'>
+    <div class='wrapper'>
+      <div *ngFor='let item of menuItems; let i = index' class='menuItem color-hover'>
+        <mat-icon [routerLink]='item.link'>{{ menuIcons[i] }}</mat-icon>
+        <div [routerLink]='item.link'>{{ item.name }}</div>
       </div>
     </div>
   </div>
 </div>
-
