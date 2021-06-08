@@ -1,27 +1,25 @@
-.button {
-  border: none;
-  color: white;
-  padding: 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+@import "src/styles";
+
+.formButton {
+  background-color: white;
+  color: #007bff;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 10px;
   width: 100%;
-}
-
-.button1 {
-  background-color: white;
-  color: black;
+  text-align: center;
   border: 2px solid #007bff;
+  padding: 16px;
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
 }
 
-.button1:hover {
+.formButton:hover {
   background-color: #007bff;
   color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 mat-form-field {
@@ -29,7 +27,6 @@ mat-form-field {
 }
 
 h3 {
-  font-size: 35px;
   font-weight: 700;
   margin: 15px 0 20px;
   line-height: 40px;
@@ -43,80 +40,37 @@ h3 {
   padding: 100px 0;
 }
 
-*, :after, :before {
-  box-sizing: border-box;
-}
-
-.idea-form-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: -1;
-}
-
 .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 70%;
   padding: 0 15px;
   margin: 0 auto;
-}
-
-.column {
-  float: left;
-  width: 50%;
-}
-
-@media screen and (max-width: 1200px) {
-  .column {
-    width: 100%;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: center;
   }
-  .code {
-    margin-left: -40px;
-    margin-right: -40px;
-  }
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-  align-items: center;
 }
 
 .form {
   background: #fff;
-  margin-left: 20px;
   box-shadow: 5px 7px 30px rgb(72 73 121);
   padding: 40px;
   border-radius: 5px;
   text-align: center;
-  @media screen and (max-width: 1200px) {
-    margin-left: -40px;
-    margin-right: -40px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
   }
 }
 
 p {
-  font-size: 18px;
   line-height: 1.6;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  @extend .largeText;
 }
 
-.color-red {
-  color: #DB4437;
-}
-
-.color-yellow {
-  color: #F4B400;
-}
-
-.color-blue {
-  color: #4285F4;
-}
-
-.color-green {
-  color: #0F9D58;
+mat-label {
+  @extend .largeText;
 }
