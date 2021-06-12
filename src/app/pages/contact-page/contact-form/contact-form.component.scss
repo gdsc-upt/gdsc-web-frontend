@@ -1,29 +1,34 @@
 .form-container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .imageContainer {
-  flex: 1;
+  height: 500px;
+  display: block;
   box-sizing: border-box;
-  padding-top: 5%;
-  padding-left: 15%;
-  padding-right: 1%;
+  padding: 10px;
 }
 
 .contactContainer {
-  flex: 1;
   box-sizing: border-box;
-  padding-top: 5%;
-  padding-right: 15%;
-  padding-left: 1%;
+  padding: 10px;
+  width: 400px;
 }
 
 img {
+  height: 100%;
   max-width: 100%;
 }
 
-.mat-form-field {
+mat-form-field {
   width: 100%;
+}
+
+mat-error {
+  margin: 5px 0;
 }
 
 .btn {
@@ -41,10 +46,21 @@ img {
 }
 
 @media screen and (max-width: 990px) {
-  .container {
+  .form-container {
     flex-direction: column;
-    width: auto;
-    height: auto;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .contactContainer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px)  {
+  .contactContainer {
+   width: 100%;
+  }
+}
+
 

@@ -30,3 +30,8 @@ $default_border_radius: 7px;
     color: white !important;
   }
 }
+
+
+mat-form-field.noPadding .mat-form-field-wrapper {
+  padding-bottom: 10px;
+}
