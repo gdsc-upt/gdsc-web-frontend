@@ -1,4 +1,4 @@
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-back-to-top',
@@ -8,9 +8,8 @@ import { Component, HostListener} from '@angular/core';
 
 export class BackToTopComponent {
 
-  public goToTop(): void {
-    try
-    {
+  goToTop(): void {
+    try {
       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
     } catch (e) {
       window.scrollTo(0, 0);
@@ -19,12 +18,11 @@ export class BackToTopComponent {
 
   @HostListener('window:scroll', ['$event'])
 
-  public showOnScroll(): void {
+  showOnScroll(): void {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("myBtn").style.display = "block";
+      document.getElementById('myBtn').style.display = 'block';
     } else {
-      document.getElementById("myBtn").style.display = "none";
+      document.getElementById('myBtn').style.display = 'none';
     }
   }
 }
-

@@ -1,50 +1,48 @@
 .container {
-  width: 70%;
-  height: max-content;
-  overflow: hidden;
-  margin: 10px auto 50px auto;
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
   position: relative;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-container {
-  width: max-content;
-  max-width: 50%;
-  height: auto;
-  font-size: large;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   text-align: justify;
-  margin-top: 100px;
   color: dimgray;
-}
+  align-items: center;
 
-.text-container h1 {
-  margin-bottom: 25px;
-  color: darkslategray;
-  font-weight: bold;
-  font-size: xx-large;
+  .title {
+    text-align: center;
+  }
 }
 
 .container img {
-  width: 50%;
-  height: auto;
+  display: block;
+  margin: 0 25px;
+  max-width: 40%;
 }
 
-.left img {
-  float: left;
+.left {
+  flex-direction: row-reverse;
 }
 
-.left div {
-  float: right;
-}
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    margin: 20px auto;
+  }
 
-.right img {
-  float: right;
-}
+  .text-container {
+    align-items: center;
+  }
 
-.right div {
-  float: left;
-}
-
-.textImage {
-  margin-top: 25px;
+  .container img {
+    max-width: 90%;
+  }
 }

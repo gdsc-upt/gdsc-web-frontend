@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsPageComponent } from './about-us-page.component';
 import { SharedModule } from '../../shared/shared.module';
 
-const routes: Routes = [{path: '', component: AboutUsPageComponent}];
+const routes: Routes = [{ path: '', component: AboutUsPageComponent }];
 
 @NgModule({
   declarations: [AboutUsPageComponent],

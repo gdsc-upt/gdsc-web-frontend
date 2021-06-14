@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-idea-form',
   templateUrl: './idea-form.component.html',
-  styleUrls: ['./idea-form.component.scss'],
+  styleUrls: ['./idea-form.component.scss']
 })
 export class IdeaFormComponent implements OnInit {
   hide = true;
@@ -28,5 +28,3 @@ export class IdeaFormComponent implements OnInit {
     return this.ideasForm.controls.email.hasError('email') ? 'Not a valid email' : '';
   }
 }
-
-

@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../../shared/shared.module';
 
-const routes: Routes = [{path: '', component: HomePageComponent}];
+const routes: Routes = [{ path: '', component: HomePageComponent }];
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ const routes: Routes = [{path: '', component: HomePageComponent}];
     IdeaFormComponent,
     GdscDetailsComponent,
     TechnologiesSectionComponent,
-    TechnologyCardComponent,
+    TechnologyCardComponent
   ],
   imports: [
     SharedModule,
@@ -37,7 +37,7 @@ const routes: Routes = [{path: '', component: HomePageComponent}];
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule,
+    MatGridListModule
   ]
 })
 export class HomePageModule {

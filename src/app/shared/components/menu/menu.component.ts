@@ -5,10 +5,17 @@ import { MenuItemsService } from '../../../services/menu-items.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
   menuItems: IMenuItem[];
+  menuIcons: string[] = [
+    'home',
+    'phone',
+    'article',
+    'groups',
+    'event'
+  ];
 
   constructor(private readonly menuItemsService: MenuItemsService) {
   }

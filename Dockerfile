@@ -1,5 +1,7 @@
 FROM node:14-alpine as build
 
+ARG BRANCH=main
+
 RUN mkdir /app
 
 WORKDIR /app
@@ -10,7 +12,7 @@ RUN npm install ci
 
 COPY . /app
 
-RUN npm run build --prod
+RUN npm run build:$BRANCH --prod
 
 FROM nginx:1.17.1-alpine
 

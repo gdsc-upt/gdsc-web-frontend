@@ -4,4 +4,5 @@ export interface IMenuItem extends IBase {
   name: string;
   type: string;
   link: string;
+  logoName: string;
 }

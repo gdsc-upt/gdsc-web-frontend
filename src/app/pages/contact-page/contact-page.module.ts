@@ -5,11 +5,11 @@ import { ContactPageComponent } from './contact-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../../shared/shared.module';
 
-const routes: Routes = [{path: '', component: ContactPageComponent}];
+const routes: Routes = [{ path: '', component: ContactPageComponent }];
 
 @NgModule({
   declarations: [ContactPageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), MatIconModule, SharedModule],
+  imports: [CommonModule, RouterModule.forChild(routes), MatIconModule, SharedModule]
 })
 export class ContactPageModule {
 }
