@@ -1,8 +1,8 @@
 <div [ngClass]="{ right: position === 'right', left: position === 'left' }" class='container'>
   <div class='text-container'>
-    <h1>{{ title }}</h1>
+    <h2 class="title">{{ title }}</h2>
     <app-title-bar></app-title-bar>
-    <p class='textImage'>{{ text }}</p>
+    <p class="largeText">{{ text }}</p>
   </div>
-  <img [src]='image' alt='Students' />
+  <img [src]='image' alt='Students'/>
 </div>
