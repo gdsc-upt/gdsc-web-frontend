@@ -1,5 +1,5 @@
-<div class = "form-container">
-  <div class ="imageContainer">
+<div class="form-container">
+  <div class="imageContainer">
     <img src="/assets/contact.webp" alt="contact">
   </div>
   <div class="contactContainer">
@@ -27,18 +27,6 @@
       </div>
       <div class="contact-area">
         <mat-form-field class="noPadding" appearance="outline">
-          <input formControlName="phone" matInput>
-          <mat-label>Phone</mat-label>
-          <mat-error *ngIf="contactForm.controls.phone.getError('required')">
-            This field is required!
-          </mat-error>
-          <mat-error *ngIf="contactForm.controls.phone.getError('pattern')">
-            Invalid phone number!
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="contact-area">
-        <mat-form-field class="noPadding" appearance="outline">
           <input formControlName="subject" matInput>
           <mat-label>Subject</mat-label>
           <mat-error *ngIf="contactForm.controls.subject.getError('required')">
@@ -48,9 +36,9 @@
       </div>
       <div class="contact-area">
         <mat-form-field class="noPadding" appearance="outline">
-          <textarea formControlName="message" matInput rows="6"></textarea>
+          <textarea formControlName="text" matInput rows="6"></textarea>
           <mat-label>Your message</mat-label>
-          <mat-error *ngIf="contactForm.controls.message.getError('required')">
+          <mat-error *ngIf="contactForm.controls.text.getError('required')">
             This field is required!
           </mat-error>
         </mat-form-field>
