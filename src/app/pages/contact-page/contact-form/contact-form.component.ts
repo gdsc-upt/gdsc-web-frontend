@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../../services/contact.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { tryCatch } from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,7 +14,8 @@ export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
 
   constructor(
-    private readonly _contactService: ContactService
+    private readonly _contactService: ContactService,
+    private readonly _snackBar: MatSnackBar
   ) {
   }
 
@@ -28,7 +31,19 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildForm();
-
   }
 
+  async submit(): Promise<void> {
+    if(!this.contactForm.valid) {
+      this._snackBar.open('The form is not valid!','Close');
+      return;
+    }
+    try {
+      await this._contactService.post(this.contactForm.value);
+      this.contactForm.reset();
+      this._snackBar.open('Success!','Close');
+    }catch (err) {
+      this._snackBar.open('Oops! PERCIC couldn\'t send your gift!');
+    }
+  }
 }

@@ -71,7 +71,15 @@ $default_border_radius: 7px;
   color: #0F9D58;
 }
 
-
 mat-form-field.noPadding .mat-form-field-wrapper {
   padding-bottom: 10px;
+}
+
+.mat-snack-bar-container {
+  color: #4284f7;
+  background: white;
+}
+
+.mat-simple-snackbar-action {
+  color: red;
 }

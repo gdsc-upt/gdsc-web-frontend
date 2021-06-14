@@ -9,6 +9,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const routes: Routes = [{ path: '', component: ContactPageComponent }];
 
@@ -26,7 +27,8 @@ const routes: Routes = [{ path: '', component: ContactPageComponent }];
     MatFormFieldModule,
     FormsModule,
     MatIconModule,
-    SharedModule
+    SharedModule,
+    MatSnackBarModule
   ],
 })
 export class ContactPageModule {
