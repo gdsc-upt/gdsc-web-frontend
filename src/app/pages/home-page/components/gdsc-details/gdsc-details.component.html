@@ -1,19 +1,18 @@
 <div class="container">
   <div class="text-container">
-    <div>
-      <h1>{{ title }}</h1>
-      <app-title-bar></app-title-bar>
-      <p>{{ text }}</p>
-    </div>
-    <div class="icons">
-      <a href="https://www.facebook.com/dsc-upt/" class="fb">
-        <span class="icon icon-fb"></span>
-      </a>
-      <a href="https://github.com/dsc-upt" class="github">
-        <span class="icon icon-github"></span>
-      </a>
-    </div>
+    <h2 class="title">{{ title }}</h2>
+    <app-title-bar></app-title-bar>
+    <p class="largeText">{{ text }}</p>
+  </div>
+  <div class="icons">
+    <a href="https://www.facebook.com/dsc-upt/" class="fb">
+      <span class="icon icon-fb"></span>
+    </a>
+    <a href="https://github.com/dsc-upt" class="github">
+      <span class="icon icon-github"></span>
+    </a>
   </div>
   <div class="image-container">
-    <img style="object-fit: scale-down" [src]="image" alt="Home"></div>
+    <img style="object-fit: scale-down" [src]="image" alt="Home">
+  </div>
 </div>
