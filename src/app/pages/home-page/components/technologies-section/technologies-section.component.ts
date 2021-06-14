@@ -49,8 +49,11 @@ export class TechnologiesSectionComponent implements OnInit {
 
     this.counter$.subscribe(async audio => {
       this._counter = this._counter + 1;
-      if (this._counter > 1 && this._counter % 4 === 0) await audio.play();
-      else audio?.pause();
+      if (this._counter > 1 && this._counter % 4 === 0) {
+        await audio.play();
+      } else {
+        audio?.pause();
+      }
     });
   }
 

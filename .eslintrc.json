@@ -108,7 +108,14 @@
             "SwitchCase": 0
           }
         ],
-        "quotes": ["error", "single"]
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "arrow-parens": [
+          "error",
+          "as-needed"
+        ]
       }
     },
     {

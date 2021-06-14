@@ -12,8 +12,8 @@ const components = [
   FooterComponent,
   MenuComponent,
   TitleBarComponent,
-  BackToTopComponent,
-]
+  BackToTopComponent
+];
 
 @NgModule({
   declarations: [

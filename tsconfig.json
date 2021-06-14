@@ -17,7 +17,7 @@
       "dom"
     ],
     "paths": {
-      "@gdsc/env/*": ["environments/*"],
+      "@gdsc/env": ["environments"],
       "@gdsc/models": ["app/models"],
       "@gdsc/types": ["app/types"]
     }

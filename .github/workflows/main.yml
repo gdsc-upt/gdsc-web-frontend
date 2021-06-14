@@ -38,6 +38,7 @@ jobs:
           secrets: GIT_AUTH_TOKEN=${{ secrets.CR_PAT }}
           push: true
           tags: ghcr.io/dsc-upt/gdsc-web-frontend-${{ env.BRANCH }}:latest
+          build-args: BRANCH=${{ env.BRANCH }}
 
   deploy:
     needs: build

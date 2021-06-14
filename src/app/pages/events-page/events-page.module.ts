@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { EventsPageComponent } from './events-page.component';
 import { SharedModule } from '../../shared/shared.module';
 
-const routes: Routes = [{path: '', component: EventsPageComponent}];
+const routes: Routes = [{ path: '', component: EventsPageComponent }];
 
 @NgModule({
   declarations: [EventsPageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule]
 })
 export class EventsPageModule {
 }

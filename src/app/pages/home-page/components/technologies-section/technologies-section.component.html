@@ -6,10 +6,10 @@
       (click)='audioSubject.next(bega)'>GDSC UPT</span></p>
   </div>
   <mat-grid-list
-    [cols]='breakpoint'
-    rowHeight='2:1'
     (window:resize)='onResize($event)'
+    [cols]='breakpoint'
     [gutterSize]="'30px'"
+    rowHeight='2:1'
   >
     <mat-grid-tile *ngFor='let technology of technologies' class='mat-panel'>
       <app-technology-card [technology]='technology' class='card'></app-technology-card>

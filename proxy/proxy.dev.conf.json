@@ -1,6 +1,6 @@
 {
   "/v1/*": {
-    "target": "http://dev.api.gdscupt.tech",
+    "target": "https://dev.api.gdscupt.tech",
     "secure": true,
     "logLevel": "debug",
     "changeOrigin": true
