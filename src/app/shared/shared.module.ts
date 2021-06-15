@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 const components = [
   FooterComponent,
@@ -17,7 +18,8 @@ const components = [
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    ComingSoonComponent
   ],
   imports: [
     CommonModule,
@@ -25,9 +27,10 @@ const components = [
     RouterModule,
     MatIconModule
   ],
-  exports: [
-    ...components
-  ]
+    exports: [
+        ...components,
+        ComingSoonComponent
+    ]
 })
 export class SharedModule {
 }
