@@ -18,7 +18,16 @@ button, body {
   font-family: "JetBrains Mono", monospace;
 }
 
+section {
+  padding: 80px;
+  @media screen and (max-width: 1200px) {
+    padding: 40px;
+  }
+}
+
 $default_border_radius: 7px;
+$light-blue: #edf5ff;
+$blue: #007bff;
 
 .faq-panel .mat-expansion-panel-body {
   padding: 0 !important;
@@ -69,4 +78,12 @@ $default_border_radius: 7px;
 
 .color-green {
   color: #0F9D58;
+}
+
+.blue-bg {
+  background-color: $light-blue;
+  box-shadow: 740px 0 0 $light-blue,
+  1520px 0 0 $light-blue,
+  -740px 0 0 $light-blue,
+  -1520px 0 0 $light-blue;
 }

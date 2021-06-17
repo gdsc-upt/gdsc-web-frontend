@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Position } from '@gdsc/types';
 
-
 @Component({
   selector: 'app-text-image-component',
   templateUrl: './text-image.component.html',

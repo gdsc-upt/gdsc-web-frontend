@@ -7,7 +7,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./idea-form.component.scss']
 })
 export class IdeaFormComponent implements OnInit {
-  hide = true;
   ideasForm: FormGroup;
 
   ngOnInit(): void {
