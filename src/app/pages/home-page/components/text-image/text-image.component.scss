@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  width: 90%;
   margin: 20px auto;
   position: relative;
   padding: 20px 0;
@@ -8,8 +7,19 @@
   justify-content: center;
 }
 
+.col-md-6 {
+  width: 50%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.px-2 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 .text-container {
-  margin: 0 40px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -25,7 +35,7 @@
 .container img {
   display: block;
   margin: 0 25px;
-  max-width: 40%;
+  max-width: 90%;
 }
 
 .left {
