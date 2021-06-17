@@ -5,28 +5,26 @@
   flex-direction: row;
   align-items: center;
   align-content: center;
-}
 
-.icons a {
-  border: 1px solid #818992;
-  border-radius: 30px;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  text-align: center;
-  margin: 0 20px;
-}
+  a {
+    border: 1px solid #818992;
+    border-radius: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
 
-.icons a:hover {
-  transition-duration: 0.4s;
-  transform: scale(1.2);
+    &:hover {
+      transition-duration: 0.4s;
+      transform: scale(1.2);
 
-  .icon {
-    transition-duration: 0.4s;
-    filter: invert(1);
+      .icon {
+        transition-duration: 0.4s;
+        filter: invert(1);
+      }
+    }
   }
-
 }
 
 .icons .fb:hover {

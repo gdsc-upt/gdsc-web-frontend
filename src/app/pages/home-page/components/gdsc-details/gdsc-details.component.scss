@@ -1,6 +1,4 @@
 .container {
-  display: flex;
-  width: 90%;
   margin: 20px auto;
   position: relative;
   padding: 20px 0;
@@ -9,13 +7,12 @@
 }
 
 .text-container {
-  margin: 0 40px;
-  display: flex;
   flex-direction: column;
   overflow: hidden;
   text-align: justify;
   color: dimgray;
   align-items: center;
+  font-size: 18px;
 
   .title {
     text-align: center;
