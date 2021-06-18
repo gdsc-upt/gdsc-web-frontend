@@ -53,4 +53,4 @@ jobs:
           port: 69
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script: sudo /home/docker/deploy/deploy.sh /home/docker/gdsc/frontend-${{ env.BRANCH }}
+          script: /home/docker/deploy/deploy.sh /home/docker/gdsc/frontend-${{ env.BRANCH }}
