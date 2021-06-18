@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {MatMenuModule} from '@angular/material/menu';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   templateUrl: './contact-page.component.html',
