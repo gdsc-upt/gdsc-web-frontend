@@ -9,7 +9,7 @@
 
 .col-md-6 {
   width: 50%;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
   }
 }
@@ -42,7 +42,7 @@
   flex-direction: row-reverse;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .container {
     flex-direction: column;
     margin: 20px auto;

@@ -7,11 +7,13 @@
 }
 
 .text-container {
+  display: flex;
   flex-direction: column;
   overflow: hidden;
   text-align: justify;
   color: dimgray;
   align-items: center;
+  justify-content: center;
   font-size: 18px;
 
   .title {
