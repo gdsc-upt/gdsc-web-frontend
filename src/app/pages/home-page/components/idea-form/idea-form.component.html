@@ -59,7 +59,7 @@
         </mat-error>
       </mat-form-field>
 
-      <button class='form-button' type='submit' [disabled]='!ideasForm.valid'>
+      <button class='form-button' type='submit' [disabled]='!ideasForm.valid' (click)="submit()">
         <span>SUBMIT IDEA</span>
       </button>
     </form>
