@@ -1,8 +1,8 @@
-<div class='container'>
+<section class='blue-bg'>
   <div class='text-container'>
     <h1>Technologies</h1>
     <app-title-bar></app-title-bar>
-    <p class='techSection'>The are some of the technologies we focus on at <span
+    <p class='tech-section'>The are some of the technologies we focus on at <span
       (click)='audioSubject.next(bega)'>GDSC UPT</span></p>
   </div>
   <mat-grid-list
@@ -15,7 +15,7 @@
       <app-technology-card [technology]='technology' class='card'></app-technology-card>
     </mat-grid-tile>
   </mat-grid-list>
-</div>
+</section>
 
 <audio #bega>
   <source src='https://cdn.timis.tech/sa-curga-bere-pe-bega.mp3' type='audio/mpeg'>

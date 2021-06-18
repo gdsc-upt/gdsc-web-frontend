@@ -1,10 +1,5 @@
 @import 'src/styles';
 
-.container {
-  background-color: #edf5ff;
-  padding: 75px;
-}
-
 .mat-expansion-panel {
   transition: .5s;
   background-color: #f5f9ff;
@@ -59,7 +54,7 @@
     padding: 30px 0;
   }
 
-  .container {
+  section {
     padding: 50px 20px;
   }
 

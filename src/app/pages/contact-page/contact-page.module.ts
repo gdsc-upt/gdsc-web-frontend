@@ -1,15 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { ContactPageComponent } from './contact-page.component';
-import { MatIconModule } from '@angular/material/icon';
+import {ContactPageComponent} from './contact-page.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const routes: Routes = [{ path: '', component: ContactPageComponent }];
 
 @NgModule({
-  declarations: [ContactPageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), MatIconModule, SharedModule]
+  declarations: [
+    ContactPageComponent,
+    ContactFormComponent
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    RouterModule.forChild(routes),
+    MatFormFieldModule,
+    FormsModule,
+    MatIconModule,
+    SharedModule,
+    MatSnackBarModule
+  ],
 })
 export class ContactPageModule {
 }

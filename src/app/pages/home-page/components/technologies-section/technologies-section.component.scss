@@ -1,3 +1,5 @@
+@import "src/styles";
+
 .mat-panel {
   background-color: white;
   border-radius: 7px;
@@ -9,19 +11,9 @@
   width: 100% !important;
 }
 
-.tech-component {
-  padding: 0;
-  background-color: darkgrey;
-}
-
-.container {
-  background-color: #edf5ff;
-  padding: 80px !important;
-}
-
 .mat-panel:hover {
   transition: 0.3s ease-in-out !important;
-  box-shadow: 0 0 5px #007bff !important;
+  box-shadow: 0 0 5px $blue !important;
   stroke-dashoffset: -480 !important;
   transform: translateY(-10px);
 }
@@ -33,7 +25,7 @@
   flex-direction: column;
 }
 
-.techSection {
+.tech-section {
   margin-top: 20px;
   margin-bottom: 50px;
 }
