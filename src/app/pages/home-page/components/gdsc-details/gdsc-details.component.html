@@ -1,0 +1,21 @@
+<div class='container d-flex'>
+  <div>
+    <div class='text-container'>
+      <h2 class='title'>{{ title }}</h2>
+      <app-title-bar></app-title-bar>
+      <p class='largeText'>{{ text }}</p>
+    </div>
+
+    <div class='icons'>
+      <a href='https://www.facebook.com/dsc-upt/' class='fb'>
+        <span class='icon icon-fb'></span>
+      </a>
+      <a href='https://github.com/dsc-upt' class='github ml-15'>
+        <span class='icon icon-github'></span>
+      </a>
+    </div>
+  </div>
+  <div class='image-container'>
+    <img style='object-fit: scale-down' [src]='image' alt='Home'>
+  </div>
+</div>
