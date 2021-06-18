@@ -23,7 +23,7 @@ export class IdeaFormComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       branch: new FormControl('', [Validators.required]),
       year: new FormControl('', [Validators.required]),
-      idea: new FormControl('', [Validators.required])
+      description: new FormControl('', [Validators.required])
     });
   }
 
