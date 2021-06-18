@@ -13,34 +13,49 @@ export class TechnologiesSectionComponent implements OnInit {
   audioSubject = new BehaviorSubject<HTMLAudioElement>(null);
   counter$ = this.audioSubject.asObservable();
 
-  technologies: ITechnology[] = [{
-    id: '0',
-    image: 'assets/angular.jpg',
-    name: 'Angular',
-    created: '',
-    updated: ''
-  },
-  {
-    id: '1',
-    image: 'assets/javascript.svg',
-    name: 'JavaScript',
-    created: '',
-    updated: ''
-  },
-  {
-    id: '2',
-    image: 'assets/python.jpg',
-    name: 'Python',
-    created: '',
-    updated: ''
-  },
-  {
-    id: '3',
-    image: 'assets/android.svg',
-    name: 'Android Development',
-    created: '',
-    updated: ''
-  }
+  technologies: ITechnology[] = [
+    {
+      id: '0',
+      image: 'assets/angular.png',
+      name: 'Angular',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '2',
+      image: 'assets/django-logo.png',
+      name: 'Django',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '3',
+      image: 'assets/kotlin.png',
+      name: 'Kotlin',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '4',
+      image: 'assets/NET_Core_Logo.png',
+      name: 'ASP .NET Core',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '5',
+      image: 'assets/docker.png',
+      name: 'Docker',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '5',
+      image: 'assets/reactjs-logo.png',
+      name: 'React',
+      created: '',
+      updated: ''
+    }
   ];
   breakpoint: number;
 

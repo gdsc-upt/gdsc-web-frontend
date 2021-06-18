@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 0;
+}
+
+img {
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #edf5ff;
+}
+
+p {
+  padding-left: 10px;
+  margin: 7px 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 7.5px 0;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  p {
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 748px) {
+  p {
+    margin: 30px 0;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+  img {
+    margin-left: 20px;
+  }
+}

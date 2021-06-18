@@ -66,6 +66,16 @@ $blue: #007bff;
   }
 }
 
+.mediumText {
+  font-size: 15px;
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 10px;
+  }
+}
+
 .color-red {
   color: #DB4437;
 }

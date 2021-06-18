@@ -4,7 +4,7 @@ import { ITechnology } from '@gdsc/models';
 @Component({
   selector: 'app-technology-card',
   templateUrl: './technology-card.component.html',
-  styleUrls: ['./technology-card.component.css']
+  styleUrls: ['./technology-card.component.scss']
 })
 export class TechnologyCardComponent {
   @Input() technology: ITechnology;
