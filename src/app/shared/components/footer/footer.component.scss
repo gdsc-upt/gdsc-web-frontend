@@ -17,7 +17,7 @@ a img {
   margin-top: 10px;
 }
 
-.madeWith mat-icon:hover {
+.made-with mat-icon:hover {
   transform: scale(1.2);
 }
 
@@ -27,16 +27,18 @@ p {
 }
 
 app-logo {
-  width: 25%;
-  font-size: 13px;
   margin-top: 40px;
+
+  @media screen and (max-width: 720px) {
+    font-size: 13px;
+  }
 }
 
 .color {
   color: red;
 }
 
-.madeWith {
+.made-with {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,11 +47,6 @@ app-logo {
 }
 
 @media screen and (max-width: 500px) {
-  .logo {
-    width: 200px;
-    height: auto;
-  }
-
   .icons {
     padding: 20px 0 25px;
   }

@@ -1,4 +1,5 @@
 .logo {
+  width: 25em;
   text-align: center;
 
   .sub-logo {
@@ -7,6 +8,14 @@
     filter: blur(0.5px);
     font-family: GoogleSans, sans-serif;
     font-weight: lighter;
+  }
+}
+
+.small {
+  width: 15em;
+
+  .sub-logo {
+    font-size: 0.9em;
   }
 }
 

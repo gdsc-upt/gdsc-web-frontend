@@ -32,15 +32,26 @@
 }
 
 @media screen and (max-width: 700px) {
+  .content,
   .container {
     flex-direction: column;
+  }
+
+  .text-container {
+    align-items: center;
+  }
+
+  .container img {
+    max-width: 90%;
   }
 }
 
 app-logo {
-  width: 33%;
   padding-bottom: 50px;
-  font-size: 15.5px;
+
+  @media screen and (max-width: 720px) {
+    font-size: 10px;
+  }
 }
 
 .content {

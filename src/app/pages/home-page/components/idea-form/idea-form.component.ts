@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { IdeasService } from '../../../../services/ideas.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -9,6 +9,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./idea-form.component.scss']
 })
 export class IdeaFormComponent implements OnInit {
+  @ViewChild(FormGroupDirective) private readonly _formDirective: FormGroupDirective;
+
   ideasForm: FormGroup;
 
   constructor(
@@ -41,9 +43,9 @@ export class IdeaFormComponent implements OnInit {
     }
     try {
       await this._ideasService.post(this.ideasForm.value);
-      this.ideasForm.reset();
+      this._formDirective.resetForm();
       this._snackBar.open('Success!', 'Close');
-    } catch(err) {
+    } catch (err) {
       this._snackBar.open('Oops! Delivery of your message failed successfully!', 'Close');
     }
   }
