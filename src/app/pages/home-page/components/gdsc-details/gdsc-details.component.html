@@ -1,21 +1,24 @@
-<section class='container d-flex'>
-  <div class='col-md-6 px-2'>
-    <div class='text-container'>
-      <h2 class='heading'>{{ title }}</h2>
-      <app-title-bar></app-title-bar>
-      <p class='large-text'>{{ text }}</p>
-    </div>
+<section class='container flex-column'>
+  <app-logo></app-logo>
+  <div class='d-flex content'>
+    <div class='col-md-6 px-2'>
+      <div class='text-container'>
+        <h2 class='heading'>{{ title }}</h2>
+        <app-title-bar></app-title-bar>
+        <p class='large-text'>{{ text }}</p>
+      </div>
 
-    <div class='icons'>
-      <a href='https://www.facebook.com/dsc-upt/' class='fb'>
-        <span class='icon icon-fb'></span>
-      </a>
-      <a href='https://github.com/dsc-upt' class='github ml-15'>
-        <span class='icon icon-github'></span>
-      </a>
+      <div class='icons'>
+        <a href='https://www.facebook.com/dsc-upt/' class='fb'>
+          <span class='icon icon-fb'></span>
+        </a>
+        <a href='https://github.com/dsc-upt' class='github ml-15'>
+          <span class='icon icon-github'></span>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class='image-container col-md-6 px-2'>
-    <img style='object-fit: scale-down' [src]='image' alt='Home'>
+    <div class='image-container col-md-6 px-2'>
+      <img style='object-fit: scale-down' [src]='image' alt='Home'>
+    </div>
   </div>
 </section>

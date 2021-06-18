@@ -8,6 +8,11 @@ $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 @import "src/assets/styles/icons";
 
+@font-face {
+  font-family: GoogleSans;
+  src: url("/assets/font/google") format("truetype");
+}
+
 html, body {
   height: 100%;
 }
@@ -25,6 +30,10 @@ section {
   @media screen and (max-width: 1200px) {
     padding: 40px 0;
   }
+}
+
+img {
+  width: 100%;
 }
 
 $default_border_radius: 7px;
@@ -115,14 +124,18 @@ mat-form-field.noPadding .mat-form-field-wrapper {
   -1520px 0 0 $light-blue;
 }
 
+.flex-column,
 .d-flex {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .ml-15 {
   margin-left: 15px;
 }
-
 
 .form-button {
   background-color: white;

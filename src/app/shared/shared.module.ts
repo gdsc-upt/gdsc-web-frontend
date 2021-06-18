@@ -8,18 +8,20 @@ import { RouterModule } from '@angular/router';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 const components = [
   FooterComponent,
   MenuComponent,
   TitleBarComponent,
-  BackToTopComponent
+  BackToTopComponent,
+  ComingSoonComponent,
+  LogoComponent
 ];
 
 @NgModule({
   declarations: [
-    ...components,
-    ComingSoonComponent
+    ...components
   ],
   imports: [
     CommonModule,
@@ -27,10 +29,9 @@ const components = [
     RouterModule,
     MatIconModule
   ],
-    exports: [
-        ...components,
-        ComingSoonComponent
-    ]
+  exports: [
+    ...components
+  ]
 })
 export class SharedModule {
 }
