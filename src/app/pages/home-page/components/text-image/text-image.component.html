@@ -1,11 +1,11 @@
-<div [ngClass]="{ right: position === 'right', left: position === 'left' }" class='container'>
+<section [ngClass]="{ right: position === 'right', left: position === 'left' }" class='container pink-bg'>
   <div class='text-container col-md-6 px-2'>
-    <h2 class='title'>{{ title }}</h2>
+    <h2 class='heading'>{{ title }}</h2>
     <app-title-bar></app-title-bar>
-    <p class='largeText'>{{ text }}</p>
+    <p class='large-text'>{{ text }}</p>
   </div>
 
   <div class='col-md-6 px-2'>
     <img [src]='image' alt='Students' />
   </div>
-</div>
+</section>

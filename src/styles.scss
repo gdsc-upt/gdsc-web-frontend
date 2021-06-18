@@ -21,15 +21,16 @@ button, body {
 }
 
 section {
-  padding: 80px;
+  padding: 80px 0;
   @media screen and (max-width: 1200px) {
-    padding: 40px;
+    padding: 40px 0;
   }
 }
 
 $default_border_radius: 7px;
 $light-blue: #edf5ff;
 $blue: #007bff;
+$pink: #f9fafc;
 
 .faq-panel .mat-expansion-panel-body {
   padding: 0 !important;
@@ -42,11 +43,12 @@ $blue: #007bff;
   }
 }
 
-.smallText {
+.small-text {
   font-size: 10px;
 }
 
-.title {
+.heading {
+  color: $blue;
   font-size: 35px;
   @media screen and (max-width: 900px) {
     font-size: 25px;
@@ -56,7 +58,7 @@ $blue: #007bff;
   }
 }
 
-.largeText {
+.large-text {
   font-size: 18px;
   @media screen and (max-width: 900px) {
     font-size: 15px;
@@ -119,4 +121,41 @@ mat-form-field.noPadding .mat-form-field-wrapper {
 
 .ml-15 {
   margin-left: 15px;
+}
+
+
+.form-button {
+  background-color: white;
+  color: $blue;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid $blue;
+  padding: 16px;
+
+  span {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.form-button:hover {
+  background-color: $blue;
+  color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.col-md-6 {
+  width: 50%;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.px-2 {
+  padding-right: 10px;
+  padding-left: 10px;
 }

@@ -1,22 +1,18 @@
+@import "src/styles";
+
 .container {
   display: flex;
-  margin: 20px auto;
   position: relative;
-  padding: 20px 0;
   align-items: center;
   justify-content: center;
 }
 
-.col-md-6 {
-  width: 50%;
-  @media screen and (max-width: 700px) {
-    width: 100%;
-  }
-}
-
-.px-2 {
-  padding-right: 10px;
-  padding-left: 10px;
+.pink-bg {
+  background-color: $pink;
+  box-shadow: 740px 0 0 $pink,
+  1520px 0 0 $pink,
+  -740px 0 0 $pink,
+  -1520px 0 0 $pink;
 }
 
 .text-container {
@@ -27,7 +23,7 @@
   color: dimgray;
   align-items: center;
 
-  .title {
+  .heading {
     text-align: center;
   }
 }

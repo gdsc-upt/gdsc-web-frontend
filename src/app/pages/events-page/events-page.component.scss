@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.imageContainer {
+.image-container {
   flex: 1;
   box-sizing: border-box;
   padding-top: 5%;
@@ -10,7 +10,7 @@
   padding-right: 1%;
 }
 
-.contactContainer {
+.contact-container {
   flex: 1;
   box-sizing: border-box;
   padding-top: 5%;
@@ -51,4 +51,3 @@ img {
     height: auto;
   }
 }
-

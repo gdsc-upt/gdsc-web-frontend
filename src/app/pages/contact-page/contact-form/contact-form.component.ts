@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../../services/contact.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { tryCatch } from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,7 +9,6 @@ import { tryCatch } from 'rxjs/internal-compatibility';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-
   contactForm: FormGroup;
 
   constructor(
@@ -43,7 +41,7 @@ export class ContactFormComponent implements OnInit {
       this.contactForm.reset();
       this._snackBar.open('Success!','Close');
     }catch (err) {
-      this._snackBar.open('Oops! PERCIC couldn\'t send your gift!');
+      this._snackBar.open('Oops! Delivery of your message failed successfully!', 'Close');
     }
   }
 }

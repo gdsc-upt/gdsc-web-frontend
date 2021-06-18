@@ -1,9 +1,8 @@
 .container {
-  margin: 20px auto;
   position: relative;
-  padding: 20px 0;
   align-items: center;
   justify-content: center;
+  height: 85vh;
 }
 
 .text-container {
@@ -16,7 +15,7 @@
   justify-content: center;
   font-size: 18px;
 
-  .title {
+  .heading {
     text-align: center;
   }
 }

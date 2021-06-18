@@ -1,11 +1,11 @@
-<div class="form-container">
-  <div class="imageContainer">
-    <img src="/assets/contact.webp" alt="contact">
+<section class="form-container">
+  <div class='image-container'>
+    <img src="assets/contact.webp" alt="contact">
   </div>
-  <div class="contactContainer">
+  <div class='contact-container'>
     <form [formGroup]="contactForm">
       <div class="contact-area">
-        <mat-form-field class="noPadding" appearance="outline">
+        <mat-form-field appearance="outline">
           <input formControlName="name" matInput>
           <mat-label>Name</mat-label>
           <mat-error *ngIf="contactForm.controls.name.getError('required')">
@@ -14,7 +14,7 @@
         </mat-form-field>
       </div>
       <div class="contact-area">
-        <mat-form-field class="noPadding" appearance="outline">
+        <mat-form-field appearance="outline">
           <input formControlName="email" matInput>
           <mat-label>Email</mat-label>
           <mat-error *ngIf="contactForm.controls.email.getError('required')">
@@ -26,7 +26,7 @@
         </mat-form-field>
       </div>
       <div class="contact-area">
-        <mat-form-field class="noPadding" appearance="outline">
+        <mat-form-field appearance="outline">
           <input formControlName="subject" matInput>
           <mat-label>Subject</mat-label>
           <mat-error *ngIf="contactForm.controls.subject.getError('required')">
@@ -35,7 +35,7 @@
         </mat-form-field>
       </div>
       <div class="contact-area">
-        <mat-form-field class="noPadding" appearance="outline">
+        <mat-form-field appearance="outline">
           <textarea formControlName="text" matInput rows="6"></textarea>
           <mat-label>Your message</mat-label>
           <mat-error *ngIf="contactForm.controls.text.getError('required')">
@@ -43,7 +43,7 @@
           </mat-error>
         </mat-form-field>
       </div>
-      <button (click)="submit()" mat-raised-button class="contactFormBtn">Submit message</button>
+      <button (click)="submit()" class='form-button'><span>Submit message</span></button>
     </form>
   </div>
-</div>
+</section>
