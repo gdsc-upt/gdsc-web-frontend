@@ -50,6 +50,7 @@ jobs:
           BRANCH: ${{ needs.build.outputs.BRANCH }}
         with:
           host: gdscupt.tech
+          port: 69
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: sudo /home/docker/deploy/deploy.sh /home/docker/gdsc/frontend-${{ env.BRANCH }}
