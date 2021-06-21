@@ -3,7 +3,7 @@ import { IMenuItem } from '@gdsc/models';
 import { MenuItemsService } from '../../../services/menu-items.service';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'gdsc-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
@@ -17,11 +17,11 @@ export class MenuComponent implements OnInit {
     'event'
   ];
 
-  constructor(private readonly menuItemsService: MenuItemsService) {
+  constructor(private readonly _menuItemsService: MenuItemsService) {
   }
 
   ngOnInit(): void {
-    this.menuItemsService.get().subscribe(menuItems => {
+    this._menuItemsService.get().subscribe(menuItems => {
       this.menuItems = menuItems;
     });
   }

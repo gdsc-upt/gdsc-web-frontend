@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-gdsc-details',
-  templateUrl: './gdsc-details.component.html',
-  styleUrls: ['./gdsc-details.component.scss']
+  selector: 'gdsc-details-banner',
+  templateUrl: './details-banner.component.html',
+  styleUrls: ['./details-banner.component.scss']
 })
-export class GdscDetailsComponent {
+export class DetailsBannerComponent {
   title = 'Who are we?';
   text = 'Google Developer Student Clubs are university based community groups for ' +
     'students interested in Google developer technologies. ' +

@@ -22,7 +22,7 @@
         "@angular-eslint/component-selector": [
           "error",
           {
-            "prefix": "app",
+            "prefix": "gdsc",
             "style": "kebab-case",
             "type": "element"
           }
@@ -30,7 +30,7 @@
         "@angular-eslint/directive-selector": [
           "error",
           {
-            "prefix": "app",
+            "prefix": "gdsc",
             "style": "camelCase",
             "type": "attribute"
           }

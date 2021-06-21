@@ -3,7 +3,7 @@ import { IFaq } from '@gdsc/models';
 import { FaqsService } from '../../../../services/faqs.service';
 
 @Component({
-  selector: 'app-faqs-section',
+  selector: 'gdsc-faqs-section',
   templateUrl: './faqs-section.component.html',
   styleUrls: ['./faqs-section.component.scss']
 })

@@ -4,7 +4,7 @@ import { IdeasService } from '../../../../services/ideas.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-idea-form',
+  selector: 'gdsc-idea-form',
   templateUrl: './idea-form.component.html',
   styleUrls: ['./idea-form.component.scss']
 })

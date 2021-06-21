@@ -3,7 +3,7 @@ import { ITechnology } from '@gdsc/models';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-technologies-section',
+  selector: 'gdsc-technologies-section',
   templateUrl: './technologies-section.component.html',
   styleUrls: ['./technologies-section.component.scss']
 })
