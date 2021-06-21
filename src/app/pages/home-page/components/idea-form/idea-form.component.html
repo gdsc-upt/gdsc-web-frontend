@@ -58,9 +58,7 @@
         </mat-error>
       </mat-form-field>
 
-      <button class='form-button' type='submit' [disabled]='!ideasForm.valid' (click)="submit()">
-        <span>SUBMIT IDEA</span>
-      </button>
+      <gdsc-submit-button [label]="'SUBMIT IDEA'" [disabled]="!ideasForm.valid" (action)="submit()"></gdsc-submit-button>
     </form>
   </div>
 </section>
