@@ -43,7 +43,7 @@
           </mat-error>
         </mat-form-field>
       </div>
-      <button (click)="submit()" class='form-button'><span>Submit message</span></button>
+      <gdsc-submit-button [label]="'SUBMIT MESSAGE'" [disabled]="!contactForm.valid" (action)="submit()"></gdsc-submit-button>
     </form>
   </div>
 </section>
