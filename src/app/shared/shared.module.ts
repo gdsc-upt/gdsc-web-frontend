@@ -9,6 +9,7 @@ import { BackToTopComponent } from './components/back-to-top/back-to-top.compone
 import { MatIconModule } from '@angular/material/icon';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 
 const components = [
   FooterComponent,
@@ -16,12 +17,14 @@ const components = [
   TitleBarComponent,
   BackToTopComponent,
   ComingSoonComponent,
-  LogoComponent
+  LogoComponent,
+  SubmitButtonComponent
 ];
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    SubmitButtonComponent
   ],
   imports: [
     CommonModule,

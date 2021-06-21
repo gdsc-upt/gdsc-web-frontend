@@ -1,0 +1,25 @@
+@import 'src/styles';
+
+.form-button {
+  background-color: white;
+  color: $blue;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid $blue;
+  padding: 16px;
+
+  span {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.form-button:hover {
+  background-color: $blue;
+  color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
