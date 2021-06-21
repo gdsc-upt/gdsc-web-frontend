@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { ContactService } from '../../../services/contact.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -9,6 +9,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
+  @ViewChild(FormGroupDirective) private readonly _formDirective: FormGroupDirective;
+
   contactForm: FormGroup;
 
   constructor(
@@ -23,7 +25,7 @@ export class ContactFormComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email,
         Validators.pattern('^\\S+@\\S+$')]),
       subject: new FormControl('', [Validators.required]),
-      text: new FormControl('', [Validators.required]),
+      text: new FormControl('', [Validators.required])
     });
   }
 
@@ -32,15 +34,15 @@ export class ContactFormComponent implements OnInit {
   }
 
   async submit(): Promise<void> {
-    if(!this.contactForm.valid) {
-      this._snackBar.open('The form is not valid!','Close');
+    if (!this.contactForm.valid) {
+      this._snackBar.open('The form is not valid!', 'Close');
       return;
     }
     try {
       await this._contactService.post(this.contactForm.value);
-      this.contactForm.reset();
-      this._snackBar.open('Success!','Close');
-    }catch (err) {
+      this._formDirective.resetForm();
+      this._snackBar.open('Success!', 'Close');
+    } catch (err) {
       this._snackBar.open('Oops! Delivery of your message failed successfully!', 'Close');
     }
   }

@@ -30,10 +30,10 @@ section {
   @media screen and (max-width: 1200px) {
     padding: 40px 0;
   }
-}
 
-img {
-  width: 100%;
+  @media (max-width: 768px) {
+    padding: 40px 20px
+  }
 }
 
 $default_border_radius: 7px;

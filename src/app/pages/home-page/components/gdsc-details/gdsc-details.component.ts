@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./gdsc-details.component.scss']
 })
 export class GdscDetailsComponent {
-  title = 'Google Developer Student Clubs UPT';
+  title = 'Who are we?';
   text = 'Google Developer Student Clubs are university based community groups for ' +
     'students interested in Google developer technologies. ' +
     'Students from all undergraduate or graduate programs with an interest ' +
