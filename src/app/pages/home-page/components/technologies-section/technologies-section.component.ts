@@ -16,42 +16,42 @@ export class TechnologiesSectionComponent implements OnInit {
   technologies: ITechnology[] = [
     {
       id: '0',
-      image: 'assets/angular.png',
+      image: 'assets/images/angular-logo.png',
       name: 'Angular',
       created: '',
       updated: ''
     },
     {
       id: '2',
-      image: 'assets/django-logo.png',
+      image: 'assets/images/django-logo.png',
       name: 'Django',
       created: '',
       updated: ''
     },
     {
       id: '3',
-      image: 'assets/kotlin.png',
+      image: 'assets/images/kotlin-logo.png',
       name: 'Kotlin',
       created: '',
       updated: ''
     },
     {
       id: '4',
-      image: 'assets/NET_Core_Logo.png',
+      image: 'assets/images/dotnet-logo.png',
       name: 'ASP .NET Core',
       created: '',
       updated: ''
     },
     {
       id: '5',
-      image: 'assets/docker.png',
+      image: 'assets/images/docker-logo.png',
       name: 'Docker',
       created: '',
       updated: ''
     },
     {
       id: '5',
-      image: 'assets/reactjs-logo.png',
+      image: 'assets/images/reactjs-logo.png',
       name: 'React',
       created: '',
       updated: ''
