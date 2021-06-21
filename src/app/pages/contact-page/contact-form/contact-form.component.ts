@@ -4,7 +4,7 @@ import { ContactService } from '../../../services/contact.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-contact-form',
+  selector: 'gdsc-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })

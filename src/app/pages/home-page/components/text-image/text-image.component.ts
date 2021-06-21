@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Position } from '@gdsc/types';
 
 @Component({
-  selector: 'app-text-image-component',
+  selector: 'gdsc-text-image',
   templateUrl: './text-image.component.html',
   styleUrls: ['./text-image.component.scss']
 })
