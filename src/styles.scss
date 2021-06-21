@@ -10,7 +10,7 @@ $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 @font-face {
   font-family: GoogleSans;
-  src: url("/assets/font/google") format("truetype");
+  src: url("https://gdscupt.tech/assets/font/google") format("truetype");
 }
 
 html, body {
