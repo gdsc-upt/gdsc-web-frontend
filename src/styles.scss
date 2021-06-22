@@ -52,10 +52,6 @@ $pink: #f9fafc;
   }
 }
 
-.small-text {
-  font-size: 10px;
-}
-
 .heading {
   color: $blue;
   font-size: 35px;
@@ -84,6 +80,16 @@ $pink: #f9fafc;
   }
   @media screen and (max-width: 500px) {
     font-size: 10px;
+  }
+}
+
+.small-text {
+  font-size: 10px;
+  @media screen and (max-width: 900px) {
+    font-size: 8px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 6px;
   }
 }
 
