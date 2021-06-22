@@ -51,3 +51,22 @@
 .icon-fb {
   background-image: url("../images/facebook-logo.svg");
 }
+
+@media screen and (max-width: 900px) {
+  .icons a {
+    width: 40px;
+    height: 40px;
+  }
+  .icon {
+    margin: 9px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .icons a {
+    width: 30px;
+    height: 30px;
+  }
+  .icon {
+    margin: 4px;
+  }
+}
