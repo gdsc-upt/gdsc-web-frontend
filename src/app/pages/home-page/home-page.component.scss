@@ -1,0 +1,14 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+gdsc-logo {
+  font-size: 30px;
+
+  @media screen and (max-width: 720px) {
+    font-size: 10px;
+  }
+}

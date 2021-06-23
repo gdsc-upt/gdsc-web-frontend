@@ -44,18 +44,6 @@
   .container img {
     max-width: 90%;
   }
-
-  gdsc-logo {
-    padding-top: 80px;
-  }
-}
-
-gdsc-logo {
-  padding-bottom: 50px;
-
-  @media screen and (max-width: 720px) {
-    font-size: 10px;
-  }
 }
 
 .content {
