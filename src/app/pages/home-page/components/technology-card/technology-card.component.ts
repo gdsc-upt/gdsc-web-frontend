@@ -7,6 +7,9 @@ import { ITechnology } from '@gdsc/models';
   styleUrls: ['./technology-card.component.scss']
 })
 export class TechnologyCardComponent {
-  @Input() technology: ITechnology;
+  @Input() technology: ITechnology & { link?: string };
 
+  magicHappens() {
+    window.open(this.technology.link, '_blank');
+  }
 }

@@ -52,3 +52,10 @@ p {
     margin-left: 20px;
   }
 }
+
+a {
+  text-underline: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: inherit;
+}

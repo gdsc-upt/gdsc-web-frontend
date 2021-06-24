@@ -13,7 +13,7 @@ export class TechnologiesSectionComponent implements OnInit {
   audioSubject = new BehaviorSubject<HTMLAudioElement>(null);
   counter$ = this.audioSubject.asObservable();
 
-  technologies: ITechnology[] = [
+  technologies: (ITechnology & { link?: string })[] = [
     {
       id: '0',
       image: 'assets/images/angular-logo.png',
@@ -26,7 +26,8 @@ export class TechnologiesSectionComponent implements OnInit {
       image: 'assets/images/django-logo.png',
       name: 'Django',
       created: '',
-      updated: ''
+      updated: '',
+      link: 'https://www.youtube.com/watch?v=4_OiUURbYlQ'
     },
     {
       id: '3',
