@@ -6,7 +6,7 @@ $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 @include mat.core($gdsc-typography);
 
-@import "src/assets/styles/icons";
+@import "assets/styles/icons";
 
 @font-face {
   font-family: GoogleSans;
