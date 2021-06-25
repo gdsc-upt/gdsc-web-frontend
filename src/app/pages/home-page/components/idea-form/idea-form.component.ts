@@ -24,7 +24,7 @@ export class IdeaFormComponent implements OnInit {
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       branch: new FormControl('', [Validators.required]),
-      year: new FormControl('', [Validators.required]),
+      year: new FormControl('', [Validators.required, Validators.min(1), Validators.max(6)]),
       description: new FormControl('', [Validators.required])
     });
   }
@@ -34,6 +34,10 @@ export class IdeaFormComponent implements OnInit {
       return 'This field is required';
     }
     return this.ideasForm.controls.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  getYearError(error: string): boolean {
+    return this.ideasForm.controls.year.hasError(error);
   }
 
   async submit(): Promise<void> {

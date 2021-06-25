@@ -44,9 +44,15 @@
 
       <mat-form-field appearance='outline'>
         <mat-label>Year</mat-label>
-        <input formControlName='year' required matInput>
-        <mat-error *ngIf="ideasForm.controls.year.getError('required')">This field is
+        <input formControlName='year' required matInput type="number">
+        <mat-error *ngIf="getYearError('required')">This field is
           required
+        </mat-error>
+        <mat-error *ngIf="!getYearError('required') && getYearError('min')">
+          Minimum year is 1
+        </mat-error>
+        <mat-error *ngIf="!getYearError('required') && !getYearError('min') && getYearError('max')">
+          Maximum year is 6
         </mat-error>
       </mat-form-field>
 
