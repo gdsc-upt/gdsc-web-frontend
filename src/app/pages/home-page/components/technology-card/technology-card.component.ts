@@ -10,6 +10,8 @@ export class TechnologyCardComponent {
   @Input() technology: ITechnology & { link?: string };
 
   magicHappens() {
-    window.open(this.technology.link, '_blank');
+    if (this.technology.link) {
+      window.open(this.technology.link, '_blank');window.open(this.technology.link, '_blank');
+    }
   }
 }
