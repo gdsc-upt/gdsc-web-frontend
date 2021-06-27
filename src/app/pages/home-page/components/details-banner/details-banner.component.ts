@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./details-banner.component.scss']
 })
 export class DetailsBannerComponent {
-  title = 'Who are we?';
+  title = 'Who are GDSC?';
   text = 'Google Developer Student Clubs are university based community groups for ' +
     'students interested in Google developer technologies. ' +
     'Students from all undergraduate or graduate programs with an interest ' +
