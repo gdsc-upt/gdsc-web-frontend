@@ -2,48 +2,41 @@
   <div class='image-container'>
     <img src="../../../../assets/images/contact.png" alt="contact">
   </div>
-  <div class='contact-container'>
+  <div class='form'>
     <form [formGroup]="contactForm">
-      <div class="contact-area">
-        <mat-form-field appearance="outline">
-          <input formControlName="name" matInput>
-          <mat-label>Name</mat-label>
-          <mat-error *ngIf="contactForm.controls.name.getError('required')">
-            This field is required!
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="contact-area">
-        <mat-form-field appearance="outline">
-          <input formControlName="email" matInput>
-          <mat-label>Email</mat-label>
-          <mat-error *ngIf="contactForm.controls.email.getError('required')">
-            This field is required!
-          </mat-error>
-          <mat-error *ngIf="contactForm.controls.email.getError('pattern')">
-            Introduce a valid email address!
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="contact-area">
-        <mat-form-field appearance="outline">
-          <input formControlName="subject" matInput>
-          <mat-label>Subject</mat-label>
-          <mat-error *ngIf="contactForm.controls.subject.getError('required')">
-            This field is required!
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="contact-area">
-        <mat-form-field appearance="outline">
-          <textarea formControlName="text" matInput rows="6"></textarea>
-          <mat-label>Your message</mat-label>
-          <mat-error *ngIf="contactForm.controls.text.getError('required')">
-            This field is required!
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <gdsc-submit-button [label]="'SUBMIT MESSAGE'" [disabled]="!contactForm.valid" (action)="submit()"></gdsc-submit-button>
+      <mat-form-field appearance="outline">
+        <input formControlName="name" matInput>
+        <mat-label>Name</mat-label>
+        <mat-error *ngIf="contactForm.controls.name.getError('required')">
+          This field is required!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input formControlName="email" matInput>
+        <mat-label>Email</mat-label>
+        <mat-error *ngIf="contactForm.controls.email.getError('required')">
+          This field is required!
+        </mat-error>
+        <mat-error *ngIf="contactForm.controls.email.getError('pattern')">
+          Introduce a valid email address!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input formControlName="subject" matInput>
+        <mat-label>Subject</mat-label>
+        <mat-error *ngIf="contactForm.controls.subject.getError('required')">
+          This field is required!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <textarea formControlName="text" matInput rows="6"></textarea>
+        <mat-label>Your message</mat-label>
+        <mat-error *ngIf="contactForm.controls.text.getError('required')">
+          This field is required!
+        </mat-error>
+      </mat-form-field>
+      <gdsc-submit-button [label]="'SUBMIT MESSAGE'" [disabled]="!contactForm.valid"
+                          (action)="submit()"></gdsc-submit-button>
     </form>
   </div>
 </section>
