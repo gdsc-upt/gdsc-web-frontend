@@ -7,6 +7,7 @@ $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 @include mat.core($gdsc-typography);
 
 @import "assets/styles/icons";
+@import "assets/styles/variables";
 
 @font-face {
   font-family: GoogleSans;
@@ -36,10 +37,7 @@ section {
   }
 }
 
-$default_border_radius: 7px;
-$light-blue: #edf5ff;
-$blue: #007bff;
-$pink: #f9fafc;
+
 
 .faq-panel .mat-expansion-panel-body {
   padding: 0 !important;
@@ -151,6 +149,5 @@ mat-form-field.noPadding .mat-form-field-wrapper {
 }
 
 .px-2 {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 0 $spacer / 2;
 }
