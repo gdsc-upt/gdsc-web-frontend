@@ -1,3 +1,5 @@
+@import "src/assets/styles/_mixins.scss";
+
 .contact-info-area {
   background-color: #edf5ff;
   padding: 20px 50px;
@@ -104,9 +106,4 @@ a {
 
 .contactText {
   margin-top: 20px;
-}
-
-.py-2 {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
