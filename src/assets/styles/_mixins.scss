@@ -1,0 +1,29 @@
+@import "variables";
+
+@mixin px($weight: 1) {
+  padding: 0 $spacer * $weight;
+}
+
+@mixin py($weight: 1) {
+  padding: $spacer * $weight 0;
+}
+
+@mixin px-x {
+  @for $i from 1 through $max-px {
+    .px-#{$i} {
+      @include px($i);
+    }
+  }
+}
+
+@mixin py-x {
+  @for $i from 1 through $max-px {
+    .px-#{$i} {
+      @include py($i);
+    }
+  }
+}
+
+@include px-x;
+
+@include py-x;
