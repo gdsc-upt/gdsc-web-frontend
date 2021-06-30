@@ -23,7 +23,7 @@
 //This mixin generates all the CSS classes: py-1, py-2, py-3, ..., py-10. It makes use of py() from above for every "i"
 @mixin py-x {
   @for $i from 1 through $max-px {
-    .px-#{$i} {
+    .py-#{$i} {
       @include py($i);
     }
   }
