@@ -1,53 +1,33 @@
-<p>events page works!</p>
+<div class='header-container'>
+  <div class='text-container'>
+    <h2>Our Events</h2>
+    <app-title-bar></app-title-bar>
+  </div>
+</div>
+
 <div class="container">
-  <div class="scrollit">
-    <table>
-      <thead>
-      <tr>
-        <th></th>
-        <th></th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><h3><a href=""></a></h3><a href=""><br></a></td>
-        <td><a href=""></a></td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td><h3><a href=""></a></h3><a href=""><br></a></td>
-        <td></td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td><h3><a href=""></a></h3><a href=""><br></a></td>
-        <td></td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td><h3><a href=""></a></h3><a href=""><br></a></td>
-        <td></td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td><h3><a href=""></a></h3><a href=""><br></a></td>
-        <td></td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td><h3><a href=""></a></h3><a href=""><br></a></td>
-        <td></td>
-      </tr>
-      </tbody>
+  <div class="scrollbar mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Event Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status</th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </div>
 </div>
-<svg class="idea-form-bottom" viewBox="0 0 100 100" preserveAspectRatio="none">
-  <path d="M0,70 C30,130 70,50 100,70 L100,100 0,100 Z" fill="#edf5ff"></path>
-</svg>
+
 <app-back-to-top></app-back-to-top>
