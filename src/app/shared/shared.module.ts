@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
+import { BubbleAnimationComponent } from './components/bubble-animation/bubble-animation.component';
 
 const components = [
   FooterComponent,
@@ -24,7 +25,8 @@ const components = [
 @NgModule({
   declarations: [
     ...components,
-    SubmitButtonComponent
+    SubmitButtonComponent,
+    BubbleAnimationComponent
   ],
   imports: [
     CommonModule,
@@ -32,9 +34,10 @@ const components = [
     RouterModule,
     MatIconModule
   ],
-  exports: [
-    ...components
-  ]
+    exports: [
+        ...components,
+        BubbleAnimationComponent
+    ]
 })
 export class SharedModule {
 }
