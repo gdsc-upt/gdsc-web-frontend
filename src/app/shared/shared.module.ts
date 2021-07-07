@@ -19,14 +19,13 @@ const components = [
   BackToTopComponent,
   ComingSoonComponent,
   LogoComponent,
-  SubmitButtonComponent
+  SubmitButtonComponent,
+  BubbleAnimationComponent
 ];
 
 @NgModule({
   declarations: [
     ...components,
-    SubmitButtonComponent,
-    BubbleAnimationComponent
   ],
   imports: [
     CommonModule,
@@ -34,10 +33,9 @@ const components = [
     RouterModule,
     MatIconModule
   ],
-    exports: [
-        ...components,
-        BubbleAnimationComponent
-    ]
+  exports: [
+    ...components,
+  ]
 })
 export class SharedModule {
 }
