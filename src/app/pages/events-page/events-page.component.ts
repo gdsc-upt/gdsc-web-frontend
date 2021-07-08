@@ -24,4 +24,22 @@ const EVENT_DATA: EventTable[] = [
 export class EventsPageComponent {
   displayedColumns: string[] = ['name', 'date', 'status'];
   dataSource = EVENT_DATA;
+
+  colorPick(element: { name: string, date: string, status: string }): string {
+    if (element.status === 'Event in progress')
+      return '#DB4437';
+    else if (element.status === 'Sign-up Closed')
+      return '#F4B400';
+    else if (element.status === 'Sign-up Open')
+      return '#0F9D58';
+  }
+
+  getStatusForStyling(arg1: string, arg2: string): string {
+    if (arg2) {
+      return arg1 + ' ' + arg2;
+    }
+    else {
+      return arg1;
+    }
+  }
 }
