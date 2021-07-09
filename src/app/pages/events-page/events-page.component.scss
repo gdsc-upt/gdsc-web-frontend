@@ -34,6 +34,7 @@ h2 {
 .scrollbar {
   height: 400px;
   overflow: auto;
+  border-radius: 10px;
 }
 
 table {
@@ -71,12 +72,4 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-.full-right {
-  padding-left: 41px;
-}
-
-.table-shadow {
-  background-color: rgba(0, 0, 0, 0);
 }
