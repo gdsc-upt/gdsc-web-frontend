@@ -7,4 +7,5 @@ export interface IEvent extends IBase {
   status: string;
   start: Date;
   end: Date;
+  rsvp_link: string;
 }

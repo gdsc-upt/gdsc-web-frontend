@@ -12,7 +12,7 @@
 
         <ng-container matColumnDef="title">
           <th mat-header-cell *matHeaderCellDef> Event Name</th>
-          <td mat-cell *matCellDef="let element" (click)="openDialog()"> {{element.title}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openDialog(element)"> {{element.title}} </td>
         </ng-container>
 
         <ng-container matColumnDef="start">
