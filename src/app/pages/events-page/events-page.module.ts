@@ -6,12 +6,13 @@ import { SharedModule } from '../../shared/shared.module';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [{ path: '', component: EventsPageComponent }];
 
 @NgModule({
   declarations: [EventsPageComponent, EventDetails],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule, MatTableModule, MatDialogModule, MatButtonModule]
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule, MatTableModule, MatDialogModule, MatButtonModule, MatIconModule]
 })
 export class EventsPageModule {
 }

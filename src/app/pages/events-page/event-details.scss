@@ -1,7 +1,18 @@
-button {
-  left: 135px;
+mat-icon {
   background-color: #007bff;
   color: white;
-  bottom: 10px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
 }
