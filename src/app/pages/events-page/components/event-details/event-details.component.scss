@@ -44,9 +44,25 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 800px;
   @media screen and (max-width: 1200px) {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.column.description {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.column.join {
+  width: 50%;
+  align-items: center;
+  justify-content: left;
+}
+
+mat-dialog-content {
+  width: 1000px;
 }
