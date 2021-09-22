@@ -1,16 +1,16 @@
-#myBtn {
-  display: none;
+@use "variables";
+
+button {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #D3D3D3;
-  color: white;
+  background-color: white;
+  color: variables.$blue;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 50%;
+  border: 1px solid variables.$blue;
+
   @media screen and (max-width: 992px) {
     padding: 5px;
     bottom: 10px;
@@ -18,7 +18,7 @@
   }
 }
 
-#myBtn:hover {
+button:hover {
   transition: background-color 0.2s ease-in-out;
   background-color: #555;
   cursor: pointer;

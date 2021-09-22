@@ -1,4 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'gdsc-back-to-top',
@@ -7,14 +9,7 @@ import { Component, HostListener } from '@angular/core';
 })
 
 export class BackToTopComponent {
-  @HostListener('window:scroll', ['$event'])
-  showOnScroll(): void {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById('myBtn').style.display = 'block';
-    } else {
-      document.getElementById('myBtn').style.display = 'none';
-    }
-  }
+  readonly showButton = fromEvent(window, 'scroll').pipe(tap(console.log), map(() => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20));
 
   goToTop(): void {
     try {
