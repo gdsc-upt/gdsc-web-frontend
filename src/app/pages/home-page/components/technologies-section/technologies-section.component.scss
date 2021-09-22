@@ -1,4 +1,4 @@
-@import "src/styles";
+@use "variables";
 
 .mat-panel {
   background-color: white;
@@ -13,7 +13,7 @@
 
 .mat-panel:hover {
   transition: 0.3s ease-in-out !important;
-  box-shadow: 0 0 5px $blue !important;
+  box-shadow: 0 0 5px variables.$blue !important;
   stroke-dashoffset: -480 !important;
   transform: translateY(-10px);
 }

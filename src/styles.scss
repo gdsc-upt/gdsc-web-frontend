@@ -1,14 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 @use '~@angular/material' as mat;
+@use "variables";
 
 $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 @include mat.core($gdsc-typography);
-
-@import "assets/styles/icons";
-@import "assets/styles/variables";
-@import "assets/styles/mixins";
 
 @font-face {
   font-family: GoogleSans;
@@ -39,7 +36,6 @@ section {
 }
 
 
-
 .faq-panel .mat-expansion-panel-body {
   padding: 0 !important;
   margin: 0 !important;
@@ -52,7 +48,7 @@ section {
 }
 
 .heading {
-  color: $blue;
+  color: variables.$blue;
   font-size: 35px;
   @media screen and (max-width: 900px) {
     font-size: 25px;
@@ -122,11 +118,11 @@ mat-form-field.noPadding .mat-form-field-wrapper {
 }
 
 .blue-bg {
-  background-color: $light-blue;
-  box-shadow: 740px 0 0 $light-blue,
-  1520px 0 0 $light-blue,
-  -740px 0 0 $light-blue,
-  -1520px 0 0 $light-blue;
+  background-color: variables.$light-blue;
+  box-shadow: 740px 0 0 variables.$light-blue,
+  1520px 0 0 variables.$light-blue,
+  -740px 0 0 variables.$light-blue,
+  -1520px 0 0 variables.$light-blue;
 }
 
 .flex-column,
