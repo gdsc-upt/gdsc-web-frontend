@@ -2,6 +2,8 @@
 
 @use '~@angular/material' as mat;
 @use "variables";
+@use "icons";
+@use "forms";
 
 $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
