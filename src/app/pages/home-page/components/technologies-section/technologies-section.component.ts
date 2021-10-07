@@ -45,8 +45,8 @@ export class TechnologiesSectionComponent implements OnInit {
     },
     {
       id: '5',
-      image: 'assets/images/docker-logo.png',
-      name: 'Docker',
+      image: 'assets/images/devops-logo.png',
+      name: 'DevOps',
       created: '',
       updated: ''
     },
@@ -54,6 +54,27 @@ export class TechnologiesSectionComponent implements OnInit {
       id: '5',
       image: 'assets/images/reactjs-logo.png',
       name: 'React',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '6',
+      image: 'assets/images/springboot-logo.png',
+      name: 'Spring Boot',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '7',
+      image: 'assets/images/flutter-logo.png',
+      name: 'Flutter',
+      created: '',
+      updated: ''
+    },
+    {
+      id: '8',
+      image: 'assets/images/more-logo.png',
+      name: 'And more are coming...',
       created: '',
       updated: ''
     }
