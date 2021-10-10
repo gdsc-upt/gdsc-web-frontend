@@ -1,9 +1,9 @@
 <div class='center'>
   <div class='header-menu'>
     <div class='wrapper'>
-      <div *ngFor='let item of menuItems; let i = index' class='menuItem color-hover'>
-        <mat-icon [routerLink]='item.link'>{{ menuIcons[i] }}</mat-icon>
-        <div [routerLink]='item.link'>{{ item.name }}</div>
+      <div *ngFor='let item of menuItems; let i = index' (click)="redirect(item)" class='menuItem color-hover'>
+        <mat-icon>{{ menuIcons[i] }}</mat-icon>
+        <div>{{ item.name }}</div>
       </div>
     </div>
   </div>

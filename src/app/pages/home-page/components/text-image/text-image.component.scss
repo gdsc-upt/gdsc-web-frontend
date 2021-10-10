@@ -1,4 +1,4 @@
-@import "src/styles";
+@use "variables";
 
 .container {
   display: flex;
@@ -8,11 +8,11 @@
 }
 
 .pink-bg {
-  background-color: $pink;
-  box-shadow: 740px 0 0 $pink,
-  1520px 0 0 $pink,
-  -740px 0 0 $pink,
-  -1520px 0 0 $pink;
+  background-color: variables.$pink;
+  box-shadow: 740px 0 0 variables.$pink,
+  1520px 0 0 variables.$pink,
+  -740px 0 0 variables.$pink,
+  -1520px 0 0 variables.$pink;
 }
 
 .text-container {

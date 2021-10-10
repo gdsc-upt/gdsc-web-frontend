@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 img {
-  margin-left: 10px;
+  margin-left: 20px;
   border-radius: 50%;
-  width: 75px;
   height: 75px;
+  object-fit: contain;
   border: 1px solid #edf5ff;
 }
 
 p {
-  padding-left: 10px;
+  padding-left: 20px;
   margin: 7px 0;
 }
 

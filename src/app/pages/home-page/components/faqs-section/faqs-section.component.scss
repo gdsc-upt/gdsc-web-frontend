@@ -1,4 +1,4 @@
-@import 'src/styles';
+@use 'variables';
 
 .title {
   margin: 20px 0;
@@ -8,7 +8,7 @@
   transition: .5s;
   background-color: #f5f9ff;
   color: black;
-  border-radius: $default_border_radius;
+  border-radius: variables.$default_border_radius;
 }
 
 .mat-expansion-panel:hover {
@@ -24,7 +24,7 @@
 .faq-panel {
   background-color: rgba(255, 255, 255, .54);
   padding: 50px;
-  border-radius: $default_border_radius;
+  border-radius: variables.$default_border_radius;
   border: 0;
 }
 

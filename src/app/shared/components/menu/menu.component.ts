@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IMenuItem } from '@gdsc/models';
 import { MenuItemsService } from '../../../services/menu-items.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'gdsc-menu',
@@ -17,12 +18,18 @@ export class MenuComponent implements OnInit {
     'event'
   ];
 
-  constructor(private readonly _menuItemsService: MenuItemsService) {
+  constructor(private readonly _menuItemsService: MenuItemsService, private _router: Router) {
   }
 
   ngOnInit(): void {
     this._menuItemsService.get().subscribe(menuItems => {
       this.menuItems = menuItems;
     });
+  }
+
+  redirect(item: IMenuItem) {
+    item.type ?
+      window.location.href = 'https://gdsc.community.dev/politehnica-university-of-timisoara/' :
+      this._router.navigate([item.link]);
   }
 }

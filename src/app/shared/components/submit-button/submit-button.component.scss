@@ -1,14 +1,14 @@
-@import 'src/styles';
+@use 'variables';
 
 .form-button {
   background-color: white;
-  color: $blue;
+  color: variables.$blue;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 10px;
   width: 100%;
   text-align: center;
-  border: 2px solid $blue;
+  border: 2px solid variables.$blue;
   padding: 16px;
 
   span {
@@ -19,7 +19,7 @@
 }
 
 .form-button:hover:enabled {
-  background-color: $blue;
+  background-color: variables.$blue;
   color: white;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
