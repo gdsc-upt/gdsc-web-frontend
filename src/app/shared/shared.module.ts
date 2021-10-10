@@ -11,7 +11,6 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
 import { LogoComponent } from './components/logo/logo.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 import { BubbleAnimationComponent } from './components/bubble-animation/bubble-animation.component';
-import { JoinUsComponent } from './components/join-us/join-us.component';
 
 const components = [
   FooterComponent,
@@ -21,7 +20,6 @@ const components = [
   ComingSoonComponent,
   LogoComponent,
   SubmitButtonComponent,
-  JoinUsComponent,
   BubbleAnimationComponent
 ];
 

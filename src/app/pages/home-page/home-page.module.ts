@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../../shared/shared.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { JoinUsComponent } from './components/join-us/join-us.component';
 
 const routes: Routes = [{ path: '', component: HomePageComponent }];
 
@@ -26,6 +27,7 @@ const routes: Routes = [{ path: '', component: HomePageComponent }];
     FaqsSectionComponent,
     IdeaFormComponent,
     DetailsBannerComponent,
+    JoinUsComponent,
     TechnologiesSectionComponent,
     TechnologyCardComponent
   ],
