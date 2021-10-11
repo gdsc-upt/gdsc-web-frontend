@@ -1,0 +1,37 @@
+@use 'variables';
+
+button {
+  width: 40%;
+  height: 100%;
+  background-color: #4285f4;
+  border: #4285f4;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.join-us-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.join-us-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1{
+  font-weight: normal;
+}
+a {
+  width: 100%;
+  height: 60px;
+}

@@ -1,18 +1,18 @@
-@import "variables";
+@use "variables";
 
 //This mixin generates a CSS class that has padding left and right equal to the parameter
 @mixin px($weight: 1) {
-  padding: 0 $spacer * $weight;
+  padding: 0 variables.$spacer * $weight;
 }
 
 //This mixin generates a CSS class that has padding top and bottom equal to the parameter
 @mixin py($weight: 1) {
-  padding: $spacer * $weight 0;
+  padding: variables.$spacer * $weight 0;
 }
 
 //This mixin generates all the CSS classes: px-1, px-2, px-3, ..., px-10. It makes use of px() from above for every "i"
 @mixin px-x {
-  @for $i from 1 through $max-px {
+  @for $i from 1 through variables.$max-px {
     .px-#{$i} {
       @include px($i);
     }
@@ -22,14 +22,10 @@
 
 //This mixin generates all the CSS classes: py-1, py-2, py-3, ..., py-10. It makes use of py() from above for every "i"
 @mixin py-x {
-  @for $i from 1 through $max-px {
+  @for $i from 1 through variables.$max-px {
     .py-#{$i} {
       @include py($i);
     }
   }
 }
 @include py-x;
-
-
-
-

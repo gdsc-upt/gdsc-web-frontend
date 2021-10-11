@@ -1,5 +1,4 @@
-@import "src/styles";
-@import "src/assets/styles/_forms.scss";
+@use "src/styles";
 
 mat-form-field {
   width: 100%;
