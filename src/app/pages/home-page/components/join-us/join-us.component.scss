@@ -1,9 +1,9 @@
-@use 'src/assets/styles/variables';
+@use 'variables';
 
 button {
-  width: 100%;
+  width: 40%;
   height: 100%;
-  background-color: #DE5246;
+  background-color: darkblue;
   border-radius: 10px;
   color: white;
   text-align: center;
