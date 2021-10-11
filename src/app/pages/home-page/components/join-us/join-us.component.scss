@@ -3,7 +3,7 @@
 button {
   width: 40%;
   height: 100%;
-  background-color: darkblue;
+  background-color: #4285f4;
   border-radius: 10px;
   color: white;
   text-align: center;
@@ -19,10 +19,6 @@ button {
   text-align: center;
 }
 
-h1 {
-  font-weight: bold;
-}
-
 .join-us-inner {
   display: flex;
   flex-direction: column;
@@ -30,7 +26,9 @@ h1 {
   align-items: center;
   text-align: center;
 }
-
+h1{
+  font-weight: normal;
+}
 a {
   width: 100%;
   height: 60px;
