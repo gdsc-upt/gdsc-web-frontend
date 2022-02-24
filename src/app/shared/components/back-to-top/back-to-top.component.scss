@@ -8,8 +8,8 @@ button {
   background-color: white;
   color: variables.$blue;
   padding: 15px;
+  border-color: variables.$blue;
   border-radius: 50%;
-  border: 1px solid variables.$blue;
 
   @media screen and (max-width: 992px) {
     padding: 5px;
@@ -19,7 +19,9 @@ button {
 }
 
 button:hover {
-  transition: background-color 0.2s ease-in-out;
-  background-color: #555;
+  background: url("/assets/images/top-button-bg.png") right;
+  color: white;
+  border: transparent;
+  transition: 0.6s ease-in;
   cursor: pointer;
 }
