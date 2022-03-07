@@ -11,6 +11,13 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
 import { LogoComponent } from './components/logo/logo.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 import { BubbleAnimationComponent } from './components/bubble-animation/bubble-animation.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+import { BrowserModule } from '@angular/platform-browser';
+
+export function playerFactory() {
+  return player;
+}
 
 const components = [
   FooterComponent,
@@ -31,7 +38,8 @@ const components = [
     CommonModule,
     MatMenuModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    LottieModule.forRoot({ player: playerFactory })
   ],
   exports: [
     ...components,
