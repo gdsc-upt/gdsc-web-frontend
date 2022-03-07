@@ -1,4 +1,10 @@
-<div class='container' (click)='magicHappens()'>
-  <img src='{{technology.image}}' alt='image'>
-  <p class='medium-text'>{{technology.name}}</p>
+<div class="scene scene-card">
+  <div (click)='magicHappens()' [ngClass]="{'is-flipped' : isFlipped}" class="card">
+    <div class="card_face card_face-front">
+      <img alt='image' src='{{technology.image}}'>
+    </div>
+    <div class="card_face card_face-back">
+      <p class='medium-text'>{{technology.name}}</p>
+    </div>
+  </div>
 </div>

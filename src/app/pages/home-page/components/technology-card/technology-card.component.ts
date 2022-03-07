@@ -8,10 +8,9 @@ import { ITechnology } from '@gdsc/models';
 })
 export class TechnologyCardComponent {
   @Input() technology: ITechnology & { link?: string };
+  isFlipped = false;
 
   magicHappens() {
-    if (this.technology.link) {
-      window.open(this.technology.link, '_blank');window.open(this.technology.link, '_blank');
-    }
+    this.isFlipped = !this.isFlipped;
   }
 }
