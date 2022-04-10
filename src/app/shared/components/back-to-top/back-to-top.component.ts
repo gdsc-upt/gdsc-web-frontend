@@ -9,7 +9,7 @@ import { map, tap } from 'rxjs/operators';
 })
 
 export class BackToTopComponent {
-  readonly showButton = fromEvent(window, 'scroll').pipe(tap(console.log), map(() => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20));
+  readonly showButton = fromEvent(window, 'scroll').pipe(map(() => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20));
 
   goToTop(): void {
     try {
