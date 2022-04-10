@@ -1,2 +1,14 @@
 <gdsc-back-to-top></gdsc-back-to-top>
-<gdsc-coming-soon></gdsc-coming-soon>
+<div *ngIf="events !== undefined; else loading">
+  <ul *ngFor="let event of events">
+    <li>{{event.title}}</li>
+    <li>{{event.start_date}}</li>
+    <li>{{event.end_date}}</li>
+    <li><a [href]="event.url">link</a></li>
+  </ul>
+</div>
+<ng-template #loading>
+  <div class="loading">
+    <app-loading-animation></app-loading-animation>
+  </div>
+</ng-template>
