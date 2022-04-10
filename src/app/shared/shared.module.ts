@@ -14,6 +14,7 @@ import { BubbleAnimationComponent } from './components/bubble-animation/bubble-a
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { BrowserModule } from '@angular/platform-browser';
+import { LoadingAnimationComponent } from './components/loading-animation/loading-animation.component';
 
 export function playerFactory() {
   return player;
@@ -33,6 +34,7 @@ const components = [
 @NgModule({
   declarations: [
     ...components,
+    LoadingAnimationComponent,
   ],
   imports: [
     CommonModule,
@@ -41,9 +43,10 @@ const components = [
     MatIconModule,
     LottieModule.forRoot({ player: playerFactory })
   ],
-  exports: [
-    ...components,
-  ]
+    exports: [
+        ...components,
+        LoadingAnimationComponent,
+    ]
 })
 export class SharedModule {
 }
