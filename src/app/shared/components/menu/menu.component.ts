@@ -29,7 +29,7 @@ export class MenuComponent implements OnInit {
 
   redirect(item: IMenuItem) {
     item.type ?
-      window.location.href = 'https://gdsc.community.dev/politehnica-university-of-timisoara/' :
+      window.location.href = '/events' :
       this._router.navigate([item.link]);
   }
 }

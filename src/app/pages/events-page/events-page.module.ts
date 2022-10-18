@@ -8,6 +8,9 @@ const routes: Routes = [{ path: '', component: EventsPageComponent }];
 
 @NgModule({
   declarations: [EventsPageComponent],
+  exports: [
+    EventsPageComponent
+  ],
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule]
 })
 export class EventsPageModule {
