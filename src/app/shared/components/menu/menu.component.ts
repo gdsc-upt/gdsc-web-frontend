@@ -28,8 +28,6 @@ export class MenuComponent implements OnInit {
   }
 
   redirect(item: IMenuItem) {
-    item.type ?
-      window.location.href = '/events' :
-      this._router.navigate([item.link]);
+    this._router.navigate([item.link]);
   }
 }
