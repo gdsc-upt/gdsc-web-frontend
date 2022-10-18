@@ -4,7 +4,8 @@
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 100px;
 }
 
 .pink-bg {
@@ -30,8 +31,7 @@
 
 .container img {
   display: block;
-  margin: 0 25px;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .left {
