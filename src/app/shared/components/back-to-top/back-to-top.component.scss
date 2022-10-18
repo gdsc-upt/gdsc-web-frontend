@@ -8,12 +8,17 @@ button {
   background-color: white;
   color: variables.$blue;
   padding: 15px;
-  border-color: variables.$blue;
-  border-radius: 50%;
+  border: 1px solid variables.$blue;
 
   @media screen and (max-width: 992px) {
     padding: 5px;
     bottom: 10px;
+    right: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 5px;
+    bottom: 80px;
     right: 10px;
   }
 }

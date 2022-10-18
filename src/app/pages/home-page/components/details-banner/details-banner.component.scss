@@ -2,8 +2,14 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  height: 85vh;
-  z-index: 1;
+}
+
+.inner-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
 }
 
 .text-container {

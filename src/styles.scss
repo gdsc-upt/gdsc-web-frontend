@@ -9,10 +9,7 @@ $gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 @include mat.core($gdsc-typography);
 
-@font-face {
-  font-family: GoogleSans;
-  src: url("https://gdscupt.tech/assets/font/google") format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
 
 html, body {
   height: 100%;
@@ -22,7 +19,7 @@ body {
   margin: 0;
 }
 
-button, body {
+* {
   font-family: "JetBrains Mono", monospace;
 }
 
@@ -46,6 +43,12 @@ section {
 .mat-expansion-panel:hover {
   .mat-expansion-indicator:after {
     color: white !important;
+  }
+}
+
+@media screen and (min-width: 2250px) {
+  mat-grid-tile {
+    height: 100% !important;
   }
 }
 

@@ -9,11 +9,12 @@ import { map, tap } from 'rxjs/operators';
 })
 
 export class BackToTopComponent {
-  readonly showButton = fromEvent(window, 'scroll').pipe(map(() => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20));
+  readonly showButton = fromEvent(window, 'scroll')
+    .pipe(map(() => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20));
 
   goToTop(): void {
     try {
-      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
     } catch (e) {
       window.scrollTo(0, 0);
     }
