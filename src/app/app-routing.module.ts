@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RedirectGuard } from './services/redirect.guard';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
     path: 'events',
     loadChildren: () =>
       import('./pages/events-page/events-page.module').then(m => m.EventsPageModule)
+  },
+  {
+    path: '**',
+    canActivate: [RedirectGuard]
   }
 ];
 

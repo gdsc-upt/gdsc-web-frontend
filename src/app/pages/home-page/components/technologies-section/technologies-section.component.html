@@ -5,6 +5,7 @@
     <p class='tech-section large-text'>These are some of the technologies we focus on at <span
       (click)='audioSubject.next(bega)'>GDSC UPT</span></p>
   </div>
+
   <mat-grid-list
     (window:resize)='onResize($event)'
     [cols]='breakpoint'
@@ -15,6 +16,7 @@
       <gdsc-technology-card [technology]='technology' class='card'></gdsc-technology-card>
     </mat-grid-tile>
   </mat-grid-list>
+
 </section>
 
 <audio #bega>
