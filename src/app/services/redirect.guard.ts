@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { RedirectService } from './redirect.service';
+import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,12 @@ export class RedirectGuard implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const redirectTo = this._redirectService.get(route.url[0].path);
-    if (redirectTo) {
-      window.location.href = redirectTo;
-      return true;
-    }
-    return this._router.navigate(['/']);
+    return this._redirectService.get(route.url[0].path).pipe(switchMap(redirectTo => {
+      if (redirectTo) {
+        window.location.href = redirectTo;
+        return Promise.resolve(true);
+      }
+      return this._router.navigate(['/']);
+    }));
   }
-
-
 }
