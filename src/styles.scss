@@ -149,3 +149,44 @@ mat-form-field.noPadding .mat-form-field-wrapper {
     width: 100%;
   }
 }
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+gdsc-technology-card {
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  gdsc-technology-card {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  gdsc-technology-card {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  gdsc-technology-card {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 2250px) {
+  gdsc-technology-card {
+    width: 20%;
+  }
+}
