@@ -14,7 +14,7 @@ export class RedirectGuard implements CanActivate {
     return this._redirectService.get(route.url[0].path).pipe(switchMap(redirectTo => {
       if (redirectTo) {
         window.location.href = redirectTo;
-        return Promise.resolve(true);
+        return Promise.reject();
       }
       return this._router.navigate(['/']);
     }));

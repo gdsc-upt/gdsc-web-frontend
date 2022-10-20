@@ -1,5 +1,3 @@
-<gdsc-menu></gdsc-menu>
-<div class='container'>
+<ng-container *ngIf="redirectService.loaded$ | async">
   <router-outlet></router-outlet>
-</div>
-<gdsc-footer></gdsc-footer>
+</ng-container>

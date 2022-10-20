@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RedirectService } from './services/redirect.service';
 
 @Component({
   selector: 'gdsc-root',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(readonly redirectService: RedirectService){}
 }

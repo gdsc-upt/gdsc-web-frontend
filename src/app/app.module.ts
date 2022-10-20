@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RedirectService } from './services/redirect.service';
+import { BasePageComponent } from './pages/base-page/base-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BasePageComponent
   ],
   imports: [
     BrowserModule,
