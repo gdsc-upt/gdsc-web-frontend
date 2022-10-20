@@ -1,49 +1,24 @@
 @use "variables";
 
-.scene {
-  display: block;
-  border-radius: 10px;
-  outline: none;
-  width: 360px;
-  height: 200px;
-  transition: transform 1s ease-in-out;
-  perspective: 600px;
-}
-
-body {
-  font-family: sans-serif;
-}
-
-.card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center;
-  transition: transform 1s;
-}
-
 .is-flipped {
   transform: rotateY(-180deg);
 }
 
 .card_face {
-  position: absolute;
+  display: flex;
+  justify-content: center;
   color: black;
   text-align: center;
   font-weight: bold;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
   background: white;
 }
 
 .card_face-front {
   & > img {
-    margin-top: 9%;
     object-fit: contain;
-    height: 130px;
+    width: 100px;
+    height: 80px;
   }
 }
 
@@ -52,4 +27,72 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80px;
+}
+
+.card {
+  margin: 0 16px 16px 16px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 1s;
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    margin: 16px 12px 12px 12px;
+  }
+
+  .card_face-front {
+    & > img {
+      width: 110px;
+      height: 90px;
+    }
+  }
+
+  .card_face-back {
+    height: 90px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .card_face-front {
+    & > img {
+      width: 170px;
+      height: 120px;
+    }
+  }
+
+  .card_face-back {
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .card_face-front {
+    & > img {
+      width: 150px;
+      height: 110px;
+    }
+  }
+
+  .card_face-back {
+    height: 110px;
+  }
+}
+
+@media screen and (min-width: 2250px) {
+  .card_face-front {
+    & > img {
+      width: 140px;
+      height: 100px;
+    }
+  }
+
+  .card_face-back {
+    height: 100px;
+  }
 }

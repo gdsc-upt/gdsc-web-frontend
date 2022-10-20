@@ -8,7 +8,6 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./technologies-section.component.scss']
 })
 export class TechnologiesSectionComponent implements OnInit {
-  offSet = 500;
   _counter = -1;
   audioSubject = new BehaviorSubject<HTMLAudioElement>(null);
   counter$ = this.audioSubject.asObservable();
@@ -50,11 +49,8 @@ export class TechnologiesSectionComponent implements OnInit {
       updated: ''
     }
   ];
-  breakpoint: number;
 
   ngOnInit(): void {
-    this.breakpoint = (innerWidth / this.offSet);
-
     this.counter$.subscribe(async audio => {
       this._counter = this._counter + 1;
       if (this._counter > 1 && this._counter % 4 === 0) {
@@ -63,9 +59,5 @@ export class TechnologiesSectionComponent implements OnInit {
         audio?.pause();
       }
     });
-  }
-
-  onResize(event): void {
-    this.breakpoint = (event.target.innerWidth / this.offSet);
   }
 }

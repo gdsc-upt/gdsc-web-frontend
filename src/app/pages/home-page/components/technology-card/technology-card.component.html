@@ -1,10 +1,8 @@
-<div class="scene scene-card">
-  <div (click)='magicHappens()' [ngClass]="{'is-flipped' : isFlipped}" class="card">
-    <div class="card_face card_face-front">
+<div (click)='magicHappens()' [ngClass]="{'is-flipped' : isFlipped}" class="card">
+    <div class="card_face card_face-front" *ngIf="!isFlipped">
       <img alt='image' src='{{technology.image}}'>
     </div>
-    <div class="card_face card_face-back">
+    <div class="card_face card_face-back" *ngIf="isFlipped">
       <p class='medium-text'>{{technology.name}}</p>
     </div>
-  </div>
 </div>
