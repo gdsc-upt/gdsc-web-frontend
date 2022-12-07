@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { ContactService } from '../../../services/contact.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ContactFormComponent implements OnInit {
   @ViewChild(FormGroupDirective) private readonly _formDirective: FormGroupDirective;
 
-  contactForm: FormGroup;
+  contactForm: UntypedFormGroup;
 
   constructor(
     private readonly _contactService: ContactService,
@@ -20,12 +20,12 @@ export class ContactFormComponent implements OnInit {
   }
 
   buildForm() {
-    this.contactForm = new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email,
+    this.contactForm = new UntypedFormGroup({
+      name: new UntypedFormControl('', [Validators.required]),
+      email: new UntypedFormControl('', [Validators.required, Validators.email,
         Validators.pattern('^\\S+@\\S+$')]),
-      subject: new FormControl('', [Validators.required]),
-      text: new FormControl('', [Validators.required])
+      subject: new UntypedFormControl('', [Validators.required]),
+      text: new UntypedFormControl('', [Validators.required])
     });
   }
 

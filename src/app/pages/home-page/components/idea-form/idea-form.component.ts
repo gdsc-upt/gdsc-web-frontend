@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { IdeasService } from '../../../../services/ideas.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class IdeaFormComponent implements OnInit {
   @ViewChild(FormGroupDirective) private readonly _formDirective: FormGroupDirective;
 
-  ideasForm: FormGroup;
+  ideasForm: UntypedFormGroup;
 
   constructor(
     private readonly _ideasService: IdeasService,
@@ -20,12 +20,12 @@ export class IdeaFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ideasForm = new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      branch: new FormControl('', [Validators.required]),
-      year: new FormControl('', [Validators.required, Validators.min(1), Validators.max(6)]),
-      description: new FormControl('', [Validators.required])
+    this.ideasForm = new UntypedFormGroup({
+      name: new UntypedFormControl('', [Validators.required]),
+      email: new UntypedFormControl('', [Validators.required, Validators.email]),
+      branch: new UntypedFormControl('', [Validators.required]),
+      year: new UntypedFormControl('', [Validators.required, Validators.min(1), Validators.max(6)]),
+      description: new UntypedFormControl('', [Validators.required])
     });
   }
 
