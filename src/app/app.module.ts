@@ -8,20 +8,24 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RedirectService } from './services/redirect.service';
 import { BasePageComponent } from './pages/base-page/base-page.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BasePageComponent
+    BasePageComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   bootstrap: [AppComponent],
+
   providers: [
     {
       provide: APP_INITIALIZER,

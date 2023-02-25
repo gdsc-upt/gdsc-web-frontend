@@ -3,3 +3,30 @@
   justify-content: center;
   align-items: center;
 }
+
+.container{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.headingbar{
+  padding-top:0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.heading{
+  font-size:40px;
+  display:flex;
+  margin-top:0;
+  padding-top:50px;
+  justify-content: center;
+  margin-right: auto;
+  margin-left:auto;
+}
