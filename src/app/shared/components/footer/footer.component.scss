@@ -2,9 +2,15 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: white;
   background-image: url('../../../../assets/images/footer-bg.png');
   background-position-x: center;
+  padding: 0 350px;
+  @media screen and (max-width: 1500px) {
+    padding: 0 50px;
+
+  }
 }
 
 img {
@@ -15,6 +21,42 @@ a img {
   color: #818992;
   background-color: white;
   margin-top: 10px;
+}
+
+.ac-icon {
+  width: 15%;
+  height: auto;
+  padding: 50px;
+
+  @media screen and (max-width: 720px) {
+    width: 150px;
+    margin-top: 24px;
+
+  }
+
+}
+
+.upt-icon {
+
+  width: 15%;
+  height: auto;
+  padding: 50px;
+  @media screen and (max-width: 720px) {
+    width: 150px;
+    margin-top: 24px;
+  }
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @media screen and (max-width: 720px) {
+   flex-direction: column;
+  }
 }
 
 .made-with mat-icon:hover {
