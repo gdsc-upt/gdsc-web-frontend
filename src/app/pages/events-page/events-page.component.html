@@ -1,14 +1,27 @@
+<div class = "blue-bg">
+
+  <h1 class = "heading">Events</h1>
+  <gdsc-title-bar class = "headingbar"></gdsc-title-bar>
+
 <gdsc-back-to-top></gdsc-back-to-top>
-<div *ngIf="events !== undefined; else loading">
-  <ul *ngFor="let event of events">
-    <li>{{event.title}}</li>
-    <li>{{event.start_date}}</li>
-    <li>{{event.end_date}}</li>
-    <li><a [href]="event.url">link</a></li>
-  </ul>
-</div>
+<div *ngIf="events !== undefined; else loading" class = "container">
+<!--  <div *ngFor="let event of events">-->
+<!--    <li>{{event.title}}</li>-->
+<!--    <li>{{event.start_date}}</li>-->
+<!--    <li>{{event.end_date}}</li>-->
+<!--    <li><a [href]="event.url">link</a></li>-->
+
+
+    <gdsc-cards  *ngFor="let event of events"  [title] = "event.title" [url] = "event.url" [start_date]="event.start_date">
+    </gdsc-cards>
+  </div>
+<!--</div>-->
+
 <ng-template #loading>
   <div class="loading">
     <app-loading-animation></app-loading-animation>
   </div>
 </ng-template>
+
+
+</div>
