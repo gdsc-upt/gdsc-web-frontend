@@ -1,3 +1,5 @@
+https://www.figma.com/file/8aFQHULgENvO0yRCutm5yK/Event-Planner-Low-Fi?node-id=0-1&t=tymmTI9tUOunTFo6-0
+
 # GdscWebFrontend 
 
 This is the repository for the frontend of the GDSC presentation website.
