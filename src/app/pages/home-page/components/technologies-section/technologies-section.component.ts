@@ -36,13 +36,6 @@ export class TechnologiesSectionComponent implements OnInit {
     },
     {
       id: '3',
-      image: 'assets/images/flutter-logo.png',
-      name: 'Flutter',
-      created: '',
-      updated: ''
-    },
-    {
-      id: '4',
       image: 'assets/images/design-logo.png',
       name: 'Graphic Design',
       created: '',

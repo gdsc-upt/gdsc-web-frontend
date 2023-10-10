@@ -8,7 +8,7 @@ import { FaqsService } from '../../../../services/faqs.service';
   styleUrls: ['./faqs-section.component.scss']
 })
 export class FaqsSectionComponent implements OnInit {
-  faqs: IFaq[];
+  faqs: IFaq[] = [];
 
   constructor(
     private readonly _faqsService: FaqsService
