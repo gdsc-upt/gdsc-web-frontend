@@ -29,8 +29,9 @@ import { MatCardModule } from '@angular/material/card';
   providers: [
     {
       provide: APP_INITIALIZER,
+      multi: true,
       useFactory: (redirectService: RedirectService) => {
-        return redirectService.load();
+        return () => redirectService.load();
       },
       deps: [RedirectService]
     }
