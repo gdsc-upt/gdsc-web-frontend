@@ -19,4 +19,4 @@ COPY --from=builder /app/dist /app/dist
 CMD ["node", "/app/dist/server/server.mjs"]
 
 
-LABEL org.opencontainers.image.source=https://github.com/dsc-upt/gdsc-web-frontend
+LABEL org.opencontainers.image.source=https://github.com/gdsc-upt/gdsc-web-frontend

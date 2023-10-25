@@ -37,7 +37,7 @@ jobs:
         with:
           secrets: GIT_AUTH_TOKEN=${{ secrets.CR_PAT }}
           push: true
-          tags: ghcr.io/dsc-upt/gdsc-web-frontend-${{ env.BRANCH }}:latest
+          tags: ghcr.io/gdsc-upt/gdsc-web-frontend-${{ env.BRANCH }}:latest
           build-args: BRANCH=${{ env.BRANCH }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
