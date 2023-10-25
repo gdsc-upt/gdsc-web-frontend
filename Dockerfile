@@ -1,4 +1,4 @@
-FROM node:14-alpine as build
+FROM node:lts-alpine as build
 
 ARG BRANCH=main
 
