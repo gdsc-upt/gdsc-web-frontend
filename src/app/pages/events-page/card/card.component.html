@@ -1,8 +1,18 @@
 <div class = "card-container">
 
- <div class = "title">{{title}}</div>
+  <div>
+    <img src="../../../../assets/images/angular-logo.png" height="250" width="250"/>
+  </div>
+  <div class="secundary-container">
+      <div>
+        <div class = "title">{{title}}</div>
+        <div class = "description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a </div>
+      </div>
+      <div>
+        <button class="buton" type ="button" (click)="redirectLink(url)">Check out!</button>
+        <div class = "date"> {{start_date | date: "dd/MM/yyyy" }}</div>
+      </div>
+  </div>
 
-  <button class="buton" type ="button" (click)="redirectLink(url)">Check out!</button>
-  <div class = "date"> {{start_date | date: "dd/MM/yyyy" }}</div>
 
 </div>

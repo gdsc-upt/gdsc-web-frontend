@@ -1,20 +1,21 @@
 
 .card-container {
   display: flex;
-  flex-direction: column;
-  background-color: 	white;
+  flex-direction: row;
+  background-color: white;
   color: #1e4fa6;
   border-radius: 10px;
   border: 4px solid #86c0f7;
   height:260px;
-  width: 250px;
-  justify-content: space-between;
+  width: 100%;
   font-size:20px;
   margin-bottom:50px;
   transition: box-shadow 0.5s ,border-radius 1s;
   transition-timing-function: ease-in-out;
-
+  justify-content: flex-start;
+  align-items: center;
 }
+
 .card-container:hover{
   box-shadow: 10px 20px 15px rgba(15, 51, 115,0.3);
   border-radius : 2px;
@@ -34,7 +35,6 @@
   border-radius: 50px;
   width: 150px;
   font-size: 20px;
-  margin-top:70px;
   margin-bottom: 10px ;
   margin-left:10px;
   transition: background-color 0.5s, background-color 0.5s, border-color 0.5s ;
@@ -55,7 +55,6 @@
   font-size:21px;
   font-weight: bold;
   z-index: 1;
-
 }
 
 .date{
@@ -64,5 +63,16 @@
   margin-left:20px;
   margin-bottom:10px;
   font-size:15px;
+}
+
+.secundary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 10px 0 10px;
+}
+
+.description {
+  height: 130px;
 }
 
