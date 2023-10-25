@@ -1,14 +1,14 @@
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
-import { RedirectService } from './services/redirect.service';
 import { BasePageComponent } from './pages/base-page/base-page.component';
-import { MatCardModule } from '@angular/material/card';
+import { RedirectService } from './services/redirect.service';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule,
     MatCardModule
   ],
   bootstrap: [AppComponent],
@@ -35,7 +34,8 @@ import { MatCardModule } from '@angular/material/card';
       },
       deps: [RedirectService]
     },
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ]
 })
 export class AppModule {
