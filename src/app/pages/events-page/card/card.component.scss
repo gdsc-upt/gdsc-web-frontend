@@ -1,7 +1,6 @@
 
 .card-container {
   display: flex;
-  flex-direction: row;
   background-color: white;
   color: #1e4fa6;
   border-radius: 10px;
@@ -9,52 +8,25 @@
   height:260px;
   width: 100%;
   font-size:20px;
-  margin-bottom:50px;
-  transition: box-shadow 0.5s ,border-radius 1s;
-  transition-timing-function: ease-in-out;
-  justify-content: flex-start;
+  margin-bottom:20px;
   align-items: center;
-}
-
-.card-container:hover{
-  box-shadow: 10px 20px 15px rgba(15, 51, 115,0.3);
-  border-radius : 2px;
-}
-
-.card-container:hover ::after {
-
-  box-shadow: none;
-  border-radius : 10px;
-  transition-duration: 250ms;
 }
 
 .buton{
   color: grey;
   background-color: rgba(15, 51, 115,0.2);
   border: 3px solid #86c0f7;
-  border-radius: 50px;
+  border-radius: 10px;
   width: 150px;
   font-size: 20px;
-  margin-bottom: 10px ;
-  margin-left:10px;
-  transition: background-color 0.5s, background-color 0.5s, border-color 0.5s ;
-  transition-timing-function: ease-in-out;
-}
-.buton:hover{
-  background-color: 	#a3bff0;
-  border-color: rgb(107, 159, 242);
-  cursor: pointer;
+  margin: 10px 0 10px 0;
 }
 
+
 .title{
-  height: 40%;
-  margin-top:0;
-  margin-left: 0;
-  padding-left: 15px;
-  padding-top:15px;
+  padding: 10px 0 10px 15px;
   font-size:21px;
   font-weight: bold;
-  z-index: 1;
 }
 
 .date{
@@ -74,5 +46,18 @@
 
 .description {
   height: 130px;
+  overflow: auto;
+
+
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #86c0f7;
+  border-radius: 15px;
+}
+
 
