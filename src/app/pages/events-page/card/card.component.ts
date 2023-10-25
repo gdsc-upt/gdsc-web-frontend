@@ -7,10 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() title: string  = '';
+  @Input() title: string = '';
   @Input() url: string = '';
   @Input() start_date: string = '';
-  redirectLink(url: string) : void {
+
+  redirectLink(url: string): void {
     window.location.href = url;
   }
 }

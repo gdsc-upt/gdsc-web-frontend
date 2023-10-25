@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RedirectGuard } from './services/redirect.guard';
 import { BasePageComponent } from './pages/base-page/base-page.component';
+import { RedirectGuard } from './services/redirect.guard';
 
 const routes: Routes = [
   {
@@ -37,7 +37,8 @@ const routes: Routes = [
   },
   {
     path: '**',
-    canActivate: [RedirectGuard]
+    canActivate: [RedirectGuard],
+    component: BasePageComponent,
   }
 ];
 

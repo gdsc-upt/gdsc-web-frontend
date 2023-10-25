@@ -12,10 +12,11 @@ COPY . /app
 
 RUN yarn build:$BRANCH
 
-FROM nginx:alpine
+FROM node:lts-alpine
 
-COPY --from=build /app/dist/gdsc-web-frontend /usr/share/nginx/html
+COPY --from=builder /app/dist /app/dist
 
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+CMD ["node", "/app/dist/server/server.mjs"]
+
 
 LABEL org.opencontainers.image.source=https://github.com/dsc-upt/gdsc-web-frontend

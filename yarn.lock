@@ -338,6 +338,14 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/platform-server@^17.0.0-rc.0":
+  version "17.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-17.0.0-rc.0.tgz#f958e70e58d08479e47fb59846770b23e3051e36"
+  integrity sha512-RWQ430esYfBpxUIQXAJc7GnnsnynCPLYKJYTKW0PrA/HyKuHGh9n3NBn0V9p7PxM9Mo4w47HGvFbA68pmkhtkQ==
+  dependencies:
+    tslib "^2.3.0"
+    xhr2 "^0.2.0"
+
 "@angular/router@^17.0.0-rc.0":
   version "17.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-17.0.0-rc.0.tgz#ae913790757182fffb29a189441303dfacaddf5a"
@@ -2697,7 +2705,7 @@
     "@types/range-parser" "*"
     "@types/send" "*"
 
-"@types/express@*", "@types/express@^4.17.13":
+"@types/express@*", "@types/express@^4.17.13", "@types/express@^4.17.17":
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.20.tgz#e7c9b40276d29e38a4e3564d7a3d65911e2aa433"
   integrity sha512-rOaqlkgEvOW495xErXMsmyX3WKBInbhG5eqojXYi3cGUaLoRDlXa5d52fkfWZT963AZ3v2eZ4MbKE6WpDAGVsw==
@@ -4591,7 +4599,7 @@ exponential-backoff@^3.1.1:
   resolved "https://registry.yarnpkg.com/exponential-backoff/-/exponential-backoff-3.1.1.tgz#64ac7526fe341ab18a39016cd22c787d01e00bf6"
   integrity sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==
 
-express@^4.17.3:
+express@^4.17.3, express@^4.18.2:
   version "4.18.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
   integrity sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==
@@ -8158,6 +8166,11 @@ ws@~8.11.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.11.0.tgz#6a0d36b8edfd9f96d8b25683db2f8d7de6e8e143"
   integrity sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==
+
+xhr2@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.2.1.tgz#4e73adc4f9cfec9cbd2157f73efdce3a5f108a93"
+  integrity sha512-sID0rrVCqkVNUn8t6xuv9+6FViXjUVXq8H5rWOH2rz9fDNQEd4g0EA2XlcEdJXRz5BMEn4O1pJFdT+z4YHhoWw==
 
 xmlhttprequest-ssl@~2.0.0:
   version "2.0.0"

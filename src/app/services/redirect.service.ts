@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { environment } from '@gdsc/env';
 import { BehaviorSubject } from 'rxjs';
-import { filter, map, tap } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RedirectService {
-  readonly loaded$ = new BehaviorSubject(false);
   private readonly _apiUrl = environment.apiUrl + 'redirects';
   private _all: Record<string, string> = {};
+  readonly loaded$ = new BehaviorSubject(false);
 
   constructor(private readonly _http: HttpClient) {
   }

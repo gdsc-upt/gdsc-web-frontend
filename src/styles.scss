@@ -72,16 +72,6 @@ section {
   }
 }
 
-.large-text {
-  font-size: 18px;
-  @media screen and (max-width: 900px) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 12px;
-  }
-}
-
 .medium-text {
   font-size: 15px;
   @media screen and (max-width: 900px) {

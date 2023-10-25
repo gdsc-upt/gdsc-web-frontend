@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { fromEvent } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
+import { fromEvent, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 @Component({
@@ -9,8 +10,15 @@ import { map, tap } from 'rxjs/operators';
 })
 
 export class BackToTopComponent {
-  readonly showButton = fromEvent(window, 'scroll')
-    .pipe(map(() => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20));
+  readonly #isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  readonly showButton: Observable<boolean>;
+
+  constructor() {
+    this.showButton = this.#isBrowser ? fromEvent(window, 'scroll').pipe(
+      map(() => window.scrollY > 300),
+      tap(console.log),
+    ) : new Observable();
+  }
 
   goToTop(): void {
     try {

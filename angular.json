@@ -29,33 +29,34 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/gdsc-web-frontend",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "./src/styles.scss"
+              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./src/assets/styles"
+                "src/assets/styles",
+                "src/styles"
               ]
             },
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
+            "server": "src/main.server.ts",
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "main": {
@@ -66,12 +67,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": true,
-              "extractLicenses": true,
-              "vendorChunk": true,
-              "buildOptimizer": true,
+              "extractLicenses": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -92,13 +88,9 @@
                   "with": "src/environments/environment.dev.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": true,
-              "extractLicenses": true,
-              "vendorChunk": true,
-              "buildOptimizer": true,
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -139,6 +131,88 @@
               "src/**/*.html"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/gdsc-web-frontend/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "buildOptimizer": false,
+            "optimization": false,
+            "sourceMap": true,
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/assets/styles"
+              ]
+            },
+            "extractLicenses": false,
+            "vendorChunk": true
+          },
+          "configurations": {
+            "main": {
+              "buildOptimizer": true,
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.main.ts"
+                }
+              ],
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true,
+              "vendorChunk": true
+            },
+            "dev": {
+              "buildOptimizer": true,
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "gdsc-web-frontend:build:development",
+              "serverTarget": "gdsc-web-frontend:server:development"
+            },
+            "production": {
+              "browserTarget": "gdsc-web-frontend:build:production",
+              "serverTarget": "gdsc-web-frontend:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "gdsc-web-frontend:build:production",
+              "serverTarget": "gdsc-web-frontend:server:production"
+            },
+            "development": {
+              "browserTarget": "gdsc-web-frontend:build:development",
+              "serverTarget": "gdsc-web-frontend:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
