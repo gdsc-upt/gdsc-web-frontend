@@ -4,7 +4,7 @@ ARG BRANCH=main
 
 WORKDIR /app
 
-COPY package.json yarn-lock.json /app/
+COPY package.json yarn.lock /app/
 
 RUN yarn install
 
