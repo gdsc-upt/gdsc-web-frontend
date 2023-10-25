@@ -1,32 +1,28 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { IdeasService } from '../../../../services/ideas.service';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 
 @Component({
   selector: 'gdsc-idea-form',
   templateUrl: './idea-form.component.html',
   styleUrls: ['./idea-form.component.scss']
 })
-export class IdeaFormComponent implements OnInit {
+export class IdeaFormComponent {
   @ViewChild(FormGroupDirective) private readonly _formDirective: FormGroupDirective;
 
-  ideasForm: UntypedFormGroup;
+  readonly ideasForm = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    branch: new FormControl('', [Validators.required]),
+    year: new FormControl(1, [Validators.required, Validators.min(1), Validators.max(6)]),
+    description: new FormControl('', [Validators.required])
+  });
 
   constructor(
     private readonly _ideasService: IdeasService,
     private readonly _snackBar: MatSnackBar
   ) {
-  }
-
-  ngOnInit(): void {
-    this.ideasForm = new UntypedFormGroup({
-      name: new UntypedFormControl('', [Validators.required]),
-      email: new UntypedFormControl('', [Validators.required, Validators.email]),
-      branch: new UntypedFormControl('', [Validators.required]),
-      year: new UntypedFormControl('', [Validators.required, Validators.min(1), Validators.max(6)]),
-      description: new UntypedFormControl('', [Validators.required])
-    });
   }
 
   getErrorMessage(): string {

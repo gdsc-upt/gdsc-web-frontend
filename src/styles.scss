@@ -5,7 +5,7 @@
 @use "icons";
 @use "forms";
 
-$gdsc-typography: mat.define-legacy-typography-config($font-family: "JetBrains Mono");
+$gdsc-typography: mat.define-typography-config($font-family: "JetBrains Mono");
 
 // TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
 //  The following line adds:
@@ -15,8 +15,8 @@ $gdsc-typography: mat.define-legacy-typography-config($font-family: "JetBrains M
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
 //    `@include mat.legacy-typography-hierarchy($gdsc-typography);`
-@include mat.all-legacy-component-typographies($gdsc-typography);
-@include mat.legacy-core();
+@include mat.all-component-typographies($gdsc-typography);
+@include mat.core();
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
 
@@ -138,7 +138,8 @@ mat-form-field.noPadding .mat-form-field-wrapper {
   -740px 0 0 variables.$light-blue,
   -1520px 0 0 variables.$light-blue;
 }
-.cream-bg{
+
+.cream-bg {
 
 
 }

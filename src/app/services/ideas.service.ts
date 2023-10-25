@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '@gdsc/env';
-import { HttpClient } from '@angular/common/http';
 import { IIdea } from '../models/idea';
 
 @Injectable({
@@ -11,9 +11,10 @@ export class IdeasService {
 
   constructor(
     private readonly _http: HttpClient
-  ) { }
+  ) {
+  }
 
-  post(idea: IIdea): Promise<IIdea> {
+  post(idea: Partial<IIdea>): Promise<IIdea> {
     return this._http.post<IIdea>(this._apiUrl, idea).toPromise();
   }
 }

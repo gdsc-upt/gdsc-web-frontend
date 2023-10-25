@@ -2,6 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
     "analytics": false,
+    "packageManager": "yarn",
     "schematicCollections": [
       "@angular-eslint/schematics"
     ]
@@ -116,18 +117,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gdsc-web-frontend:build"
+            "buildTarget": "gdsc-web-frontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gdsc-web-frontend:build:production"
+              "buildTarget": "gdsc-web-frontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gdsc-web-frontend:build"
+            "buildTarget": "gdsc-web-frontend:build"
           }
         },
         "lint": {

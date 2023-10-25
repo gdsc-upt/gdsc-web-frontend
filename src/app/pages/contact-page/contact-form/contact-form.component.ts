@@ -1,36 +1,28 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ContactService } from '../../../services/contact.service';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 
 @Component({
   selector: 'gdsc-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
-export class ContactFormComponent implements OnInit {
+export class ContactFormComponent {
   @ViewChild(FormGroupDirective) private readonly _formDirective: FormGroupDirective;
 
-  contactForm: UntypedFormGroup;
+  readonly contactForm = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email,
+      Validators.pattern('^\\S+@\\S+$')]),
+    subject: new FormControl('', [Validators.required]),
+    text: new FormControl('', [Validators.required])
+  });
 
   constructor(
     private readonly _contactService: ContactService,
     private readonly _snackBar: MatSnackBar
   ) {
-  }
-
-  buildForm() {
-    this.contactForm = new UntypedFormGroup({
-      name: new UntypedFormControl('', [Validators.required]),
-      email: new UntypedFormControl('', [Validators.required, Validators.email,
-        Validators.pattern('^\\S+@\\S+$')]),
-      subject: new UntypedFormControl('', [Validators.required]),
-      text: new UntypedFormControl('', [Validators.required])
-    });
-  }
-
-  ngOnInit(): void {
-    this.buildForm();
   }
 
   async submit(): Promise<void> {

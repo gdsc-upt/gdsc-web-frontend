@@ -2,17 +2,15 @@ FROM node:lts-alpine as build
 
 ARG BRANCH=main
 
-RUN mkdir /app
-
 WORKDIR /app
 
-COPY package.json package-lock.json /app/
+COPY package.json yarn-lock.json /app/
 
-RUN npm install ci
+RUN yarn install
 
 COPY . /app
 
-RUN npm run build:$BRANCH --prod
+RUN yarn build:$BRANCH
 
 FROM nginx:alpine
 
