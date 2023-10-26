@@ -15,3 +15,4 @@ export class CardComponent {
     window.location.href = url;
   }
 }
+

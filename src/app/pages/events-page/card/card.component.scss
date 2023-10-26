@@ -1,22 +1,38 @@
+@use "variables";
 
 .card-container {
   display: flex;
   background-color: ghostwhite;
-  color: #1e4fa6;
+  color: variables.$cool-black;
   border-radius: 10px;
   border: lightslategray solid 1px;
-  height:260px;
+  height:350px;
   width: 100%;
   font-size:20px;
   margin-bottom:20px;
   align-items: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.image-container1 {
+  min-width: 40%;
+  max-width: 40%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: gray;
+  border-radius: 8px 0 0 8px;
+}
+
+.image-container1 img {
+  max-width: 100%;
+  height: auto;
 }
 
 .title{
-  padding: 10px 0 10px 15px;
+  padding: 10px 0 10px 25px;
   font-size:21px;
   font-weight: bold;
+  overflow: auto;
+  max-height: 30px;
 }
 
 @media (max-width: 768px) {
@@ -37,8 +53,8 @@
 }
 
 .buton{
-  color: grey;
-  border: none;
+  color: variables.$cool-black;
+  border: lightslategray solid 1px;
   background-color: white;
   border-radius: 10px;
   width: 150px;
@@ -48,14 +64,14 @@
   cursor: pointer;
   transition: all 0.3s;
   font-weight: bold;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .buton:hover {
   font-size: 22px;
-  color: #007bff;
+  color: white;
+  background-color: black;
 }
-
 
 .date{
   position: relative;
@@ -71,8 +87,9 @@
 }
 
 .description {
-  height: 130px;
+  height: 220px;
   overflow: auto;
+  padding: 0 15px 0 15px;
 }
 
 ::-webkit-scrollbar {
@@ -80,8 +97,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e4fa6;
+  background: variables.$cool-black;
   border-radius: 15px;
 }
+
+
 
 
