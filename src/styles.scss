@@ -194,3 +194,12 @@ gdsc-technology-card {
     width: 20%;
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: variables.$blue;
+  border-radius: 15px;
+}
