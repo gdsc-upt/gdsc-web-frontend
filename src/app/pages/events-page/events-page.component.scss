@@ -47,5 +47,18 @@
   }
 }
 
+.bubble::after {
+  content: '';
+  border-bottom-left-radius: 70% 100%;
+  border-bottom-right-radius: 30% 90%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 90%;
+  background-color: #fff9f7;
+  height: 25%;
+}
+
+
 
 
